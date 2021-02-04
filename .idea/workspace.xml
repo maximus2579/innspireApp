@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="" />
+    <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/logo_innspire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/HomeLogo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Starsection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/subHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +25,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,7 +46,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\apps\innspireapp\src\assets" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -34,10 +63,34 @@
       <option name="presentableId" value="Default" />
       <updated>1612435267887</updated>
       <workItem from="1612435268941" duration="501000" />
+      <workItem from="1612440068197" duration="12752000" />
+      <workItem from="1612456496830" duration="609000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2501" y="506" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612440113711">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2501" y="506" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1612440113711" />
+    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612440084801">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1612440084801" />
+    <state x="2340" y="459" key="FileChooserDialogImpl" timestamp="1612449577857">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2340" y="459" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1612449577857" />
+    <state x="2244" y="349" key="SettingsEditor" timestamp="1612440272120">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2244" y="349" key="SettingsEditor/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1612440272120" />
+    <state x="2269" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1612452841347">
+      <screen x="1920" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2269" y="320" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1612452841347" />
   </component>
 </project>
