@@ -3,21 +3,12 @@ import Starsection from "../components/Starsection"
 const HomeLogo = ({titles}) => {
     return (
         <>
-        <img src={logo} alt={"Logo"} className={"logo"}/>
+        <div className={"center"}><img src={logo} alt={"Logo"} className={"logoHome"}/></div>
         <div className={"logoOptions"}>
-            {titles.map((title) => <Starsection title={title}/>)}
+            {titles.map((title, index) => <Starsection key={index} title={title}/>)}
         </div>
         </>
     );
 };
-
-HomeLogo.defaultProps = {
-    titles: [
-        "people",
-        "devOps",
-        "agenda",
-        "agile"
-    ]
-}
 
 export default HomeLogo;

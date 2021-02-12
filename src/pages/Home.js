@@ -1,8 +1,10 @@
 import HomeLogo from "../components/HomeLogo"
 
-const Home = () => {
+const Home = ({titles}) => {
     return (
-        <HomeLogo/>
+        <div className={"app"}>
+        <HomeLogo titles={titles}/>
+        </div>
     );
 };
 

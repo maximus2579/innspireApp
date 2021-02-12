@@ -1,56 +1,32 @@
-import {Route, BrowserRouter as Router} from "react-router-dom"
+import React, {useEffect, useState} from "react";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Home from "./pages/Home"
-import subHome from "./pages/subHome"
+import SubHome from "./pages/SubHome"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 
-function App() {
-  return (
+const App = () =>{
+    const [postnames, setPostnames] = useState([]);
+    useEffect(() => {
+        async function getAllPostTypesTitles() {
+            fetch('http://localhost/wordpress/wp-json/wp/v2/apptitels')
+                .then(response => response.json())
+                .then(data => setPostnames(data));
+        }
+
+        getAllPostTypesTitles();
+    }, [])
+    return (
       <Router>
-          <div className="app">
+          <>
               {/*routing*/}
-              <switch>
-              <Route path={"/"} exact component={Home}/>
-              <Route path={"/home"} component={subHome}/>
-              </switch>
-          </div>
+              <Switch>
+                  <Route path={"/"} exact children={postnames.length > 0 ? (<Home titles={postnames}/>) : <Loader type="ThreeDots" color="#FFF" height={80} width={80} />}/>
+                  <Route path={"/:param"} children={<SubHome/>}/>
+              </Switch>
+          </>
       </Router>
   );
 }
-
-// App.defaultProps = {
-//     titles: [
-//         ["people",
-//             // [
-//                 // "peopleTest1",
-//                 // "peopleTest2",
-//                 // "peopleTest3",
-//                 // "peopleTest4",
-//             // ]
-//         ],
-//         ["devOps",
-//             // [
-//                 // "devOpsTest1",
-//                 // "devOpsTest2",
-//                 // "devOpsTest3",
-//                 // "devOpsTest4",
-//             // ]
-//         ],
-//         ["agenda",
-//             // [
-//                 // "agendaTest1",
-//                 // "agendaTest2",
-//                 // "agendaTest3",
-//                 // "agendaTest4",
-//             // ]
-//         ],
-//         ["agile",
-//             // [
-//                 // "agileTest1",
-//                 // "agileTest2",
-//                 // "agileTest3",
-//                 // "agileTest4",
-//             // ]
-//         ],
-//     ]
-// }
 
 export default App;

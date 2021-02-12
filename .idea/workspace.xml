@@ -2,21 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/logo_innspire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/HomeLogo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Starsection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/subHome.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ShowContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ShowPosts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeLogo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeLogo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Starsection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Starsection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/subHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SubHome.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -65,6 +65,16 @@
       <workItem from="1612435268941" duration="501000" />
       <workItem from="1612440068197" duration="12752000" />
       <workItem from="1612456496830" duration="609000" />
+      <workItem from="1612514153899" duration="12584000" />
+      <workItem from="1612773299819" duration="17688000" />
+      <workItem from="1612796868619" duration="49000" />
+      <workItem from="1612860437863" duration="20445000" />
+      <workItem from="1612881685498" duration="8530000" />
+      <workItem from="1612944737341" duration="27094000" />
+      <workItem from="1613033605270" duration="13461000" />
+      <workItem from="1613060552454" duration="1129000" />
+      <workItem from="1613061754053" duration="96000" />
+      <workItem from="1613119602617" duration="524000" />
     </task>
     <servers />
   </component>
@@ -76,14 +86,16 @@
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
     <state x="2501" y="506" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1612440113711" />
-    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612440084801">
+    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612957013267">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
-    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1612440084801" />
-    <state x="2340" y="459" key="FileChooserDialogImpl" timestamp="1612449577857">
+    <state x="2335" y="335" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612877657266" />
+    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1612957013267" />
+    <state x="2340" y="459" key="FileChooserDialogImpl" timestamp="1613061557375">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
-    <state x="2340" y="459" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1612449577857" />
+    <state x="2235" y="341" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612883168743" />
+    <state x="2340" y="459" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1613061557375" />
     <state x="2244" y="349" key="SettingsEditor" timestamp="1612440272120">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>

@@ -1,10 +1,8 @@
-import Nav from "./Nav"
+import ShowPosts from "./ShowPosts"
 
-const Header = () => {
+const Header = ({posts, param}) => {
     return (
-        <header>
-           <Nav/>
-        </header>
+           <ShowPosts posts={posts} param={param}/>
     );
 };
 
