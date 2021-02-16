@@ -24,3 +24,4 @@ yarn-error.log*
 
 # idea folder ignore
 /.idea
+.idea/workspace.xml
