@@ -7,6 +7,8 @@ import Loader from "react-loader-spinner"
 import React from "react";
 
 const ShowPosts = ({posts, param}) => {
+    document.body.style.height = null;
+    document.body.style.alignItems = null;
     if (posts.length > 0) {
         return (
             <>
