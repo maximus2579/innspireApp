@@ -1,3 +1,4 @@
+/*centrale class*/
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -23,19 +24,12 @@ code {
     monospace;
 }
 
-.logoOptions{
-  margin: 10px 10px 5vw 10px;
-  display: flex;
-  justify-content: space-around;
-  width: 60vw;
-  flex-wrap: wrap;
-}
-
 .center {
   display: flex;
   width: 100%;
   justify-content: center;
 }
+
 .app{
   margin: 10px;
   width: 100%;
@@ -45,19 +39,76 @@ code {
   align-items: center;
 }
 
-.logo{
-  width: 100px;
-}
-
-.logoHome{
-  width: 30vh;
-}
 #root{
   width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/*hoofdpagina*/
+.logoHome{
+  width: 30vh;
+}
+
+.logoOptions{
+  margin: 10px 10px 5vw 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 60vw;
+  flex-wrap: wrap;
+  animation: 1.2s example1 ease-in-out;
+}
+
+.logoOptions div, .logoOptions a{
+  animation: 1.2s example ease-in-out;
+}
+
+.logoOptions svg{
+  animation: 1.2s example2 ease-in-out;
+}
+
+@keyframes example {
+  0% {
+    color: transparent;
+    transform: translate(1.5vw, -150px);
+  }
+  50% {
+    position: static;
+    transform: translate(0, 0);
+  }
+  75% {
+    color: transparent;
+  }
+  100%{
+    color: white;
+
+  }
+}
+
+@keyframes example1 {
+  0% {
+    width: 10vw;
+  }
+  50%{
+    width: 60vw;
+  }
+}
+
+@keyframes example2 {
+  0% {
+    width: 10px;
+  }
+  50%{
+    width: 50px;
+  }
+}
+
+/*subkopjes*/
+.logo{
+  width: 100px;
+}
+
 nav{
   display: flex;
   justify-content: space-around;
@@ -151,10 +202,6 @@ a{
   color: white;
 }
 
-.logoOptions div, a{
-  animation: 0.8s example ease-in-out;
-}
-
 #gekozen_card {
   width: 20%;
   height: 40vh;
@@ -165,22 +212,26 @@ a{
   padding: 10px;
 }
 
-@keyframes example {
-  0% {
-    color: transparent;
-  transform: translate(0, -150px);
-
+/*responiviteit*/
+@media only screen and (max-width: 300px) {
+  .logoHome{
+    width: 100%;
   }
-  50% {
-    transform: translate(0, 0) scale(1);
-      }
-  75% {
-    transform: scale(1.1);
-  }
-  100%{
-    color: white;
-    transform: scale(1);
+}
 
+@media only screen and (max-width: 500px) {
+  .planningLijst li{
+    width: 30%;
+    height: 20vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .logoHome{
+    width: 45vh;
+  }
+  .planningLijst li{
+    width: 20vh;
   }
 }
 
@@ -193,37 +244,4 @@ a{
   #gekozen_card{
     width: 60%;
   }
-}
-
-@media only screen and (max-width: 300px) {
-
-  .logoHome{
-    width: 100%;
-  }
-
-}
-
-@media only screen and (max-width: 500px) {
-  /*.planningLijst{*/
-  /*  justify-content: center;*/
-  /*  align-items: center;*/
-  /*  flex-flow: column;*/
-  /*}*/
-
-  .planningLijst li{
-    width: 30%;
-    height: 20vh;
-  }
-
-}
-
-@media only screen and (min-width: 1200px) {
-  .logoHome{
-    width: 45vh;
-  }
-
-  .planningLijst li{
-    width: 20vh;
-  }
-
 }
