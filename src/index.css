@@ -245,3 +245,20 @@ a{
     width: 60%;
   }
 }
+
+@media only screen and (max-width: 666px) {
+  @keyframes example1 {
+    0% {
+      width: 10vw;
+    }
+    30%{
+      width: 10vw;
+    }
+    31%{
+      width: 30vw;
+    }
+    50%{
+      width: 30vw;
+    }
+  }
+}
