@@ -16,7 +16,24 @@ html{
   width: 100%;
   height: 100%;
   justify-content: center;
-  background-color: #555;
+  background-color: var(--color-primary);
+}
+
+.theme-light {
+  --color-primary: white;
+  --color-background: #EAEAEA;
+  --color-secondary: #121212;
+  --color-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.25);;
+  --font-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
+  linear-gradient(0deg, #121212, #121212);
+
+}
+
+.theme-dark {
+  --color-primary: #121212;
+  --color-secondary: white;
+  --font-color: rgba(255, 255, 255, 0.67)
+
 }
 
 code {
@@ -65,6 +82,7 @@ code {
 }
 
 .logoOptions svg{
+  fill: var(--color-secondary);
   animation: 2s example2 ease-in-out;
 }
 
@@ -83,8 +101,7 @@ code {
     color: transparent;
   }
   100%{
-    color: white;
-
+    color: var(--color-secondary);
   }
 }
 
@@ -115,7 +132,7 @@ nav{
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background-color: black;
+  background-color: var(--color-primary);
   padding: 10px;
   color: white;
   flex-flow: wrap;
@@ -149,11 +166,11 @@ a:hover{
 }
 
 .postContent{
-  background-color: black;
+  background-color: var(--color-primary);
   margin: 20px;
-  color: white;
-  padding: 30px;
+  color: var(--font-color);
   width: 100%;
+  padding: 10px;
 }
 
 .postContent > *{
@@ -182,8 +199,8 @@ a:hover{
   height: 10vw;
   list-style: none;
   text-align: center;
-  background-color: white;
-  color: black;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
   padding: 10px;
   font-size: 20pt;
   cursor: pointer;
@@ -195,20 +212,24 @@ ul li div{
 
 nav ul a{
   text-decoration: none;
-  color: white;
+  color: var(--color-secondary);
   margin: 0 5vw;
+}
+
+nav svg{
+  fill: var(--color-secondary);
 }
 
 a{
   text-decoration: none;
-  color: white;
+  color: var(--color-secondary);
 }
 
 #gekozen_card {
   width: 20%;
   height: 40vh;
-  background-color: white;
-  color: black;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
   text-align: center;
   font-size: 18pt;
   padding: 10px;
@@ -234,8 +255,7 @@ a{
       color: transparent;
     }
     100%{
-      color: white;
-
+      color: var(--color-secondary);
     }
   }
 }
@@ -263,8 +283,7 @@ a{
       color: transparent;
     }
     100%{
-      color: white;
-
+      color: var(--color-secondary);
     }
   }
 }

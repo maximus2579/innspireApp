@@ -31,9 +31,6 @@ const ShowPosts = ({posts, param}) => {
             </>
         );
     }
-    // else if (posts){
-    //     return <div className={"postContent"}><p>Geen content beschikbaar</p></div>
-    // }
     else {
         return <Loader type="ThreeDots" color="#FFF" height={80} width={80} />
     }
