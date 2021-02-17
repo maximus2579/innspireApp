@@ -57,27 +57,29 @@ code {
   justify-content: space-around;
   width: 60vw;
   flex-wrap: wrap;
-  animation: 1.2s example1 ease-in-out;
+  animation: 2s example1 ease-in-out;
 }
 
 .logoOptions div, .logoOptions a{
-  animation: 1.2s example ease-in-out;
+  animation: 2s example ease-in-out;
 }
 
 .logoOptions svg{
-  animation: 1.2s example2 ease-in-out;
+  animation: 2s example2 ease-in-out;
 }
 
 @keyframes example {
   0% {
+    font-size: 0;
     color: transparent;
-    transform: translate(1.5vw, -150px);
+    transform: translate(0 , -150px);
   }
   50% {
     position: static;
     transform: translate(0, 0);
   }
   75% {
+    font-size: 12pt;
     color: transparent;
   }
   100%{
@@ -249,13 +251,13 @@ a{
 @media only screen and (max-width: 666px) {
   @keyframes example1 {
     0% {
-      width: 10vw;
+      width: 2vw;
     }
     30%{
-      width: 10vw;
+      width: 2vw;
     }
     31%{
-      width: 30vw;
+      width: 20vw;
     }
     50%{
       width: 30vw;
