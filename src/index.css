@@ -72,7 +72,7 @@ code {
   0% {
     font-size: 0;
     color: transparent;
-    transform: translate(0 , -150px);
+    transform: translate(0 , -25vh);
   }
   50% {
     position: static;
@@ -219,12 +219,53 @@ a{
   .logoHome{
     width: 100%;
   }
+  @keyframes example {
+    0% {
+      font-size: 0;
+      color: transparent;
+      transform: translate(0 , -1vh);
+    }
+    50% {
+      position: static;
+      transform: translate(0, 0);
+    }
+    75% {
+      font-size: 12pt;
+      color: transparent;
+    }
+    100%{
+      color: white;
+
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .planningLijst li{
     width: 30%;
     height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  @keyframes example {
+    0% {
+      font-size: 0;
+      color: transparent;
+      transform: translate(0 , -18vh);
+    }
+    50% {
+      position: static;
+      transform: translate(0, 0);
+    }
+    75% {
+      font-size: 12pt;
+      color: transparent;
+    }
+    100%{
+      color: white;
+
+    }
   }
 }
 
