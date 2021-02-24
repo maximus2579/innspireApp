@@ -5,46 +5,22 @@ import SubHome from "./pages/SubHome"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
 
-// function to set a given theme/color-scheme
-function setTheme(themeName) {
-    localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
-}
-// function to toggle between light and dark theme
-function toggleTheme() {
-    if (localStorage.getItem('theme') === 'theme-dark'){
-        setTheme('theme-light');
-    } else {
-        setTheme('theme-dark');
-    }
-}
-// Immediately invoked function to set the theme on initial load
-(function () {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-dark');
-    } else {
-        setTheme('theme-light');
-    }
-})();
-
 const App = () =>{
-    const [postnames, setPostnames] = useState([]);
+    const [categories, setCategories] = useState([]);
     useEffect(() => {
         async function getAllPostTypesTitles() {
-            fetch('http://localhost/wordpress/wp-json/wp/v2/apptitels')
+            fetch('http://localhost/wordpress/wp-json/wp/v2/categories?exclude=1&&hide_empty=true&&parent=0&&_fields=slug,name')
                 .then(response => response.json())
-                .then(data => setPostnames(data));
+                .then(data => setCategories(data));
         }
-
         getAllPostTypesTitles();
     }, [])
     return (
       <Router>
           <>
-              <button id="switch" onClick={toggleTheme}>Switch</button>
               {/*routing*/}
               <Switch>
-                  <Route path={"/"} exact children={postnames.length > 0 ? (<Home titles={postnames}/>) : <Loader type="ThreeDots" color="#FFF" height={80} width={80} />}/>
+                  <Route path={"/"} exact children={categories.length > 0 ? (<Home titles={categories}/>) : <Loader type="ThreeDots" color={document.getElementsByTagName("html")[0].classList.contains("theme-dark") ? "#fff" : "#121212"} height={80} width={80}/>}/>
                   <Route path={"/:param"} children={<SubHome/>}/>
               </Switch>
 

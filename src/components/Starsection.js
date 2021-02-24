@@ -8,7 +8,7 @@ const Starsection = ({title}) => {
             <IconContext.Provider value={{ size: "100px", color: "white" }}>
                     <AiFillStar/>
             </IconContext.Provider>
-            <div className={"center"}><Link to={"/" +title.title.rendered}>{title.title.rendered}</Link></div>
+            <div className={"center"}><Link to={"/" +title.slug}>{title.name}</Link></div>
         </div>
     );
 };

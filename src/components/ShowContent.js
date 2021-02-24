@@ -11,6 +11,7 @@ const ShowContent = ({posts}) => {
                 document.querySelector(".postContent").innerHTML = `<div id="gekozen_card">${e.target.innerHTML}</div>`
             })
         }
+        MakeActive(params.id)
     });
 
     function MakeActive(id){
@@ -22,21 +23,19 @@ const ShowContent = ({posts}) => {
         }
     }
     const params = useParams();
-    MakeActive(params.id)
     const content =[];
     posts.map((post) => {
-        if (post.id == params.id) {
-            if (post.content.rendered == ""){
+        if (post.slug == params.id) {
+            if (post._embedded['wp:featuredmedia']){
+                content.push(`<div class="image_content"><div class="featured_image"><img src="${post._embedded['wp:featuredmedia'][0].source_url}"></div><div>${post.content.rendered}</div></div>`)
+            } else {
+                if (post.content.rendered == "") {
                     content.push("<p>Geen content beschikbaar</p>")
-            } else if (post.title.rendered == "Planning poker"){
-                content.push(post.content.rendered)
-                if (document.querySelectorAll(".postContent li").length > 0) {
-                    console.log(document.querySelectorAll(".postContent li"));
+                } else if (post.title.rendered == "Planning poker") {
+                    content.push(post.content.rendered)
+                } else {
+                    content.push(post.content.rendered)
                 }
-            }
-            else {
-                content.push(post.content.rendered)
-                console.log(post.content.rendered)
             }
         }
     })
