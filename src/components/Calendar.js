@@ -51,17 +51,37 @@ const Calendar = ({posts}) => {
                 var beginMaand = events[i].acf.begin_datum.substring(3,5)
                 var beginJaar = events[i].acf.begin_datum.substring(6,10)
                 var beginTijd = events[i].acf.begin_datum.substring(11,16)
-                var eindDag = events[i].acf.begin_datum.substring(0,2)
-                var eindMaand = events[i].acf.begin_datum.substring(3,5)
-                var eindJaar = events[i].acf.begin_datum.substring(6,10)
-                var eindTijd = events[i].acf.begin_datum.substring(11,16)
-                console.log(beginTijd)
-                var datum = new Date (parseInt(beginJaar), (parseInt(beginMaand) -1), parseInt(beginDag))
-                if (datum > firstnewDate && datum < secondnewDate){
-                    var eventday = datum.getDay() -1;
-                    var content = document.querySelectorAll(".days>div>div")[eventday]
-                    content.classList.add("event")
-                    content.innerHTML = "<p>" + beginTijd + " t/m " + eindTijd + "</p><h4>" +events[i].title.rendered + "</h4>"
+                var eindDag = events[i].acf.eind_datum.substring(0,2)
+                var eindMaand = events[i].acf.eind_datum.substring(3,5)
+                var eindJaar = events[i].acf.eind_datum.substring(6,10)
+                var eindTijd = events[i].acf.eind_datum.substring(11,16)
+                var beginDatum = new Date (parseInt(beginJaar), (parseInt(beginMaand) -1), parseInt(beginDag))
+                var eindDatum = new Date (parseInt(eindJaar), (parseInt(eindMaand) -1), parseInt(eindDag))
+                if (beginDatum >= firstnewDate && beginDatum <= secondnewDate){
+                    console.log(beginDatum, eindDatum)
+                    if (beginDatum === eindDatum) {
+                        console.log("hi2")
+                        var eventday = beginDatum.getDay() - 1;
+                        var content = document.querySelectorAll(".days>div>div")[eventday]
+                        content.classList.add("event")
+                        content.innerHTML = "<p>" + beginTijd + " t/m " + eindTijd + "</p><h4>" + events[i].title.rendered + "</h4>"
+                    } else {
+                        var eventBeginDay = beginDatum.getDay() - 1;
+                        var eventEndDay = eindDatum.getDay() - 1;
+                        for (let i1 = eventBeginDay; i1<=eventEndDay; i1++){
+                            var content = document.querySelectorAll(".days>div>div")
+                            var tijden = "hele dag";
+                            if (i1 === eventBeginDay){
+                                tijden = beginTijd
+                            } else if (i1 === eventEndDay){
+                                tijden = "t/m " +eindTijd
+                            }
+
+                            content[i1].classList.add("event")
+                            content[i1].innerHTML = "<p>" + tijden + "</p><h4>" + events[i].title.rendered + "</h4>"
+                        }
+
+                    }
                 }
                 // console.log(parseInt(dag), d.getDay())
             }
