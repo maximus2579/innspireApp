@@ -1,4 +1,5 @@
 import {useEffect} from "react"
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Calendar = ({posts}) => {
     var events = posts
@@ -10,10 +11,24 @@ const Calendar = ({posts}) => {
         else {
             d.setDate(d.getDate() -7)
         }
-
         setData()
-
     }
+
+    function showEvent (){
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        modal.style.display = "block";
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+
+
 
     var week = [
         "Maandag",
@@ -40,69 +55,61 @@ const Calendar = ({posts}) => {
     ]
 
     async function setData () {
-        var firstnewDate = new Date (d.getFullYear(), d.getMonth(), (d.getDate() -d.getDay() +1))
-        var secondnewDate = new Date (d.getFullYear(), d.getMonth(), (d.getDate() -d.getDay() +7))
-        var subheaderString = firstnewDate.getDate()+ " " +maanden[firstnewDate.getMonth()]+ " t/m " +secondnewDate.getDate()+ " " +maanden[secondnewDate.getMonth()]
-        document.querySelector(".calendar h1").innerHTML = d.getFullYear()
-        document.querySelector(".calendar h2").innerHTML = subheaderString
-        if (events.length > 0){
-            for (let i = 0; i<events.length; i++){
-                var beginDag = events[i].acf.begin_datum.substring(0,2)
-                var beginMaand = events[i].acf.begin_datum.substring(3,5)
-                var beginJaar = events[i].acf.begin_datum.substring(6,10)
-                var beginTijd = events[i].acf.begin_datum.substring(11,16)
-                var eindDag = events[i].acf.eind_datum.substring(0,2)
-                var eindMaand = events[i].acf.eind_datum.substring(3,5)
-                var eindJaar = events[i].acf.eind_datum.substring(6,10)
-                var eindTijd = events[i].acf.eind_datum.substring(11,16)
-                var beginDatum = new Date (parseInt(beginJaar), (parseInt(beginMaand) -1), parseInt(beginDag))
-                var eindDatum = new Date (parseInt(eindJaar), (parseInt(eindMaand) -1), parseInt(eindDag))
-                if (beginDatum >= firstnewDate && beginDatum <= secondnewDate){
-                    console.log(beginDatum, eindDatum)
-                    if (beginDatum === eindDatum) {
-                        console.log("hi2")
-                        var eventday = beginDatum.getDay() - 1;
-                        var content = document.querySelectorAll(".days>div>div")[eventday]
-                        content.classList.add("event")
-                        content.innerHTML = "<p>" + beginTijd + " t/m " + eindTijd + "</p><h4>" + events[i].title.rendered + "</h4>"
-                    } else {
-                        var eventBeginDay = beginDatum.getDay() - 1;
-                        var eventEndDay = eindDatum.getDay() - 1;
-                        for (let i1 = eventBeginDay; i1<=eventEndDay; i1++){
-                            var content = document.querySelectorAll(".days>div>div")
-                            var tijden = "hele dag";
-                            if (i1 === eventBeginDay){
-                                tijden = beginTijd
-                            } else if (i1 === eventEndDay){
-                                tijden = "t/m " +eindTijd
-                            }
 
-                            content[i1].classList.add("event")
-                            content[i1].innerHTML = "<p>" + tijden + "</p><h4>" + events[i].title.rendered + "</h4>"
+        var firstnewDate = new Date(d.getFullYear(), d.getMonth(), (d.getDate() - d.getDay() + 1))
+        var secondnewDate = new Date(d.getFullYear(), d.getMonth(), (d.getDate() - d.getDay() + 7))
+        var subheaderString = firstnewDate.getDate() + " " + maanden[firstnewDate.getMonth()] + " t/m " + secondnewDate.getDate() + " " + maanden[secondnewDate.getMonth()]
+        document.querySelector("#jaar").innerHTML = d.getFullYear()
+        document.querySelector("#substring").innerHTML = subheaderString
+        for (let i = 0; i < 7; i++) {
+            var contentEvents = []
+            for (let i1 = 8; i1 <= 18; i1++) {
+                contentEvents.push(`<div><p>${i1}:00</p></div>`)
+            }
+            document.querySelectorAll(".days>div>div")[i].innerHTML = contentEvents.join("")
+            document.querySelectorAll(".days>div>div")[i].classList.remove("event")
+        }
+        if (events.length > 0) {
+            for (let i2 = 0; i2 < events.length; i2++) {
+                if (events[i2].cf.app_field_datum) {
+                var beginTijd = events[i2].cf.app_field_begintijd
+                var eindTijd = events[i2].cf.app_field_eindtijd
+                var Datum = new Date(events[i2].cf.app_field_datum)
+                if (Datum >= firstnewDate && Datum <= secondnewDate) {
+                    for (let i3 = 0; i3<11; i3++){
+                        var content = document.querySelectorAll(".days>div>div")[Datum.getDay() - 1].querySelectorAll("div")[i3]
+                        var x = parseInt(content.querySelector("p").innerText.substring(0,2));
+                        if (x >= parseInt(beginTijd) && x <= parseInt(eindTijd)){
+                            content.classList.add("event")
+                            content.innerHTML= content.innerHTML + "<h4>" + events[i2].title.rendered + "</h4>"
+                            document.querySelector(".modal-content").innerHTML = `<span class="close">&times;</span><h2>${events[i2].title.rendered}</h2><p>${events[i2].content.rendered}</p>`
+                            content.addEventListener("click", showEvent)
                         }
-
                     }
                 }
-                // console.log(parseInt(dag), d.getDay())
             }
         }
     }
+    }
     useEffect(() => {
         setData()
-
     }, [])
 
     return (
         <div className={"calendar"}>
-            <h1></h1>
-            <button onClick={() => newWeek()}> - </button>
-            <h2></h2>
-            <button onClick={() => newWeek("+")}> + </button>
+            <div id={"myModal"} className={"modal"}>
+                <div className={"modal-content"}>
+                </div>
+            </div>
+            <h1 id={"jaar"}></h1>
+            <div className={"calendar-BTN"} onClick={() => newWeek()}><FaAngleLeft/></div>
+            <h2 id={"substring"}></h2>
+            <div className={"calendar-BTN"} onClick={() => newWeek("+")}><FaAngleRight/></div>
             <div className={"days"}>
                 {week.map((dag) =>
                 <div>
                     <h3>{dag}</h3>
-                    <div></div>
+                    <div className={"urenblokken"}></div>
                 </div>
                 )}
             </div>
