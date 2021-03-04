@@ -12,6 +12,7 @@ import Calendar from "./Calendar"
 const ShowPosts = ({posts, param}) => {
     document.body.style.height = null;
     document.body.style.alignItems = null;
+    document.body.style.backgroundColor = null;
     function hamburgerActivate(){
         if (document.querySelector("nav ul").style.display == "flex"){
             document.querySelector("nav ul").style.display = "none"

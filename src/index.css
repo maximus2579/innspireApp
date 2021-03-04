@@ -82,6 +82,28 @@ code {
   animation: 2s example2 ease-in-out;
 }
 
+.fixedNav{
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+}
+
+.fixedNav>*{
+  padding: 10px;
+}
+
+#uitloggen, #info{
+  font-size: 10pt;
+}
+
+#profile *{
+  margin: 5px;
+}
+
 @keyframes example {
   0% {
     font-size: 0;
@@ -410,8 +432,36 @@ a{
   animation-duration: 0.4s
 }
 
-.modal-content h2{
+/*form*/
+form{
+   width: 400px;
+   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.25);
+   padding: 20px;
+  background-color: white;
 }
+
+form p{
+  margin-bottom: 2px;
+}
+
+form input{
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+form h1{
+  margin-top: 0;
+}
+
+form input[type = submit]{
+  width: 20%;
+}
+
+#code{
+  display: none;
+}
+
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -468,6 +518,12 @@ a{
   .planningLijst li{
     width: 30%;
     height: 20vh;
+  }
+  form{
+    width: 80%;
+  }
+  form input[type = submit]{
+    width: 100%;
   }
 }
 
