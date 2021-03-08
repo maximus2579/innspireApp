@@ -7,10 +7,11 @@ import Loader from "react-loader-spinner";
 import Form from "./pages/Form"
 
 const App = () =>{
+    console.log(process.env.NODE_ENV)
     const [categories, setCategories] = useState([]);
     useEffect(() => {
         async function getAllPostTypesTitles() {
-            fetch('http://localhost/wordpress/wp-json/wp/v2/categories?exclude=1&&hide_empty=true&&parent=0&&_fields=slug,name')
+            fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/categories?exclude=1&&hide_empty=true&&parent=0&&_fields=slug,name`)
                 .then(response => response.json())
                 .then(data => setCategories(data));
         }

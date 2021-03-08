@@ -13,10 +13,9 @@ const Form = ({action}) => {
     const [bedrijf, setBedrijf] = useState("");
     const [achternaam, setAchternaam] = useState("");
     const [voornaam, setVoornaam] = useState("");
-
     if (action == "Registreren"){
         async function addUser (username, password, email, voornaam, achternaam, telefoonnummer, bedrijf){
-            fetch('http://localhost/wordpress/wp-json/wp/v2/users/register', {
+            fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/users/register`, {
                 method: "POST", headers: {
                     'Accept': 'application/json',
                     "content-type": "application/json",
@@ -75,7 +74,7 @@ const Form = ({action}) => {
         );
     } else {
         async function login () {
-            fetch('http://localhost/wordpress/wp-json/jwt-auth/v1/token', {
+            fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/jwt-auth/v1/token`, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

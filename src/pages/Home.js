@@ -25,7 +25,7 @@ const Home = ({titles}) => {
     }
 
     async function info () {
-        fetch('http://localhost/wordpress/wp-json/wp/v2/users/me', {
+        fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/users/me`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
