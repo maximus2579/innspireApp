@@ -1,0 +1,126 @@
+@media only screen and (max-width: 300px) {
+    .logoHome{
+        width: 100%;
+    }
+    @keyframes example {
+        0% {
+            font-size: 0;
+            color: transparent;
+            transform: translate(0 , -1vh);
+        }
+        50% {
+            position: static;
+            transform: translate(0, 0);
+        }
+        75% {
+            font-size: 12pt;
+            color: transparent;
+        }
+        100%{
+            color: var(--color-secondary);
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .planningLijst li{
+        width: 30%;
+        height: 20vh;
+    }
+    form{
+        width: 80%;
+    }
+    form input[type = submit]{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    @keyframes example {
+        0% {
+            font-size: 0;
+            color: transparent;
+            transform: translate(0 , -18vh);
+        }
+        50% {
+            position: static;
+            transform: translate(0, 0);
+        }
+        75% {
+            font-size: 12pt;
+            color: transparent;
+        }
+        100%{
+            color: var(--color-secondary);
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .logoHome{
+        width: 45vh;
+    }
+    .planningLijst li{
+        width: 20vh;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    nav ul{
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        align-content: start;
+        align-items: start;
+        order: 3;
+    }
+    nav ul a{
+        margin: 0;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    #gekozen_card{
+        width: 60%;
+    }
+    .featured_image{
+        width: 100%;
+    }
+    .image_content div{
+        width: 100%;
+    }
+    .image_content{
+        flex-wrap: wrap;
+    }
+    .last-items{
+        justify-content: space-between;
+        width: 100px;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 701px) {
+    nav ul{
+        display: flex !important;
+    }
+}
+
+@media only screen and (max-width: 666px) {
+    @keyframes example1 {
+        0% {
+            width: 2vw;
+        }
+        30%{
+            width: 2vw;
+        }
+        31%{
+            width: 20vw;
+        }
+        50%{
+            width: 30vw;
+        }
+    }
+}

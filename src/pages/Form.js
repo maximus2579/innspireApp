@@ -15,7 +15,7 @@ const Form = ({action}) => {
     const [voornaam, setVoornaam] = useState("");
     if (action == "Registreren"){
         async function addUser (username, password, email, voornaam, achternaam, telefoonnummer, bedrijf){
-            fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/users/register`, {
+            fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/users/register`, {
                 method: "POST", headers: {
                     'Accept': 'application/json',
                     "content-type": "application/json",
@@ -74,7 +74,7 @@ const Form = ({action}) => {
         );
     } else {
         async function login () {
-            fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/jwt-auth/v1/token`, {
+            fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/jwt-auth/v1/token`, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

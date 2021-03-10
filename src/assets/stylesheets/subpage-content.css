@@ -1,0 +1,178 @@
+.logo{
+    width: 100px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 1vw;
+    color: white;
+    flex-flow: wrap;
+    box-shadow: var(--color-dropshadow);
+    margin-bottom: var(--margin-content);
+}
+
+nav ul{
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    flex-wrap: wrap;
+    width: 68%;
+    padding: 0;
+}
+
+.navItems{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16pt;
+    pointer-events: none;
+}
+
+a:hover{
+    transform: scale(1.05);
+}
+
+.navItemActive{
+    border-bottom: 1px solid var(--color-secondary);
+    box-sizing: border-box;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger svg{
+    font-size: 30px;
+}
+
+.postContent{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    box-shadow: var(--color-dropshadow);
+    padding: var(--padding-content);
+    margin: 0 1vw;
+    color: var(--font-color);
+    width: 100%;
+}
+
+.postContent_image{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    box-shadow: inherit;
+    padding: 0;
+    margin: 0 1vw;
+    color: var(--font-color);
+    width: 100%;
+}
+
+.postContent > *:first-child{
+    margin-top: 0;
+}
+
+.postContent > *{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.postContent a{
+
+    text-decoration: underline;
+    cursor: auto;
+}
+
+.image_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.image_content div{
+    width: 46%;
+    background-color: var(--color-primary);
+    box-shadow: var(--color-dropshadow);
+    padding: 1vw;
+}
+
+.image_content p{
+    margin-top: 0;
+}
+
+.featured_image img{
+    width: 100%;
+}
+
+.featured_image{
+    width: 48%;
+    padding: var(--padding-content);
+}
+
+.planningLijst{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 0;
+    margin-top: 0;
+}
+
+.planningLijst li{
+    align-items: center;
+    margin: 1vw;
+    width: 20%;
+    height: 10vw;
+    list-style: none;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 10px;
+    font-size: 20pt;
+    cursor: pointer;
+}
+
+ul li div{
+    padding: 5px;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: var(--color-secondary);
+    margin: 0 5vw;
+}
+
+nav svg{
+    fill: var(--color-secondary);
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+.last-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+}
+
+#gekozen_card {
+    width: 20%;
+    height: 40vh;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 18pt;
+    padding: 10px;
+}
+
+figure{
+    margin: 0;
+}

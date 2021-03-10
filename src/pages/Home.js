@@ -1,10 +1,11 @@
 import logo from "../assets/logo_innspire.png"
 import Starsection from "../components/Starsection"
 import SwitchTheme from "../components/SwitchTheme";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import {useEffect} from "react"
 
 const Home = ({titles}) => {
+    let history = useHistory()
     document.body.style.height = "100%";
     document.body.style.alignItems = "center";
     document.body.style.backgroundColor = null
@@ -20,28 +21,28 @@ const Home = ({titles}) => {
             console.log("hi")
             document.getElementById("profile").innerHTML = `<p id="username">${localStorage.getItem("username")}</p><p id="info">User info</p><p id="uitloggen">Uitloggen</p>`
             document.getElementById("uitloggen").addEventListener("click", () => logOut())
-            document.getElementById("info").addEventListener("click", () => info())
+            document.getElementById("info").addEventListener("click", () => history.push('/user-info'))
         }
     }
 
-    async function info () {
-        fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/users/me`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + localStorage.getItem("token")
-            },
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                console.log('Email:', data.email)
-                console.log('Naam:', data.first_name + data.last_name)
-                console.log('Bijnaam:', data.extra.nickname[0])
-                console.log('Bedrijf:', data.extra.bedrijf[0])
-                console.log( 'Nummer:', data.extra.tel[0]);
-            })
-    }
+    // async function info () {
+    //     fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/users/me`, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'Authorization': 'Bearer ' + localStorage.getItem("token")
+    //         },
+    //     })
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             console.log(data)
+    //             console.log('Email:', data.email)
+    //             console.log('Naam:', data.first_name + data.last_name)
+    //             console.log('Bijnaam:', data.extra.nickname[0])
+    //             console.log('Bedrijf:', data.extra.bedrijf[0])
+    //             console.log('Nummer:', data.extra.tel[0]);
+    //         })
+    // }
 
     useEffect(() => {
         checkLogin()

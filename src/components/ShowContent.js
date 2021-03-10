@@ -28,7 +28,15 @@ const ShowContent = ({posts}) => {
         if (post.slug == params.id) {
             if (post._embedded['wp:featuredmedia']){
                 content.push(`<div class="image_content"><div class="featured_image"><img src="${post._embedded['wp:featuredmedia'][0].source_url}"></div><div>${post.content.rendered}</div></div>`)
+                if (document.querySelector(".postContent")){
+                    document.querySelector(".postContent").classList.add("postContent_image")
+                }
             } else {
+                if (document.querySelector(".postContent")) {
+                    if (document.querySelector(".postContent").classList.contains("postContent_image")) {
+                        document.querySelector(".postContent").classList.remove("postContent_image")
+                    }
+                }
                 if (post.content.rendered == "") {
                     content.push("<p>Geen content beschikbaar</p>")
                 } else if (post.title.rendered == "Planning poker") {

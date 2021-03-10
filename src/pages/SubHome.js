@@ -7,7 +7,7 @@ const SubHome = () => {
     const [posts, setPosts] = useState([]);
     const [Categories, setCategories] = useState([]);
     async function getAllCategories() {
-        fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/categories?exclude=1&&hide_empty=true&&parent=0&&_fields=slug,id`)
+        fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/categories?exclude=1&&hide_empty=true&&parent=0&&_fields=slug,id`)
             .then(response => response.json())
             .then(data => setCategories(data));
     }
@@ -19,7 +19,7 @@ const SubHome = () => {
             }
         }
         if (id) {
-            fetch(`http://${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/app?_embed&&categories=${id}&&_fields=slug,title,content,cf,_links`)
+            fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/app?_embed&&categories=${id}&&_fields=slug,title,content,cf,_links`)
                 .then(response => response.json())
                 .then(data => setPosts(data))
         }

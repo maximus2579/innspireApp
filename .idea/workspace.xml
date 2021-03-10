@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.production" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env-cmdrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/stylesheets/subpage-calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/stylesheets/subpage-content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.development" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ShowContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SubHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SubHome.js" afterDir="false" />
@@ -23,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -40,7 +52,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xampp/htdocs/wordpress" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
@@ -94,7 +107,9 @@
       <workItem from="1614847511076" duration="12665000" />
       <workItem from="1614938684245" duration="1831000" />
       <workItem from="1615191626364" duration="1884000" />
-      <workItem from="1615213308484" duration="7097000" />
+      <workItem from="1615213308484" duration="7687000" />
+      <workItem from="1615280578685" duration="21202000" />
+      <workItem from="1615365963005" duration="18467000" />
     </task>
     <servers />
   </component>
@@ -102,34 +117,34 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2501" y="506" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615218676685">
+    <state x="2501" y="506" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615393291508">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
-    <state x="2501" y="506" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1615218676685" />
-    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614679096485">
+    <state x="2501" y="506" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1615393291508" />
+    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615392810151">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
     <state x="2335" y="335" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1613655148932" />
-    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1614679096485" />
+    <state x="2473" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1615392810151" />
     <state x="2308" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1615214069272">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
     <state x="2308" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1615214069272" />
-    <state x="2340" y="459" key="FileChooserDialogImpl" timestamp="1614847712867">
+    <state x="2340" y="459" key="FileChooserDialogImpl" timestamp="1615383191410">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
     <state x="2235" y="341" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1614157487482" />
     <state x="252" y="270" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@0.0.1536.824" timestamp="1613464517448" />
-    <state x="2340" y="459" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1614847712867" />
+    <state x="2340" y="459" key="FileChooserDialogImpl/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1615383191410" />
     <state x="252" y="270" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614613431442" />
     <state x="2244" y="349" key="SettingsEditor" timestamp="1615214198304">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
     <state x="2244" y="349" key="SettingsEditor/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1615214198304" />
-    <state x="2267" y="299" width="586" height="801" key="find.popup" timestamp="1615215435996">
+    <state x="2267" y="299" width="586" height="801" key="find.popup" timestamp="1615378021815">
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
-    <state x="2267" y="299" width="586" height="801" key="find.popup/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1615215435996" />
+    <state x="2267" y="299" width="586" height="801" key="find.popup/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1615378021815" />
     <state x="2182" y="238" width="672" height="504" key="search.everywhere.popup" timestamp="1614158675480">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

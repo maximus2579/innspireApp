@@ -1,0 +1,83 @@
+.logoHome{
+    width: 30vh;
+    filter: drop-shadow(3px 3px 5px #ccc);
+}
+
+.logoOptions{
+    margin: 10px 10px 5vw 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 60vw;
+    flex-wrap: wrap;
+    animation: 2s example1 ease-in-out;
+}
+
+.logoOptions div, .logoOptions a{
+    animation: 2s example ease-in-out;
+}
+
+.logoOptions svg{
+    fill: white;
+    animation: 2s example2 ease-in-out;
+    filter: drop-shadow(var(--color-dropshadow));
+}
+
+.fixedNav{
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+.fixedNav>*{
+    padding: 10px;
+}
+
+#info, #uitloggen{
+    font-size: 10pt;
+}
+
+#profile *{
+    margin: 5px;
+}
+
+
+@keyframes example {
+    0% {
+        font-size: 0;
+        color: transparent;
+        transform: translate(0 , -25vh);
+    }
+    50% {
+        position: static;
+        transform: translate(0, 0);
+    }
+    75% {
+        font-size: 12pt;
+        color: transparent;
+    }
+    100%{
+        color: var(--color-secondary);
+    }
+}
+
+@keyframes example1 {
+    0% {
+        width: 10vw;
+    }
+    50%{
+        width: 60vw;
+    }
+}
+
+@keyframes example2 {
+    0% {
+        width: 10px;
+    }
+    50%{
+        width: 50px;
+    }
+}
