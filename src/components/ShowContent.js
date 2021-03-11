@@ -1,16 +1,45 @@
 import {useParams} from "react-router-dom";
 import React, {useEffect} from "react";
 import Loader from "react-loader-spinner";
+import {IoShirtOutline} from "react-icons/io5";
+import ReactDOMServer from 'react-dom/server';
+
 
 const ShowContent = ({posts}) => {
     useEffect(() => {
-        for (let i = 0; i<document.querySelectorAll(".planningLijst li").length; i++) {
-            document.querySelectorAll(".planningLijst li")[i].addEventListener("click", (e) => {
-                document.querySelector(".planningLijst").style.display = "none"
-                document.querySelector(".postContent").classList.add("center")
-                document.querySelector(".postContent").innerHTML = `<div id="gekozen_card">${e.target.innerHTML}</div>`
+        if (document.getElementById('classic')) {
+            document.getElementById('classic').addEventListener("click", () => {
+                document.getElementsByClassName('t-shirt')[0].style.display = 'none'
+                document.getElementsByClassName('classic')[0].style.display = 'flex'
+                for (let i = 0; i < document.querySelectorAll(".classic li").length; i++) {
+                    document.querySelectorAll(".classic li")[i].addEventListener("click", (e) => {
+                        document.querySelector(".postContent").classList.add("center")
+                        document.querySelector(".postContent").innerHTML = `<div id="gekozen_card">${e.target.innerHTML}</div>`
+                    })
+                }
+            })
+            var size = []
+            for (let i = 0; i < document.querySelectorAll(".t-shirt li").length; i++) {
+                size.push(document.querySelectorAll(".t-shirt li")[i].innerHTML)
+            }
+            document.getElementById('t-shirt').addEventListener("click", () => {
+                document.getElementsByClassName('classic')[0].style.display = 'none'
+                document.getElementsByClassName('t-shirt')[0].style.display = 'flex'
+                for (let i = 0; i < document.querySelectorAll(".t-shirt li").length; i++) {
+                    document.querySelectorAll(".t-shirt li")[i].innerHTML = ReactDOMServer.renderToString(<IoShirtOutline/>)
+                    var path = document.querySelectorAll(".t-shirt li svg")[i].innerHTML
+                    document.querySelectorAll(".t-shirt li svg")[i].innerHTML = `${path}<text x="50%" y="50%" font-size="100px" font-weight="900" dominant-baseline="middle" text-anchor="middle">${size[i]}</text>`
+                    document.querySelectorAll(".t-shirt li svg")[i].addEventListener("click", (e) => {
+                        console.log(e)
+                        document.querySelector(".postContent").classList.add("center")
+                        document.querySelector(".postContent").innerHTML = `<div id="gekozen_shirt">${e.target.parentElement.innerHTML}</div>`
+                    })
+
+                }
+
             })
         }
+
         MakeActive(params.id)
     });
 
@@ -40,7 +69,10 @@ const ShowContent = ({posts}) => {
                 if (post.content.rendered == "") {
                     content.push("<p>Geen content beschikbaar</p>")
                 } else if (post.title.rendered == "Planning poker") {
-                    content.push(post.content.rendered)
+                    content.push(
+                        `<div style="display: flex; justify-content: space-evenly"><div id="classic">Classic</div><div id="t-shirt">t-shirt sizing</div></div>
+                        ${post.content.rendered}`
+                    )
                 } else {
                     content.push(post.content.rendered)
                 }
@@ -55,6 +87,7 @@ const ShowContent = ({posts}) => {
     }
     else{
         return(
+
             <Loader type="ThreeDots" color="#FFF" height={80} width={80} />
         )
     }

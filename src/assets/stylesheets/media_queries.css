@@ -23,7 +23,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .planningLijst li{
+    .classic li{
         width: 30%;
         height: 20vh;
     }
@@ -60,7 +60,7 @@
     .logoHome{
         width: 45vh;
     }
-    .planningLijst li{
+    .classic li{
         width: 20vh;
     }
 }

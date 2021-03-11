@@ -114,8 +114,8 @@ a:hover{
     padding: var(--padding-content);
 }
 
-.planningLijst{
-    display: flex;
+.classic{
+    display: none;
     width: 100%;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -123,18 +123,51 @@ a:hover{
     margin-top: 0;
 }
 
-.planningLijst li{
+.classic li{
     align-items: center;
     margin: 1vw;
     width: 20%;
     height: 10vw;
     list-style: none;
     text-align: center;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 25pt;
+    cursor: pointer;
+    justify-content: center;
+    border: 10px solid red;
+}
+
+.t-shirt{
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 0;
+    margin-top: 0;
+}
+
+.t-shirt li{
+    align-items: center;
+    margin: 1vw;
+    list-style: none;
+    text-align: center;
+    /*background-color: var(--color-secondary);*/
+    /*color: var(--color-primary);*/
     padding: 10px;
     font-size: 20pt;
     cursor: pointer;
+    color: black;
+}
+
+.t-shirt li svg{
+    width: 5em;
+    height: 5em;
+}
+
+.t-shirt li svg *{
+    pointer-events: none;
 }
 
 ul li div{
@@ -171,6 +204,16 @@ a{
     text-align: center;
     font-size: 18pt;
     padding: 10px;
+}
+
+#gekozen_shirt{
+   display: flex;
+    justify-content: center;
+}
+
+#gekozen_shirt svg{
+    width: 20em;
+    height: 20em;
 }
 
 figure{
