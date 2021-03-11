@@ -27,6 +27,21 @@ const UserInfo = () => {
     const [tel, setTel] = useState("")
     const [planningpoker, setPlanningpoker] = useState("")
     const [thema, setThema] = useState("")
+    const allThema = ["theme-light", "theme-dark"];
+    const allPoker = ["classic", "t-shirt"];
+
+    if (thema !== "" && planningpoker !== ""){
+        var optionsThema = [];
+        var optionsPoker = [];
+        for (let i =0; i<allThema.length; i++){
+            optionsThema.push(`<option ${allThema[i] === thema ? "selected" : ""} value="${allThema[i]}">${allThema[i]}</option>`)
+        }
+        for (let i =0; i<allPoker.length; i++){
+            optionsPoker.push(`<option ${allPoker[i] === planningpoker ? "selected" : ""} value="${allPoker[i]}">${allPoker[i]}</option>`)
+        }
+        document.getElementById("thema").innerHTML = optionsThema
+        document.getElementById("planningpoker").innerHTML = optionsPoker
+    }
     async function info () {
         fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/users/me`, {
             method: 'POST',
@@ -46,6 +61,8 @@ const UserInfo = () => {
                 setTel(data.meta.tel)
                 setThema(data.meta.thema)
                 setPlanningpoker(data.meta.planning_poker)
+
+
             })
     }
 
@@ -69,6 +86,10 @@ const UserInfo = () => {
         for (let i = 0; i<inputs.length; i++){
             inputs[i].disabled = false
         }
+        var inputs1 = document.getElementById("userInfo").querySelectorAll("select");
+        for (let i = 0; i<inputs1.length; i++){
+            inputs1[i].disabled = false
+        }
     }
 
     async function saveUser (e){
@@ -86,7 +107,9 @@ const UserInfo = () => {
                 email: email,
                 meta: {
                     tel: tel,
-                    bedrijf: bedrijf
+                    bedrijf: bedrijf,
+                    planning_poker: planningpoker,
+                    thema: thema
                 }
             })
         })
@@ -106,6 +129,7 @@ const UserInfo = () => {
     }
     useEffect(() => {
         info()
+
     }, [])
     return (
         <form id={"userInfo"} onSubmit={saveUser}>
@@ -133,9 +157,11 @@ const UserInfo = () => {
                 </div>
                 <div id={"user_setting"}>
                     <label htmlFor={"thema"}>Thema</label>
-                    <input type={"text"} id={"thema"} name={"thema"} value={thema} onChange={(e) => setThema(e.target.value)} disabled/>
+                    <select id={"thema"} name={"thema"} style={{width: "100%"}} onChange={(e) => setThema(e.target.value)} disabled>
+                    </select>
                     <label htmlFor={"planningpoker"}>Planningpoker</label>
-                    <input type={"text"} id={"planningpoker"} name={"planningpoker"} value={planningpoker} onChange={(e) => setPlanningpoker(e.target.value)} disabled/>
+                    <select id={"planningpoker"} style={{width: "100%"}} name={"planningpoker"} onChange={(e) => setPlanningpoker(e.target.value)} disabled>
+                    </select>
                     <div id={"submit_div"}><div onClick={(e) => editUser(e)}>Gegevens wijzigen</div></div>
                     <p id={"code"}></p>
                 </div>

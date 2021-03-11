@@ -124,19 +124,18 @@ a:hover{
 }
 
 .classic li{
-    align-items: center;
     margin: 1vw;
     width: 20%;
-    height: 10vw;
+    height: 16vw;
     list-style: none;
     text-align: center;
     background-color: white;
     color: black;
     padding: 10px;
-    font-size: 25pt;
+    font-size: 40pt;
     cursor: pointer;
-    justify-content: center;
     border: 10px solid red;
+    font-weight: 900;
 }
 
 .t-shirt{
@@ -153,17 +152,15 @@ a:hover{
     margin: 1vw;
     list-style: none;
     text-align: center;
-    /*background-color: var(--color-secondary);*/
-    /*color: var(--color-primary);*/
     padding: 10px;
     font-size: 20pt;
     cursor: pointer;
-    color: black;
+    color: var(--color-secondary);
 }
 
 .t-shirt li svg{
-    width: 5em;
-    height: 5em;
+    width: 8em;
+    height: 8em;
 }
 
 .t-shirt li svg *{
@@ -199,21 +196,30 @@ a{
 #gekozen_card {
     width: 20%;
     height: 40vh;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+    background-color: white;
+    color: black;
     text-align: center;
-    font-size: 18pt;
+    font-size: 40pt;
+    font-weight: 900;
     padding: 10px;
+    border: 20px solid red;
+    cursor: pointer;
 }
 
-#gekozen_shirt{
+#gekozen{
    display: flex;
     justify-content: center;
 }
 
-#gekozen_shirt svg{
+#gekozen svg{
     width: 20em;
     height: 20em;
+    cursor: pointer;
+}
+
+#classic, #t-shirt{
+    color: var(--color-secondary);
+    padding: 5px;
 }
 
 figure{

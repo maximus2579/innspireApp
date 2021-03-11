@@ -87,6 +87,8 @@ const Form = ({action}) => {
                     if (data.token){
                         localStorage.setItem('token', data.token)
                         localStorage.setItem('username', data.user_display_name)
+                        localStorage.setItem('thema', data.thema)
+                        localStorage.setItem('planningpoker', data.planning_poker)
                         history.push("/")
                     }
                     else{

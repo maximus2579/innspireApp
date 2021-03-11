@@ -8,7 +8,6 @@ import Form from "./pages/Form"
 import UserInfo from "./pages/UserInfo";
 
 const App = () =>{
-    console.log(process.env.NODE_ENV)
     const [categories, setCategories] = useState([]);
     useEffect(() => {
         async function getAllPostTypesTitles() {

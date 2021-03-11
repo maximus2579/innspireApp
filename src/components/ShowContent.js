@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {useParams, useHistory} from "react-router-dom";
 import React, {useEffect} from "react";
 import Loader from "react-loader-spinner";
 import {IoShirtOutline} from "react-icons/io5";
@@ -6,18 +6,22 @@ import ReactDOMServer from 'react-dom/server';
 
 
 const ShowContent = ({posts}) => {
-    useEffect(() => {
-        if (document.getElementById('classic')) {
+    var history = useHistory();
+    function getPlanningpoker () {
+        function classic () {
             document.getElementById('classic').addEventListener("click", () => {
                 document.getElementsByClassName('t-shirt')[0].style.display = 'none'
                 document.getElementsByClassName('classic')[0].style.display = 'flex'
                 for (let i = 0; i < document.querySelectorAll(".classic li").length; i++) {
                     document.querySelectorAll(".classic li")[i].addEventListener("click", (e) => {
                         document.querySelector(".postContent").classList.add("center")
-                        document.querySelector(".postContent").innerHTML = `<div id="gekozen_card">${e.target.innerHTML}</div>`
+                        document.querySelector(".postContent").innerHTML = `<div id="gekozen"><div id="gekozen_card">${e.target.innerHTML}</div></div>`
+                        document.querySelector('#gekozen>*').addEventListener("click", () => history.push(0))
                     })
                 }
             })
+        }
+        function tShirt(){
             var size = []
             for (let i = 0; i < document.querySelectorAll(".t-shirt li").length; i++) {
                 size.push(document.querySelectorAll(".t-shirt li")[i].innerHTML)
@@ -32,13 +36,21 @@ const ShowContent = ({posts}) => {
                     document.querySelectorAll(".t-shirt li svg")[i].addEventListener("click", (e) => {
                         console.log(e)
                         document.querySelector(".postContent").classList.add("center")
-                        document.querySelector(".postContent").innerHTML = `<div id="gekozen_shirt">${e.target.parentElement.innerHTML}</div>`
+                        document.querySelector(".postContent").innerHTML = `<div id="gekozen">${e.target.parentElement.innerHTML}</div>`
+                        document.querySelector('#gekozen>*').addEventListener("click", () => history.push(0))
                     })
-
                 }
 
             })
         }
+        if (document.getElementById('classic')) {
+            classic()
+            tShirt()
+        }
+    }
+
+    useEffect(() => {
+        getPlanningpoker()
 
         MakeActive(params.id)
     });
