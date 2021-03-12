@@ -96,7 +96,7 @@ const ShowContent = ({posts}) => {
                 }
                 if (post.content.rendered == "") {
                     content.push("<p>Geen content beschikbaar</p>")
-                } else if (post.title.rendered == "Planning poker") {
+                } else if (post.slug == "planning-poker") {
                     content.push(
                         `<div style="display: flex; justify-content: space-evenly"><div id="classic">Classic</div><div id="t-shirt">t-shirt sizing</div></div>
                         ${post.content.rendered}`
