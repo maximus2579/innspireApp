@@ -217,9 +217,15 @@ a{
     cursor: pointer;
 }
 
+#gekozen_card>svg{
+    width: 4em;
+    height: 4em;
+}
+
 #classic, #t-shirt{
     color: var(--color-secondary);
     padding: 5px;
+    cursor: pointer;
 }
 
 figure{

@@ -123,6 +123,8 @@ const UserInfo = () => {
                     code.innerHTML = data.message
                 }
                 else{
+                    localStorage.setItem('thema', thema)
+                    localStorage.setItem('planningpoker', planningpoker)
                     history.go(0)
                 }
             })

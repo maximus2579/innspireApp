@@ -41,6 +41,7 @@
 }
 
 #profile *{
+    color: var(--color-secondary);
     margin: 5px;
 }
 
