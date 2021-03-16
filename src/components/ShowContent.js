@@ -9,7 +9,11 @@ import ReactDOMServer from 'react-dom/server';
 const ShowContent = ({posts}) => {
     var history = useHistory();
     console.log(localStorage.getItem("planningpoker"))
+    var numbers = []
     function getPlanningpoker () {
+        for (let i = 0; i < document.querySelectorAll(".classic li").length; i++) {
+            numbers.push(document.querySelectorAll(".classic li")[i].innerHTML)
+        }
         function classic () {
             document.getElementById('classic').addEventListener("click", () => classicContent())
             function classicContent(){
@@ -18,13 +22,15 @@ const ShowContent = ({posts}) => {
                 document.getElementsByClassName('t-shirt')[0].style.display = 'none'
                 document.getElementsByClassName('classic')[0].style.display = 'flex'
                 for (let i = 0; i < document.querySelectorAll(".classic li").length; i++) {
+                   document.querySelectorAll(".classic li")[i].innerHTML = `<p>${numbers[i]}</p>`
                     if (document.querySelectorAll(".classic li")[i].innerText === "pizza slicer"){
                         document.querySelectorAll(".classic li")[i].innerHTML = ReactDOMServer.renderToString(<GiPizzaCutter/>)
                     }
                     document.querySelectorAll(".classic li")[i].addEventListener("click", (e) => {
                         document.querySelector(".postContent").classList.add("center")
-                        document.querySelector(".postContent").innerHTML = `<div id="gekozen"><div id="gekozen_card">${e.target.innerHTML}</div></div>`
-                        document.querySelector('#gekozen>*').addEventListener("click", () => history.push(0))
+                        document.querySelector(".classic").style.display = "none"
+                        document.querySelector(".postContent").innerHTML = `<div id="gekozen"><div id="gekozen_card"><p>${e.target.innerHTML}</p></div></div>`
+                        document.querySelector('#gekozen>*').addEventListener("click", () => history.go(0))
                     })
                 }
             }
@@ -49,10 +55,10 @@ const ShowContent = ({posts}) => {
                         document.querySelectorAll(".t-shirt li")[i].style.width = "100%"
                     }
                     document.querySelectorAll(".t-shirt li svg")[i].addEventListener("click", (e) => {
-                        console.log(e)
                         document.querySelector(".postContent").classList.add("center")
+                        document.querySelector(".t-shirt").style.display = "none"
                         document.querySelector(".postContent").innerHTML = `<div id="gekozen">${e.target.parentElement.innerHTML}</div>`
-                        document.querySelector('#gekozen>*').addEventListener("click", () => history.push(0))
+                        document.querySelector('#gekozen>*').addEventListener("click", () => history.go(0))
                     })
                 }
             }
@@ -70,7 +76,6 @@ const ShowContent = ({posts}) => {
         getPlanningpoker()
         MakeActive(params.id)
     });
-
     function MakeActive(id){
         for (let i=0; i<document.querySelectorAll("a").length; i++){
             document.querySelectorAll("a")[i].classList.remove("navItemActive")
@@ -80,37 +85,43 @@ const ShowContent = ({posts}) => {
         }
     }
     const params = useParams();
-    const content =[];
-    posts.map((post) => {
-        if (post.slug == params.id) {
-            if (post._embedded['wp:featuredmedia']){
-                content.push(`<div class="image_content"><div class="featured_image"><img src="${post._embedded['wp:featuredmedia'][0].source_url}"></div><div>${post.content.rendered}</div></div>`)
-                if (document.querySelector(".postContent")){
-                    document.querySelector(".postContent").classList.add("postContent_image")
-                }
-            } else {
-                if (document.querySelector(".postContent")) {
-                    if (document.querySelector(".postContent").classList.contains("postContent_image")) {
-                        document.querySelector(".postContent").classList.remove("postContent_image")
-                    }
-                }
-                if (post.content.rendered == "") {
-                    content.push("<p>Geen content beschikbaar</p>")
-                } else if (post.slug == "planning-poker") {
-                    content.push(
-                        `<div style="display: flex; justify-content: space-evenly"><div id="classic">Classic</div><div id="t-shirt">t-shirt sizing</div></div>
-                        ${post.content.rendered}`
+    if (posts.length > 0) {
+        return(
+        posts.map((post) => {
+        if (post.slug === params.id) {
+            if (post.fimg_url){
+                return (
+                    <div className={"postContent postContent_image"}>
+                        <div className={"image_content"}>
+                            <div className={"featured_image"}>
+                                <img src={post.fimg_url}/>
+                            </div>
+                            <div dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
+                        </div>
+                        </div>
+                )
+            } else if (post.content.rendered === "") {
+                    return (
+                        <div className={"postContent"}><p>Geen content beschikbaar</p></div>
+                    )
+                } else if (post.slug === "planning-poker") {
+                    return (
+                        <>
+                        <div className={"postContent"}>
+                            <div style={{display: "flex", justifyContent: "space-evenly"}}>
+                                <div id="classic">Classic</div>
+                                <div id="t-shirt">t-shirt sizing</div>
+                            </div>
+                        </div>
+                            <div dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
+                        </>
+
                     )
                 } else {
-                    content.push(post.content.rendered)
+                    return <div className={"postContent"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
                 }
-            }
         }
     })
-    if (posts.length > 0) {
-        return (
-            <div className={"postContent"} dangerouslySetInnerHTML={{__html: content}}>
-            </div>
         )
     }
     else{

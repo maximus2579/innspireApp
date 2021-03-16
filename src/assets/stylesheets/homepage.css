@@ -38,6 +38,7 @@
 
 #info, #uitloggen{
     font-size: 10pt;
+    cursor: pointer;
 }
 
 #profile *{
@@ -61,6 +62,7 @@
         color: transparent;
     }
     100%{
+        font-size: 12pt;
         color: var(--color-secondary);
     }
 }

@@ -61,7 +61,7 @@
         width: 45vh;
     }
     .classic li{
-        width: 20vh;
+        width: 18vh;
     }
 }
 
@@ -99,6 +99,12 @@
     }
     .hamburger{
         display: block;
+    }
+    .app>.center{
+        margin-top: 100px;
+    }
+    .fixedNav{
+        justify-content: center;
     }
 }
 

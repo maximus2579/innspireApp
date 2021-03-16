@@ -5,7 +5,6 @@ const Form = ({action}) => {
     let history = useHistory()
     document.body.style.height = "100%";
     document.body.style.alignItems = "center";
-    document.body.style.backgroundColor = "#EAEAEA"
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
@@ -89,6 +88,7 @@ const Form = ({action}) => {
                         localStorage.setItem('username', data.user_display_name)
                         localStorage.setItem('thema', data.thema)
                         localStorage.setItem('planningpoker', data.planning_poker)
+                        document.documentElement.classList.add(localStorage.getItem("thema"))
                         history.push("/")
                     }
                     else{

@@ -77,6 +77,10 @@ a:hover{
     margin-top: 0;
 }
 
+.postContent > *:last-child{
+    margin-bottom: 0;
+}
+
 .postContent > *{
     margin-left: 0;
     margin-right: 0;
@@ -124,18 +128,30 @@ a:hover{
 }
 
 .classic li{
+    display: flex;
     margin: 1vw;
-    width: 20%;
-    height: 16vw;
+    width: 18%;
+    height: 18vw;
     list-style: none;
-    text-align: center;
     background-color: white;
     color: black;
     padding: 10px;
-    font-size: 40pt;
+    font-size: 5vw;
     cursor: pointer;
-    border: 10px solid red;
-    font-weight: 900;
+    border: 20px solid red;
+    font-weight: 700;
+    box-shadow: var(--color-dropshadow);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.classic li p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .t-shirt{
@@ -167,6 +183,12 @@ a:hover{
     pointer-events: none;
 }
 
+.t-shirt li svg path{
+    fill: white;
+    stroke-width: 5px;
+    filter: drop-shadow(var(--color-dropshadow));
+}
+
 ul li div{
     padding: 5px;
 }
@@ -194,7 +216,7 @@ a{
 }
 
 #gekozen_card {
-    width: 20%;
+    width: 25%;
     height: 40vh;
     background-color: white;
     color: black;
@@ -203,7 +225,15 @@ a{
     font-weight: 900;
     padding: 10px;
     border: 20px solid red;
+    border-radius: 20px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#gekozen_card p{
+    width: 100%;
 }
 
 #gekozen{

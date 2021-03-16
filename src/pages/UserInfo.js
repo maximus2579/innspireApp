@@ -2,14 +2,6 @@ import {useEffect, useState} from 'react';
 import { useHistory } from 'react-router'
 
 const UserInfo = () => {
-    (function () {
-        if (localStorage.getItem('theme') === 'theme-dark') {
-            setTheme('theme-dark');
-        } else {
-            setTheme('theme-light');
-        }
-    })();
-
     function setTheme(themeName) {
         localStorage.setItem('theme', themeName);
         document.documentElement.className = themeName;
@@ -125,6 +117,7 @@ const UserInfo = () => {
                 else{
                     localStorage.setItem('thema', thema)
                     localStorage.setItem('planningpoker', planningpoker)
+                    document.documentElement.classList.add(localStorage.getItem("thema"))
                     history.go(0)
                 }
             })

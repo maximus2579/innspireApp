@@ -19,7 +19,7 @@ const SubHome = () => {
             }
         }
         if (id) {
-            fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/app?_embed&&categories=${id}&&_fields=slug,title,content,cf,_links`)
+            fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/app?categories=${id}`)
                 .then(response => response.json())
                 .then(data => setPosts(data))
         }

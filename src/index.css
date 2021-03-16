@@ -28,6 +28,7 @@ html{
   --color-primary: white;
   --color-secondary: #121212;
   --color-background: #EAEAEA;
+  --color-form: white;
   --color-dropshadow: 3px 3px 5px #ccc;
   --margin-content: 1vh;
   --padding-content: 1vh;
@@ -39,6 +40,7 @@ html{
   --color-primary: #121212;
   --color-secondary: white;
   --color-background: #121212;
+  --color-form: rgba(18, 18, 18, 1);
   --color-dropshadow: 0;
   --margin-content: 0;
   --padding-content: 0;
@@ -93,7 +95,7 @@ form{
   width: 400px;
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.25);
   padding: 20px;
-  background-color: white;
+  background-color: var(--color-primary);
 }
 
 #userInfo{
@@ -118,6 +120,7 @@ form{
 
 #userInfo > div:nth-child(2){
   width: 75%;
+  color: var(--color-secondary);
 }
 
 #userInfo > div:nth-child(2) h3{
@@ -150,6 +153,11 @@ form{
 
 form p{
   margin-bottom: 2px;
+  color: var(--color-secondary);
+}
+
+form label{
+  color: var(--color-secondary);
 }
 
 form input{
@@ -159,6 +167,7 @@ form input{
 }
 
 form h1{
+  color: var(--color-secondary);
   margin-top: 0;
 }
 

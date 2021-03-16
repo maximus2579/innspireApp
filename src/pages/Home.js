@@ -1,6 +1,6 @@
 import logo from "../assets/logo_innspire.png"
 import Starsection from "../components/Starsection"
-import SwitchTheme from "../components/SwitchTheme";
+// import SwitchTheme from "../components/SwitchTheme";
 import {Link, useHistory} from "react-router-dom";
 import {useEffect} from "react"
 
@@ -11,8 +11,7 @@ const Home = ({titles}) => {
     document.body.style.backgroundColor = null
 
     function logOut () {
-        localStorage.removeItem("token")
-        localStorage.removeItem("username")
+        localStorage.clear();
         window.location.reload();
     }
 
@@ -49,7 +48,7 @@ const Home = ({titles}) => {
     }, [])
     return (
         <div className={"app"}>
-            <div className={"fixedNav"}><SwitchTheme/><div id={"profile"}><Link to={"inloggen"} id={"inloggen"}><div>Inloggen</div></Link></div></div>
+            <div className={"fixedNav"}><div id={"profile"}><Link to={"inloggen"} id={"inloggen"}><div>Inloggen</div></Link></div></div>
             <div className={"center"}><img src={logo} alt={"Logo"} className={"logoHome"}/></div>
             <div className={"logoOptions"}>
                 {titles.map((title, index) => <Starsection key={index} title={title}/>)}

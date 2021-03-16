@@ -6,7 +6,7 @@ import {Link, Route, Switch,} from "react-router-dom"
 import ShowContent from "./ShowContent"
 import Loader from "react-loader-spinner"
 import React from "react";
-import SwitchTheme from "./SwitchTheme";
+// import SwitchTheme from "./SwitchTheme";
 import Calendar from "./Calendar"
 
 const ShowPosts = ({posts, param}) => {
@@ -27,7 +27,7 @@ const ShowPosts = ({posts, param}) => {
                     <nav>
                         <Link to={"/"}><img src={logoSrc} className={"logo"} alt={"Logo"}/></Link>
                         <div className={"last-items"}>
-                            <SwitchTheme/>
+                            {/*<SwitchTheme/>*/}
                             <div className={"hamburger"} onClick={hamburgerActivate}><GiHamburgerMenu/></div>
                         </div>
                     </nav>
@@ -51,7 +51,7 @@ const ShowPosts = ({posts, param}) => {
                             </Link>)}
                         </ul>
                         <div className={"last-items"}>
-                            <SwitchTheme/>
+                            {/*<SwitchTheme/>*/}
                             <div className={"hamburger"} onClick={hamburgerActivate}><GiHamburgerMenu/></div>
                         </div>
                     </nav>

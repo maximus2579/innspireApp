@@ -9,6 +9,10 @@ import UserInfo from "./pages/UserInfo";
 
 const App = () =>{
     const [categories, setCategories] = useState([]);
+    if (document.documentElement.classList.contains(null)){
+        localStorage.setItem("thema", "theme-light")
+    }
+    document.documentElement.classList.add(localStorage.getItem("thema"))
     useEffect(() => {
         async function getAllPostTypesTitles() {
             fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/categories?exclude=1&&hide_empty=true&&parent=0&&_fields=slug,name`)
@@ -16,6 +20,7 @@ const App = () =>{
                 .then(data => setCategories(data));
         }
         getAllPostTypesTitles();
+        document.documentElement.classList.add(localStorage.getItem("thema"))
     }, [])
     return (
       <Router>
