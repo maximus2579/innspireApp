@@ -106,6 +106,12 @@
     .fixedNav{
         justify-content: center;
     }
+    .t-shirt{
+        justify-content: center;
+    }
+    .classic{
+        justify-content: center;
+    }
 }
 
 @media only screen and (min-width: 701px) {

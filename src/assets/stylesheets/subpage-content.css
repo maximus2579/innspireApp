@@ -185,7 +185,7 @@ a:hover{
 
 .t-shirt li svg path{
     fill: white;
-    stroke-width: 5px;
+    stroke-width: 3px;
     filter: drop-shadow(var(--color-dropshadow));
 }
 
@@ -221,7 +221,7 @@ a{
     background-color: white;
     color: black;
     text-align: center;
-    font-size: 40pt;
+    font-size: 64pt;
     font-weight: 900;
     padding: 10px;
     border: 20px solid red;

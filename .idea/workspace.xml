@@ -3,22 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/subpage-content.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/subpage-content.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ShowContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ShowPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowPosts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SubHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SubHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UserInfo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +42,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\apps\innspireapp" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\apps\innspireapp\public" />
       <recent name="C:\apps\innspireapp\src\pages" />
       <recent name="C:\apps\innspireapp\src\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\apps\innspireapp" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -111,7 +97,7 @@
       <workItem from="1615536844618" duration="6851000" />
       <workItem from="1615554852129" duration="2968000" />
       <workItem from="1615796807965" duration="14080000" />
-      <workItem from="1615891047606" duration="6498000" />
+      <workItem from="1615891047606" duration="9459000" />
     </task>
     <servers />
   </component>
