@@ -247,9 +247,9 @@ a{
     cursor: pointer;
 }
 
-#gekozen_card>svg{
-    width: 4em;
-    height: 4em;
+#gekozen_card svg{
+
+    width: 100%;
 }
 
 #classic, #t-shirt{
