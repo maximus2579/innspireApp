@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env-cmdrc" beforeDir="false" afterPath="$PROJECT_DIR$/.env-cmdrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +34,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xampp/htdocs/wordpress" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -41,13 +42,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\apps\innspireapp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\apps\innspireapp\public" />
       <recent name="C:\apps\innspireapp\src\pages" />
       <recent name="C:\apps\innspireapp\src\assets" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\apps\innspireapp" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -99,7 +100,8 @@
       <workItem from="1615891047606" duration="10159000" />
       <workItem from="1616057325578" duration="3492000" />
       <workItem from="1616143911412" duration="11714000" />
-      <workItem from="1616416983872" duration="630000" />
+      <workItem from="1616416983872" duration="2561000" />
+      <workItem from="1616491880566" duration="649000" />
     </task>
     <servers />
   </component>
