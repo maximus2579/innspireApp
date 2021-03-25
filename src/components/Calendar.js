@@ -74,10 +74,17 @@ const Calendar = ({posts}) => {
                 if (events[i2].cf.app_field_datum) {
                 var beginTijd = events[i2].cf.app_field_begintijd
                 var eindTijd = events[i2].cf.app_field_eindtijd
-                var Datum = new Date(events[i2].cf.app_field_datum)
+                    var upcommingDate = events[i2].cf.app_field_datum[0]
+                    var splitDate = upcommingDate.split("-")
+                    console.log(new Date(splitDate))
+                var Datum = new Date(splitDate)
+                    console.log(Datum)
                 if (Datum >= firstnewDate && Datum <= secondnewDate) {
+                    if (Datum.getDay() === 0){
+                        Datum.set = 7
+                    }
                     for (let i3 = 0; i3<11; i3++){
-                        var content = document.querySelectorAll(".days>div>div")[Datum.getDay() - 1].querySelectorAll("div")[i3]
+                        var content = document.querySelectorAll(".days>div>div")[Datum.getDay() === 0 ? 6 : Datum.getDay() - 1].querySelectorAll("div")[i3]
                         var x = parseInt(content.querySelector("p").innerText.substring(0,2));
                         if (x >= parseInt(beginTijd) && x <= parseInt(eindTijd)){
                             content.classList.add("event")

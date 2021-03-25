@@ -239,6 +239,8 @@ a{
 #gekozen{
    display: flex;
     justify-content: center;
+    width: 100%;
+    align-items: center;
 }
 
 #gekozen svg{
@@ -247,8 +249,12 @@ a{
     cursor: pointer;
 }
 
-#gekozen_card svg{
+#gekozen>svg>path{
+    fill: white;
+    stroke-width: 3px;
+}
 
+#gekozen_card svg{
     width: 100%;
 }
 
@@ -256,6 +262,12 @@ a{
     color: var(--color-secondary);
     padding: 5px;
     cursor: pointer;
+}
+
+#planningpoker_parent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 figure{

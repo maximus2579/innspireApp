@@ -10,6 +10,7 @@ const ShowContent = ({posts}) => {
     var history = useHistory();
     console.log(localStorage.getItem("planningpoker"))
     var numbers = []
+    var size = []
     function getPlanningpoker () {
         for (let i = 0; i < document.querySelectorAll(".classic li").length; i++) {
             numbers.push(document.querySelectorAll(".classic li")[i].innerHTML)
@@ -27,16 +28,31 @@ const ShowContent = ({posts}) => {
                         document.querySelectorAll(".classic li")[i].innerHTML = ReactDOMServer.renderToString(<GiPizzaCutter/>)
                     }
                     document.querySelectorAll(".classic li")[i].addEventListener("click", (e) => {
-                        document.querySelector(".postContent").classList.add("center")
-                        document.querySelector(".classic").style.display = "none"
-                        document.querySelector(".postContent").innerHTML = `<div id="gekozen"><div id="gekozen_card"><p>${e.target.innerHTML}</p></div></div>`
-                        document.querySelector('#gekozen>*').addEventListener("click", () => history.go(0))
+                        var previouscontent = document.querySelector("#planningpoker_parent").innerHTML
+                        document.querySelector("#planningpoker_parent").innerHTML = `<div id="gekozen"><div id="gekozen_card"><p>${e.target.innerHTML}</p></div></div>`
+                        document.querySelector('#gekozen>*').addEventListener("click", () => {
+                            document.querySelector("#planningpoker_parent").innerHTML = previouscontent
+                            document.querySelector("#planningpoker_parent").innerHTML = previouscontent
+                            if (!localStorage.getItem("planningpoker")) {
+                                var key = "";
+                                var BTNs_planningpoker = document.querySelector(".postContent>div").children
+                                for (let i=0; i<BTNs_planningpoker.length; i++){
+                                    if (BTNs_planningpoker[i].classList.contains("navItemActive")){
+                                        key = BTNs_planningpoker[i]
+                                    }
+                                }
+                                getPlanningpoker()
+                                key.click()
+                            }
+                            else {
+                                getPlanningpoker()
+                            }
+                        })
                     })
                 }
             }
         }
         function tShirt(){
-            var size = []
             for (let i = 0; i < document.querySelectorAll(".t-shirt li").length; i++) {
                 size.push(document.querySelectorAll(".t-shirt li")[i].innerHTML)
             }
@@ -55,10 +71,25 @@ const ShowContent = ({posts}) => {
                         document.querySelectorAll(".t-shirt li")[i].style.width = "100%"
                     }
                     document.querySelectorAll(".t-shirt li svg")[i].addEventListener("click", (e) => {
-                        document.querySelector(".postContent").classList.add("center")
-                        document.querySelector(".t-shirt").style.display = "none"
-                        document.querySelector(".postContent").innerHTML = `<div id="gekozen">${e.target.parentElement.innerHTML}</div>`
-                        document.querySelector('#gekozen>*').addEventListener("click", () => history.go(0))
+                        console.log("hi")
+                        var previouscontent = document.querySelector("#planningpoker_parent").innerHTML
+                        document.querySelector("#planningpoker_parent").innerHTML = `<div id="gekozen">${e.target.parentElement.innerHTML}</div>`
+                        document.querySelector('#gekozen>*').addEventListener("click", () => {
+                            document.querySelector("#planningpoker_parent").innerHTML = previouscontent
+                            if (!localStorage.getItem("planningpoker")) {
+                                var key = "";
+                                var BTNs_planningpoker = document.querySelector(".postContent>div").children
+                                for (let i=0; i<BTNs_planningpoker.length; i++){
+                                   if (BTNs_planningpoker[i].classList.contains("navItemActive")){
+                                       key = BTNs_planningpoker[i]
+                                   }
+                                }
+                                getPlanningpoker()
+                                key.click()
+                            }
+                            else {
+                                getPlanningpoker()
+                            }})
                     })
                 }
             }
@@ -66,7 +97,7 @@ const ShowContent = ({posts}) => {
         if (document.getElementById('classic')) {
             classic()
             tShirt()
-            if (localStorage.getItem("planningpoker")){
+            if (localStorage.getItem("planningpoker")) {
                 document.getElementById(localStorage.getItem("planningpoker")).click()
             }
         }
@@ -106,15 +137,15 @@ const ShowContent = ({posts}) => {
                     )
                 } else if (post.slug === "planning-poker") {
                     return (
-                        <>
-                        <div className={"postContent"}>
+                        <div id={"planningpoker_parent"}>
+                            <div className={"postContent"}>
                             <div style={{display: "flex", justifyContent: "space-evenly"}}>
                                 <div id="classic">Classic</div>
                                 <div id="t-shirt">t-shirt sizing</div>
                             </div>
-                        </div>
+                            </div>
                             <div dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
-                        </>
+                        </div>
                     )
                 } else {
                     return <div className={"postContent"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
