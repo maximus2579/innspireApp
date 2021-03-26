@@ -27,15 +27,15 @@ const ShowContent = ({posts}) => {
                     if (document.querySelectorAll(".classic li")[i].innerText === "pizza slicer"){
                         document.querySelectorAll(".classic li")[i].innerHTML = ReactDOMServer.renderToString(<GiPizzaCutter/>)
                     }
+                    var previouscontent = document.querySelector("#planningpoker_parent").innerHTML
                     document.querySelectorAll(".classic li")[i].addEventListener("click", (e) => {
-                        var previouscontent = document.querySelector("#planningpoker_parent").innerHTML
                         document.querySelector("#planningpoker_parent").innerHTML = `<div id="gekozen"><div id="gekozen_card"><p>${e.target.innerHTML}</p></div></div>`
                         document.querySelector('#gekozen>*').addEventListener("click", () => {
-                            document.querySelector("#planningpoker_parent").innerHTML = previouscontent
                             document.querySelector("#planningpoker_parent").innerHTML = previouscontent
                             if (!localStorage.getItem("planningpoker")) {
                                 var key = "";
                                 var BTNs_planningpoker = document.querySelector(".postContent>div").children
+                                console.log(BTNs_planningpoker)
                                 for (let i=0; i<BTNs_planningpoker.length; i++){
                                     if (BTNs_planningpoker[i].classList.contains("navItemActive")){
                                         key = BTNs_planningpoker[i]
@@ -71,7 +71,6 @@ const ShowContent = ({posts}) => {
                         document.querySelectorAll(".t-shirt li")[i].style.width = "100%"
                     }
                     document.querySelectorAll(".t-shirt li svg")[i].addEventListener("click", (e) => {
-                        console.log("hi")
                         var previouscontent = document.querySelector("#planningpoker_parent").innerHTML
                         document.querySelector("#planningpoker_parent").innerHTML = `<div id="gekozen">${e.target.parentElement.innerHTML}</div>`
                         document.querySelector('#gekozen>*').addEventListener("click", () => {
