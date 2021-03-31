@@ -104,13 +104,17 @@ const Calendar = ({posts, param}) => {
                 for (let i=0; i<document.querySelectorAll(".day").length; i++) {
                     document.querySelectorAll(".day>h3")[i].innerText = document.querySelectorAll(".day")[i].innerText[0]
                 }
-                document.querySelector(".today").querySelectorAll("p")[1].innerText = ""
+                if (document.querySelector(".today")) {
+                    document.querySelector(".today").querySelectorAll("p")[1].innerText = ""
+                }
 
             } else {
                 for (let i=0; i<document.querySelectorAll(".day").length; i++) {
                     document.querySelectorAll(".day>h3")[i].innerText = week[i]
                 }
-                document.querySelector(".today").querySelectorAll("p")[1].innerText = "- Vandaag"
+                if (document.querySelector(".today")) {
+                    document.querySelector(".today").querySelectorAll("p")[1].innerText = "- Vandaag"
+                }
             }
         }
         if (param === "events") {
