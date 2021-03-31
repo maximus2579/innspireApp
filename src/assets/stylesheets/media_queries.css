@@ -74,6 +74,14 @@
 }
 
 @media only screen and (max-width: 700px) {
+    #userInfo{
+        width: 80% !important;
+        flex-wrap: wrap;
+    }
+
+    #userInfo>div:nth-child(1){
+        width: 100% !important;
+    }
     nav ul{
         display: none;
         flex-direction: column;
