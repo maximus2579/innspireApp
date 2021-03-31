@@ -78,7 +78,8 @@ const Calendar = ({posts, param}) => {
             }
         }
         if (events.length > 0) {
-            events.sort((a, b) => (a.cf.app_field_eindtijd < b.cf.app_field_eindtijd ? 1 : -1))
+            events.sort((a, b) => (a.cf.app_field_datum === b.cf.app_field_datum && a.cf.app_field_eindtijd < b.cf.app_field_eindtijd ? 1 : -1))
+            console.log(events)
             for (let i2 = 0; i2 < events.length; i2++) {
                 if (events[i2].cf.app_field_datum) {
                     var upcommingDate = events[i2].cf.app_field_datum[0]
