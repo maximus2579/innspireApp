@@ -270,6 +270,11 @@ a{
     flex-wrap: wrap;
 }
 
+#planningpoker_parent>div:nth-child(2){
+    width: 100%;
+    margin: 0 1vw;
+}
+
 figure{
     margin: 0;
 }
