@@ -18,6 +18,7 @@
     margin: 0;
     font-weight: 600;
     font-size: 18pt;
+    color: var(--color-secondary);
 }
 
 .calendar svg{
@@ -54,6 +55,7 @@
 #allDays > * > p{
     margin: 0;
     padding: 5px;
+    color: var(--color-secondary);
 }
 
 .day{
@@ -61,7 +63,6 @@
 }
 .days h3{
     color: var(--color-secondary);
-
     margin: 0;
     font-weight: 500;
     font-size: 12pt;
@@ -98,6 +99,7 @@
     cursor: pointer;
     border: 1px solid var(--color-secondary);
     background-color: var(--color-primary);
+    color: var(--color-secondary);
     width: 30px;
 }
 
@@ -119,7 +121,7 @@
 }
 
 .event p{
-    color: black !important;
+    color: var(--color-secondary) !important;
 }
 
 .event h4{
