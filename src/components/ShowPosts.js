@@ -26,10 +26,6 @@ const ShowPosts = ({posts, param}) => {
                 <>
                     <nav>
                         <Link to={"/"}><img src={logoSrc} className={"logo"} alt={"Logo"}/></Link>
-                        <div className={"last-items"}>
-                            {/*<SwitchTheme/>*/}
-                            <div className={"hamburger"} onClick={hamburgerActivate}><GiHamburgerMenu/></div>
-                        </div>
                     </nav>
                     <Calendar posts={posts}/>
                 </>
