@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/subpage-calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/subpage-calendar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ShowPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowPosts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +113,7 @@
       <workItem from="1616747787458" duration="4270000" />
       <workItem from="1617003321452" duration="17252000" />
       <workItem from="1617091838195" duration="18855000" />
-      <workItem from="1617178329885" duration="10213000" />
+      <workItem from="1617178329885" duration="11379000" />
     </task>
     <servers />
   </component>

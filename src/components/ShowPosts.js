@@ -27,7 +27,7 @@ const ShowPosts = ({posts, param}) => {
                     <nav>
                         <Link to={"/"}><img src={logoSrc} className={"logo"} alt={"Logo"}/></Link>
                     </nav>
-                    <Calendar posts={posts}/>
+                    <Calendar posts={posts} param={param}/>
                 </>
             )
         } else {

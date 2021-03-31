@@ -2,8 +2,7 @@ import {useEffect} from "react"
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 import {useHistory} from "react-router-dom"
 
-const Calendar = ({posts}) => {
-    const history = useHistory()
+const Calendar = ({posts, param}) => {
     var events = posts
     var d = new Date();
 
@@ -100,6 +99,25 @@ const Calendar = ({posts}) => {
             }
         }
     }
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                for (let i=0; i<document.querySelectorAll(".day").length; i++) {
+                    document.querySelectorAll(".day>h3")[i].innerText = document.querySelectorAll(".day")[i].innerText[0]
+                }
+                document.querySelector(".today").querySelectorAll("p")[1].innerText = ""
+
+            } else {
+                for (let i=0; i<document.querySelectorAll(".day").length; i++) {
+                    document.querySelectorAll(".day>h3")[i].innerText = week[i]
+                }
+                document.querySelector(".today").querySelectorAll("p")[1].innerText = "- Vandaag"
+            }
+        }
+        if (param === "events") {
+            var x = window.matchMedia("(max-width: 700px)")
+            myFunction(x) // Call listener function at run time
+            x.addEventListener('change', myFunction);
+        }
     }
     useEffect(() => {
         document.querySelector(".prev").addEventListener("click", () => {
@@ -112,24 +130,6 @@ const Calendar = ({posts}) => {
             setData()
         });
         setData()
-        function myFunction(x) {
-                if (x.matches) { // If media query matches
-                    for (let i=0; i<document.querySelectorAll(".day").length; i++) {
-                        document.querySelectorAll(".day>h3")[i].innerText = document.querySelectorAll(".day")[i].innerText[0]
-                    }
-                    document.querySelector(".today").querySelectorAll("p")[1].innerText = ""
-
-                } else {
-                    for (let i=0; i<document.querySelectorAll(".day").length; i++) {
-                        document.querySelectorAll(".day>h3")[i].innerText = week[i]
-                    }
-                    document.querySelector(".today").querySelectorAll("p")[1].innerText = "- Vandaag"
-                }
-        }
-
-        var x = window.matchMedia("(max-width: 700px)")
-        myFunction(x) // Call listener function at run time
-        x.addEventListener('change', myFunction);
     }, [])
 
     return (
