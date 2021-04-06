@@ -8,6 +8,7 @@ import Form from "./pages/Form"
 import UserInfo from "./pages/UserInfo";
 
 const App = () =>{
+    console.log("test")
     const [categories, setCategories] = useState([]);
     if (document.documentElement.classList.contains(null)){
         localStorage.setItem("thema", "theme-light")
