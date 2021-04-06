@@ -44,7 +44,6 @@ const UserInfo = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 setEmail(data.email)
                 setAchternaam(data.last_name)
                 setBijnaam(data.username)
@@ -107,7 +106,6 @@ const UserInfo = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log()
                 var code = document.getElementById("code")
                 if(data.code) {
                     code.style.display = "block"

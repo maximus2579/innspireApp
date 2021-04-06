@@ -1,6 +1,5 @@
 import {useEffect} from "react"
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
-import {useHistory} from "react-router-dom"
 
 const Calendar = ({posts, param}) => {
     var events = posts
@@ -62,7 +61,7 @@ const Calendar = ({posts, param}) => {
         }
         for (let i = 1; i <= lastDay; i++) {
                 if (i === new Date().getDate() && d.getMonth() === new Date().getMonth()) {
-                    days += `<div class="main-date today"><p style="width: 10%">${i}</p><p style="width: 50%">- Vandaag</p></div>`;
+                    days += `<div class="main-date today"><p style="width: 10%">${i}</p><p>- Vandaag</p></div>`;
                 } else {
                     days += `<div class="main-date"><p>${i}</p></div>`;
                 }
@@ -79,7 +78,6 @@ const Calendar = ({posts, param}) => {
         }
         if (events.length > 0) {
             events.sort((a, b) => (a.cf.app_field_datum === b.cf.app_field_datum && a.cf.app_field_eindtijd < b.cf.app_field_eindtijd ? 1 : -1))
-            console.log(events)
             for (let i2 = 0; i2 < events.length; i2++) {
                 if (events[i2].cf.app_field_datum) {
                     var upcommingDate = events[i2].cf.app_field_datum[0]

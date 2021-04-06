@@ -28,10 +28,10 @@
         height: 20vh;
     }
     form{
-        width: 80%;
+        width: 80% !important;
     }
     form input[type = submit]{
-        width: 100%;
+        width: 100% !important;
     }
     .switch{
         justify-content: center;

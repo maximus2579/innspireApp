@@ -17,7 +17,6 @@ const Home = ({titles}) => {
 
     function checkLogin () {
         if (localStorage.getItem("token")) {
-            console.log("hi")
             document.getElementById("profile").innerHTML = `<p id="username">${localStorage.getItem("username")}</p><p id="info">User info</p><p id="uitloggen">Uitloggen</p>`
             document.getElementById("uitloggen").addEventListener("click", () => logOut())
             document.getElementById("info").addEventListener("click", () => history.push('/user-info'))

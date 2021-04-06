@@ -1,4 +1,4 @@
-import {useParams, useHistory} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import React, {useEffect} from "react";
 import Loader from "react-loader-spinner";
 import {IoShirtOutline} from "react-icons/io5";
@@ -7,8 +7,6 @@ import ReactDOMServer from 'react-dom/server';
 
 
 const ShowContent = ({posts}) => {
-    var history = useHistory();
-    console.log(localStorage.getItem("planningpoker"))
     var numbers = []
     var size = []
     function getPlanningpoker () {
@@ -35,7 +33,6 @@ const ShowContent = ({posts}) => {
                             if (!localStorage.getItem("planningpoker")) {
                                 var key = "";
                                 var BTNs_planningpoker = document.querySelector(".postContent>div").children
-                                console.log(BTNs_planningpoker)
                                 for (let i=0; i<BTNs_planningpoker.length; i++){
                                     if (BTNs_planningpoker[i].classList.contains("navItemActive")){
                                         key = BTNs_planningpoker[i]

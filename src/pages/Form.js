@@ -23,7 +23,6 @@ const Form = ({action}) => {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
                     if (data.code){
                         let code = document.getElementById("code")
                         code.style.display = "block"
@@ -33,7 +32,6 @@ const Form = ({action}) => {
                             history.push("/inloggen")
                         }
                         else{
-                            console.log(data.code)
                             code.style.color = "red"
                             code.innerHTML = data.message
                             setUsername('')
@@ -82,7 +80,6 @@ const Form = ({action}) => {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
                     if (data.token){
                         localStorage.setItem('token', data.token)
                         localStorage.setItem('username', data.user_display_name)
