@@ -21,7 +21,7 @@
 
 @media only screen and (max-width: 500px) {
     .logoHome{
-        width: 100%;
+        width: 90%;
     }
     .classic li{
         width: 30%;
@@ -115,9 +115,6 @@
     }
     .hamburger{
         display: block;
-    }
-    .app>.center{
-        margin-top: 100px;
     }
     .fixedNav{
         justify-content: center;

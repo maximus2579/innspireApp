@@ -6,9 +6,6 @@ import {useEffect} from "react"
 
 const Home = ({titles}) => {
     let history = useHistory()
-    document.body.style.height = "100%";
-    document.body.style.alignItems = "center";
-    document.body.style.backgroundColor = null
 
     function logOut () {
         localStorage.clear();
