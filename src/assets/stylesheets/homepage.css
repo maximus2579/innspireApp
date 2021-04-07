@@ -1,7 +1,7 @@
 .logoHome{
     margin-top: 113px;
     align-self: flex-start;
-    width:40vw;
+    width: 40vw;
     filter: drop-shadow(3px 3px 5px #ccc);
 }
 
@@ -27,7 +27,7 @@
 .fixedNav{
     display: flex;
     justify-content: flex-end;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     padding: 10px;

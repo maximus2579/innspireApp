@@ -23,6 +23,10 @@
     .logoHome{
         width: 90%;
     }
+    .logoOptions svg{
+        width: 70px;
+        height: auto;
+    }
     .classic li{
         width: 30%;
         height: 20vh;
@@ -74,6 +78,9 @@
 }
 
 @media only screen and (max-width: 700px) {
+    .logoHome{
+        width: 60%;
+    }
     #userInfo{
         width: 80% !important;
         flex-wrap: wrap;
