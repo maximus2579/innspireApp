@@ -6,7 +6,6 @@ import {useEffect} from "react"
 
 const Home = ({titles}) => {
     let history = useHistory()
-
     function logOut () {
         localStorage.clear();
         window.location.reload();
