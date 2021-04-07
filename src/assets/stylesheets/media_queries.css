@@ -78,9 +78,6 @@
 }
 
 @media only screen and (max-width: 700px) {
-    .logoHome{
-        width: 60%;
-    }
     #userInfo{
         width: 80% !important;
         flex-wrap: wrap;
