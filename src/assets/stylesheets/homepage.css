@@ -51,7 +51,7 @@
 
 @keyframes example {
     0% {
-        font-size: 0 !important;
+        font-size: 0;
         color: transparent;
         transform: translate(0 , -25vh);
     }
@@ -60,11 +60,11 @@
         transform: translate(0, 0);
     }
     75% {
-        font-size: 12pt !important;
+        font-size: 12pt;
         color: transparent;
     }
     100%{
-        font-size: 12pt!important;
+        font-size: 12pt;
         color: var(--color-secondary);
     }
 }
