@@ -58,6 +58,7 @@
     50% {
         position: static;
         transform: translate(0, 0);
+        color: transparent;
     }
     75% {
         font-size: 12pt;
