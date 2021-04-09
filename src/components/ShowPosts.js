@@ -26,7 +26,7 @@ const ShowPosts = ({posts, param}) => {
         if (param == "events"){
             return (
                 <>
-                    <nav style={{justifyContent: "flex-start"}}>
+                    <nav>
                         <Link to={"/"}><img src={logoSrc} className={"logo"} alt={"Logo"}/></Link>
                         <ul>
                             <a onClick={(e) => {
@@ -50,6 +50,10 @@ const ShowPosts = ({posts, param}) => {
                         </li>
                             </a>
                         </ul>
+                        <div className={"last-items"}>
+                            {/*<SwitchTheme/>*/}
+                            <div className={"hamburger"} onClick={hamburgerActivate}><GiHamburgerMenu/></div>
+                        </div>
                     </nav>
                     {calendarView === true ? <Calendar posts={posts} param={param}/> : <ListEvents posts={posts}/>}
                 </>
