@@ -143,7 +143,8 @@ const ShowContent = ({posts}) => {
                             <div dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
                         </div>
                     )
-                } else {
+                }
+            else {
                     return <div className={"postContent"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
                 }
         }

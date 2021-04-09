@@ -195,3 +195,24 @@
     cursor: pointer;
     transform: scale(1.05);
 }
+
+.listContent{
+    width: 100%;
+    margin: 0 1vw;
+}
+
+.eventItem{
+    background-color: var(--color-primary);
+    box-shadow: var(--color-dropshadow);
+    padding: var(--padding-content);
+    color: var(--font-color);
+    margin-bottom: 2vw;
+}
+
+.eventItem h3{
+    margin: 0 0 5px 0;
+}
+
+.eventItemString{
+    font-size: 11pt;
+}

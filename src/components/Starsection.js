@@ -5,10 +5,12 @@ import {AiFillStar} from "react-icons/ai"
 const Starsection = ({title}) => {
     return (
         <div>
+            <Link id={"link"} to={"/" +title.slug}>
             <IconContext.Provider value={{ size: "100px", color: "white" }}>
                     <AiFillStar/>
             </IconContext.Provider>
-            <div className={"center"}><Link to={"/" +title.slug}>{title.name}</Link></div>
+            <div className={"center"}>{title.name}</div>
+            </Link>
         </div>
     );
 };

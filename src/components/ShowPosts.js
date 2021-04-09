@@ -5,11 +5,13 @@ import {IconContext} from "react-icons";
 import {Link, Route, Switch,} from "react-router-dom"
 import ShowContent from "./ShowContent"
 import Loader from "react-loader-spinner"
-import React from "react";
+import {useState} from "react";
 // import SwitchTheme from "./SwitchTheme";
 import Calendar from "./Calendar"
+import ListEvents from "./ListEvents";
 
 const ShowPosts = ({posts, param}) => {
+    const [calendarView, setCalendarView] = useState(false);
     document.body.style.height = null;
     document.body.style.alignItems = null;
     document.body.style.backgroundColor = null;
@@ -24,10 +26,32 @@ const ShowPosts = ({posts, param}) => {
         if (param == "events"){
             return (
                 <>
-                    <nav>
+                    <nav style={{justifyContent: "flex-start"}}>
                         <Link to={"/"}><img src={logoSrc} className={"logo"} alt={"Logo"}/></Link>
+                        <ul>
+                            <a onClick={(e) => {
+                                setCalendarView(false)
+                            }}>
+                                <li className={"navItems"}>
+                                    <IconContext.Provider value={{size: "30px", color: "white"}}>
+                                        <AiFillStar/>
+                                    </IconContext.Provider>
+                                    <div>List</div>
+                                </li>
+                            </a>
+                            <a onClick={(e) => {
+                                setCalendarView(true)
+                            }}>
+                        <li className={"navItems"}>
+                            <IconContext.Provider value={{size: "30px", color: "white"}}>
+                                <AiFillStar/>
+                            </IconContext.Provider>
+                            <div>Calendar</div>
+                        </li>
+                            </a>
+                        </ul>
                     </nav>
-                    <Calendar posts={posts} param={param}/>
+                    {calendarView === true ? <Calendar posts={posts} param={param}/> : <ListEvents posts={posts}/>}
                 </>
             )
         } else {
