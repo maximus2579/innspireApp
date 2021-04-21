@@ -82,6 +82,7 @@ const PlanningPoker = ({post}) => {
                 }
             }
         }
+        console.log(localStorage.getItem("planningpoker"))
         if (document.getElementById('classic')) {
             classic()
             tShirt()
