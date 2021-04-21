@@ -5,6 +5,7 @@ import PlanningPoker from "./PlanningPoker";
 
 
 const ShowContent = ({posts}) => {
+    console.log("hi")
     useEffect(() => {
         MakeActive(params.id)
     });

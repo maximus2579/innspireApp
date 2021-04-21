@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PlanningPoker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlanningPoker.js" afterDir="false" />
-    </list>
+    <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +120,7 @@
       <workItem from="1618304243389" duration="40000" />
       <workItem from="1618819362393" duration="2385000" />
       <workItem from="1618907527057" duration="2396000" />
-      <workItem from="1618991731000" duration="1804000" />
+      <workItem from="1618991731000" duration="2376000" />
     </task>
     <servers />
   </component>
