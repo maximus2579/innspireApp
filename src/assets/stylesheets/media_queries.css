@@ -1,32 +1,4 @@
-@media only screen and (max-width: 300px) {
-    @keyframes example {
-        0% {
-            font-size: 0;
-            color: transparent;
-            transform: translate(0 , -1vh);
-        }
-        50% {
-            position: static;
-            transform: translate(0, 0);
-        }
-        75% {
-            font-size: 12pt;
-            color: transparent;
-        }
-        100%{
-            color: var(--color-secondary);
-        }
-    }
-}
-
 @media only screen and (max-width: 500px) {
-    .logoHome{
-        width: 90%;
-    }
-    .logoOptions svg{
-        width: 70px;
-        height: auto;
-    }
     .classic li{
         width: 30%;
         height: 20vh;
@@ -44,27 +16,6 @@
     .switch > *{
         width: 120px;
         font-size: 16pt !important;
-    }
-}
-
-@media only screen and (max-width: 1199px) {
-    @keyframes example {
-        0% {
-            font-size: 0;
-            color: transparent;
-            transform: translate(0 , -18vh);
-        }
-        50% {
-            position: static;
-            transform: translate(0, 0);
-        }
-        75% {
-            font-size: 12pt;
-            color: transparent;
-        }
-        100%{
-            color: var(--color-secondary);
-        }
     }
 }
 
@@ -102,9 +53,6 @@
         align-items: start;
         order: 3;
     }
-    nav ul a{
-        margin: 0;
-    }
     nav{
         justify-content: space-between;
     }
@@ -139,27 +87,7 @@
 }
 
 @media only screen and (min-width: 701px) {
-    nav ul{
-        display: flex !important;
-    }
     .sideNav{
         display: flex;
-    }
-}
-
-@media only screen and (max-width: 666px) {
-    @keyframes example1 {
-        0% {
-            width: 2vw;
-        }
-        30%{
-            width: 2vw;
-        }
-        31%{
-            width: 20vw;
-        }
-        50%{
-            width: 30vw;
-        }
     }
 }

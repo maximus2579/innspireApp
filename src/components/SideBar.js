@@ -7,12 +7,12 @@ const SideBar = ({titles, posts}) => {
         <div className={"sideNav"}>
                 <div>
                     {titles.map((title, index) =>
-                        <div className={"sideNavItems"}>
+                        <div key={index} className={"sideNavItems"}>
                         <div className={"navCat"}>
                             <IconContext.Provider value={{size: "30px", color: "white"}}>
                                 <AiFillStar/>
                             </IconContext.Provider>
-                            <div key={index} className={"navCatLabel"}>{title.name}</div>
+                            <div className={"navCatLabel"}>{title.name}</div>
                         </div>
                         <div className={"navTitleLabel"}>
                             {title.slug === "events" ? <div key={index}><Link to={{pathname:`/${title.slug}/upcomming`}} data={"upcomming"}>upcomming</Link></div> : posts.map((post, index) =>
