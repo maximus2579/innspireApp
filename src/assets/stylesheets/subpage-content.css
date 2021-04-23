@@ -1,5 +1,11 @@
 .logo{
-    width: 100px;
+   width: 80px;
+}
+
+.contentSection{
+    margin-top: 100px;
+    margin-left: 200px;
+    padding: 1vw;
 }
 
 nav{
@@ -27,9 +33,15 @@ nav ul{
 .navItems{
     list-style: none;
     display: flex;
-    justify-content: center;
     align-items: center;
     font-size: 16pt;
+    pointer-events: none;
+}
+
+.navCat{
+    display: flex;
+    font-size: 14pt;
+    font-weight: 500;
     pointer-events: none;
 }
 
@@ -57,9 +69,7 @@ a:hover{
     background-color: var(--color-primary);
     box-shadow: var(--color-dropshadow);
     padding: var(--padding-content);
-    margin: 0 1vw;
     color: var(--font-color);
-    width: 100%;
 }
 
 .postContent_image{
@@ -70,7 +80,6 @@ a:hover{
     padding: 0;
     margin: 0 1vw;
     color: var(--font-color);
-    width: 100%;
 }
 
 .postContent > *:first-child{

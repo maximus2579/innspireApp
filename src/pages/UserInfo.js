@@ -9,6 +9,8 @@ const UserInfo = () => {
     document.body.style.height = "100%";
     document.body.style.alignItems = "center";
     document.body.style.backgroundColor = null
+    document.querySelector("#root").style.justifyContent = "center";
+    document.querySelector("#root").style.display = "flex";
 
     const history = useHistory();
     const [email, setEmail] = useState("")

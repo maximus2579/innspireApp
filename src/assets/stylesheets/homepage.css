@@ -25,25 +25,80 @@
 
 .fixedNav{
     display: flex;
-    justify-content: flex-end;
-    position: absolute;
+    justify-content: space-between;
+    position: fixed;
     top: 0;
     width: 100%;
     align-items: center;
+    background-color: var(--color-primary);
+    height: 100px;
 }
 
 .fixedNav>*{
     padding: 10px;
 }
 
-#info, #uitloggen{
-    font-size: 10pt;
-    cursor: pointer;
+.dropdown{
+    display: none;
+    position: fixed;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: var(--color-primary);
+    padding: 10px;
 }
 
-#profile *{
+.dropdown > *{
+    display: block;
+    font-size: 10pt;
+    cursor: pointer;
+    color: var(--color-secondary);
+    margin: 0;
+    padding: 5px 0;
+}
+
+
+#profile:hover .dropdown {display: block}
+
+#profile{
+    position: relative;
+    display: inline-block;
+}
+
+#profile #username{
     color: var(--color-secondary);
     margin: 5px;
+}
+
+.sideNav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    background-color: var(--color-primary);
+    height: 100%;
+    margin-top: 100px;
+    width: 200px;
+}
+
+.sideNav svg{
+   fill: var(--color-secondary);
+}
+
+.sideNavItems{
+    margin: 10px;
+    width: 100%;
+}
+
+.navCatLabel{
+    margin-left: 10px;
+}
+
+.navTitleLabel{
+    margin-left: 40px;
+}
+
+.navTitleLabel div{
+    margin-bottom: 10px;
 }
 
 

@@ -5,6 +5,8 @@ const Form = ({action}) => {
     let history = useHistory()
     document.body.style.height = "100%";
     document.body.style.alignItems = "center";
+    document.querySelector("#root").style.justifyContent = "center";
+    document.querySelector("#root").style.display = "flex";
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
@@ -67,6 +69,7 @@ const Form = ({action}) => {
                 <label htmlFor={"password"}>Wachtwoord:</label><input required type="password" name={"password"} id={"password"} value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <input type={"submit"}/>
                 <p id={"code"}></p>
+                <Link to={"/"}><div style={{color: "blue", margin: "10px 0"}}>Homepagina</div></Link>
             </form>
         );
     } else {
@@ -109,6 +112,7 @@ const Form = ({action}) => {
                 <input type={"submit"}/>
                 <p>Nog geen account?</p>
                 <Link to={"/registreren"}><div style={{color: "blue", marginBottom: "10px"}}>registreren</div></Link>
+                <Link to={"/"}><div style={{color: "blue", margin: "10px 0"}}>Homepagina</div></Link>
             </form>
         );
     }

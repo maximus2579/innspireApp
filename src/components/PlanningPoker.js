@@ -66,7 +66,6 @@ const PlanningPoker = ({post}) => {
                         document.querySelector("#planningpoker_parent").innerHTML = `<div id="gekozen">${e.target.parentElement.innerHTML}</div>`
                         document.querySelector('#gekozen>*').addEventListener("click", () => {
                             document.querySelector("#planningpoker_parent").innerHTML = previouscontent
-
                                 var key = "";
                                 var BTNs_planningpoker = document.querySelector(".postContent>div").children
                                 for (let i=0; i<BTNs_planningpoker.length; i++){
@@ -76,7 +75,6 @@ const PlanningPoker = ({post}) => {
                                 }
                                 getPlanningpoker()
                                 key.click()
-
                            })
                     })
                 }
@@ -95,7 +93,7 @@ const PlanningPoker = ({post}) => {
     });
     return (
     <>
-        <div className={"postContent"}>
+        <div className={"postContent"} style={{width: "100%"}}>
             <div style={{display: "flex", justifyContent: "space-evenly"}}>
                 <div id="classic">Classic</div>
                 <div id="t-shirt">t-shirt sizing</div>

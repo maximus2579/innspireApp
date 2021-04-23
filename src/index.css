@@ -12,8 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
@@ -26,7 +24,7 @@ html{
 .theme-light {
   --color-primary: white;
   --color-secondary: #121212;
-  --color-background: #EAEAEA;
+  --color-background: #F7F7F7;
   --color-form: white;
   --color-dropshadow: 3px 3px 5px #ccc;
   --margin-content: 1vh;
@@ -58,19 +56,11 @@ code {
 }
 
 .app{
-  margin: 10px;
   width: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
 }
 
 #root{
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 /*button switch theme*/
