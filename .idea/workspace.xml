@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ShowContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +130,7 @@
       <workItem from="1618907527057" duration="2396000" />
       <workItem from="1618991731000" duration="14353000" />
       <workItem from="1619081181707" duration="17747000" />
-      <workItem from="1619165162072" duration="9225000" />
+      <workItem from="1619165162072" duration="14608000" />
     </task>
     <servers />
   </component>
@@ -159,13 +163,13 @@
       <screen x="1920" y="0" width="2560" height="1400" />
     </state>
     <state x="2244" y="349" key="SettingsEditor/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1615214198304" />
-    <state x="208" y="176" width="549" height="534" key="find.popup" timestamp="1619166887301">
+    <state x="208" y="176" width="549" height="534" key="find.popup" timestamp="1619187357243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="2180" y="222" width="556" height="596" key="find.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1615459782546" />
     <state x="2267" y="222" width="586" height="596" key="find.popup/0.0.1536.824/1920.0.2560.1040@1920.0.2560.1040" timestamp="1619096454063" />
     <state x="2267" y="299" width="586" height="801" key="find.popup/0.0.1536.824/1920.0.2560.1400@1920.0.2560.1400" timestamp="1619014109291" />
-    <state x="208" y="176" width="549" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1619166887301" />
+    <state x="208" y="176" width="549" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1619187357243" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1617110574175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

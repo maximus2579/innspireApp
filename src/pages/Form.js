@@ -14,7 +14,7 @@ const Form = ({action}) => {
     const [bedrijf, setBedrijf] = useState("");
     const [achternaam, setAchternaam] = useState("");
     const [voornaam, setVoornaam] = useState("");
-    if (action == "Registreren"){
+    if (action === "Registreren"){
         async function addUser (username, password, email, voornaam, achternaam, telefoonnummer, bedrijf){
             fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/users/register`, {
                 method: "POST", headers: {

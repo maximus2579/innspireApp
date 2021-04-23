@@ -4,10 +4,11 @@ import logoSrc from "../assets/logo_innspire.png";
 import {GiHamburgerMenu} from "react-icons/all";
 
 function hamburgerActivate(){
-    if (document.querySelector(".sideNav").style.display == "flex"){
-        document.querySelector(".sideNav").style.display = "none"
+    if (document.querySelector(".sideNav").classList.contains("visible")){
+        document.querySelector(".sideNav").classList.add("hide")
     } else{
-        document.querySelector(".sideNav").style.display = "flex"
+        document.querySelector(".sideNav").classList.remove("hide")
+        document.querySelector(".sideNav").classList.add("visible")
     }
 }
 

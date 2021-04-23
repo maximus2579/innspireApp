@@ -63,6 +63,14 @@ code {
   width: 100%;
 }
 
+.visible{
+  display: flex;
+}
+
+.hide{
+  display: none;
+}
+
 /*button switch theme*/
 #switch{
   background-color: transparent;

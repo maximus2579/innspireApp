@@ -32,9 +32,6 @@
     .contentSection{
         margin-left: 0;
     }
-    .sideNav{
-        display: none;
-    }
 
     #userInfo{
         width: 80% !important;
@@ -83,11 +80,5 @@
     }
     .classic{
         justify-content: center;
-    }
-}
-
-@media only screen and (min-width: 701px) {
-    .sideNav{
-        display: flex;
     }
 }

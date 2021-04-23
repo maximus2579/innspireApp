@@ -25,14 +25,14 @@ const ShowContent = ({posts}) => {
         if (params.id === "upcomming" && post.categories[0] === 11){
             allPosts.join(post)
                 return(
-                    <ListEvents posts={allPosts}/>
+                    <ListEvents key={index} posts={allPosts}/>
                 )
             }
         else if (post.slug === params.id) {
             if (post.fimg_url){
                 return (
-                    <div className={"contentSection"}>
-                    <div key={index} className={"postContent postContent_image"}>
+                    <div key={index} className={"contentSection"}>
+                    <div className={"postContent postContent_image"}>
                         <div className={"image_content"}>
                             <div className={"featured_image"}>
                                 <img src={post.fimg_url}/>
@@ -44,14 +44,14 @@ const ShowContent = ({posts}) => {
                 )
             } else if (post.content.rendered === "") {
                     return (
-                        <div className={"contentSection"}>
-                        <div key={index} className={"postContent"}><p>Geen content beschikbaar</p></div>
+                        <div key={index} className={"contentSection"}>
+                        <div className={"postContent"}><p>Geen content beschikbaar</p></div>
                         </div>
                     )
                 } else if (post.slug === "planning-poker") {
                     return (
-                        <div className={"contentSection"}>
-                        <div key={index} id={"planningpoker_parent"}>
+                        <div key={index} className={"contentSection"}>
+                        <div id={"planningpoker_parent"}>
                            <PlanningPoker post={post}/>
                         </div>
                         </div>
@@ -59,8 +59,8 @@ const ShowContent = ({posts}) => {
                 }
             else {
                     return (
-                        <div className={"contentSection"}>
-                            <div key={index} className={"postContent"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
+                        <div key={index} className={"contentSection"}>
+                            <div className={"postContent"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
                         </div>
                     )
                 }
