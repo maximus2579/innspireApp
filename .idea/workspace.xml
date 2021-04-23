@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/subpage-calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/subpage-calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Calendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ShowPosts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UserInfo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +126,7 @@
       <workItem from="1618907527057" duration="2396000" />
       <workItem from="1618991731000" duration="14353000" />
       <workItem from="1619081181707" duration="17747000" />
-      <workItem from="1619165162072" duration="4959000" />
+      <workItem from="1619165162072" duration="9225000" />
     </task>
     <servers />
   </component>
