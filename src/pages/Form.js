@@ -111,7 +111,7 @@ const Form = ({action}) => {
                 <label htmlFor={"password"}>Wachtwoord:</label><input required type="password" name={"password"} id={"password"} value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <input type={"submit"}/>
                 <p>Nog geen account?</p>
-                <Link to={"/registreren"}><div style={{color: "blue", marginBottom: "10px"}}>registreren</div></Link>
+                <Link to={"/registreren"}><div style={{color: "blue", marginBottom: "10px"}}>Registreren</div></Link>
                 <Link to={"/"}><div style={{color: "blue", margin: "10px 0"}}>Homepagina</div></Link>
             </form>
         );
