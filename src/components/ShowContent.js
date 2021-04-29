@@ -9,16 +9,20 @@ const ShowContent = ({posts}) => {
     const params = useParams();
     function myFunction(x) {
         if (x.matches) { // If media query matches
-            document.querySelector(".contentSection").style.marginLeft = ""
+            if (document.querySelector(".contentSection")) {
+                document.querySelector(".contentSection").style.marginLeft = ""
+            }
         } else {
-            document.querySelector(".contentSection").style.marginLeft = document.querySelector(".sideNav").offsetWidth.toString() + "px"
+            if (document.querySelector(".contentSection")) {
+                document.querySelector(".contentSection").style.marginLeft = document.querySelector(".sideNav").offsetWidth.toString() + "px"
+            }
         }
     }
     var x = window.matchMedia("(max-width: 700px)")
     function MakeActive(id){
         for (let i=0; i<document.querySelectorAll(".sideNav a").length; i++){
             document.querySelectorAll(".sideNav a")[i].classList.remove("navItemActive")
-            if (document.querySelectorAll(".sideNav a")[i].attributes[0].value == id){
+            if (document.querySelectorAll(".sideNav a")[i].attributes[0].value === id){
                 document.querySelectorAll(".sideNav a")[i].classList.add("navItemActive")
             }
         }
