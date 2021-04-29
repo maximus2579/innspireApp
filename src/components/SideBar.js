@@ -8,14 +8,11 @@ const SideBar = ({titles, posts}) => {
         if (x.matches) { // If media query matches
             document.querySelector(".sideNav").classList.remove("visible")
             document.querySelector(".sideNav").classList.add("hide")
-            document.querySelector(".contentSection").style.marginLeft = ""
         } else {
             document.querySelector(".sideNav").classList.remove("hide")
             document.querySelector(".sideNav").classList.add("visible")
-            document.querySelector(".contentSection").style.marginLeft = document.querySelector(".sideNav").offsetWidth.toString() + "px"
         }
     }
-
     var x = window.matchMedia("(max-width: 700px)")
     // Attach listener function on state changes
     useEffect(() => {

@@ -7,6 +7,14 @@ import ListEvents from "./ListEvents";
 
 const ShowContent = ({posts}) => {
     const params = useParams();
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+            document.querySelector(".contentSection").style.marginLeft = ""
+        } else {
+            document.querySelector(".contentSection").style.marginLeft = document.querySelector(".sideNav").offsetWidth.toString() + "px"
+        }
+    }
+    var x = window.matchMedia("(max-width: 700px)")
     function MakeActive(id){
         for (let i=0; i<document.querySelectorAll(".sideNav a").length; i++){
             document.querySelectorAll(".sideNav a")[i].classList.remove("navItemActive")
@@ -17,6 +25,8 @@ const ShowContent = ({posts}) => {
     }
     useEffect(() => {
         MakeActive(params.id)
+        myFunction(x)
+        x.addListener(myFunction)
     });
     if (posts.length > 0) {
         posts.sort((a, b) => (a.cf.app_field_datum > b.cf.app_field_datum ?  1 : -1))
