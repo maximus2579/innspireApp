@@ -1,14 +1,13 @@
-import {Link, useHistory} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {useEffect} from "react"
 import Body from "../components/Body"
-import logoSrc from "../assets/logo_innspire.png";
+
 import Header from "../components/Header";
 
 const Home = ({titles, posts}) => {
     let history = useHistory()
     function logOut () {
         localStorage.clear();
-        localStorage.setItem("thema", "theme-light")
         window.location.reload();
     }
 

@@ -5,8 +5,9 @@ import {GiHamburgerMenu} from "react-icons/all";
 
 function hamburgerActivate(){
     if (document.querySelector(".sideNav").classList.contains("visible")){
+        document.querySelector(".sideNav").classList.remove("visible")
         document.querySelector(".sideNav").classList.add("hide")
-    } else{
+    } else if (document.querySelector(".sideNav").classList.contains("hide")){
         document.querySelector(".sideNav").classList.remove("hide")
         document.querySelector(".sideNav").classList.add("visible")
     }

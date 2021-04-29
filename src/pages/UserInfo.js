@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import { useHistory } from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 
 const UserInfo = () => {
     function setTheme(themeName) {
@@ -160,6 +160,7 @@ const UserInfo = () => {
                     <div id={"submit_div"}><div onClick={(e) => editUser(e)}>Gegevens wijzigen</div></div>
                     <p id={"code"}></p>
                 </div>
+                <Link to={"/"}><div style={{color: "blue", margin: "10px 0"}}>Homepagina</div></Link>
             </div>
         </form>
     );

@@ -6,6 +6,7 @@ import ListEvents from "./ListEvents";
 
 
 const ShowContent = ({posts}) => {
+    const params = useParams();
     function MakeActive(id){
         for (let i=0; i<document.querySelectorAll(".sideNav a").length; i++){
             document.querySelectorAll(".sideNav a")[i].classList.remove("navItemActive")
@@ -14,25 +15,21 @@ const ShowContent = ({posts}) => {
             }
         }
     }
-    const params = useParams();
-    var allPosts = []
     useEffect(() => {
         MakeActive(params.id)
     });
     if (posts.length > 0) {
+        posts.sort((a, b) => (a.cf.app_field_datum > b.cf.app_field_datum ?  1 : -1))
         return(
-        posts.map((post, index) => {
-        if (params.id === "upcomming" && post.categories[0] === 11){
-            allPosts.join(post)
-                return(
-                    <ListEvents key={index} posts={allPosts}/>
-                )
-            }
+            <div className={"contentSection"}>
+                {posts.map((post, index) => {
+        if (params.id === "upcomming" && post.categories[0] === 11 && new Date(post.cf.app_field_datum) > new Date()) {
+            return <ListEvents key={index} post={post}/>
+        }
         else if (post.slug === params.id) {
             if (post.fimg_url){
                 return (
-                    <div key={index} className={"contentSection"}>
-                    <div className={"postContent postContent_image"}>
+                    <div key={index} className={"postContent postContent_image"}>
                         <div className={"image_content"}>
                             <div className={"featured_image"}>
                                 <img src={post.fimg_url}/>
@@ -40,32 +37,24 @@ const ShowContent = ({posts}) => {
                             <div dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
                         </div>
                         </div>
-                    </div>
                 )
             } else if (post.content.rendered === "") {
                     return (
-                        <div key={index} className={"contentSection"}>
-                        <div className={"postContent"}><p>Geen content beschikbaar</p></div>
-                        </div>
+                        <div key={index} className={"postContent"}><p>Geen content beschikbaar</p></div>
                     )
                 } else if (post.slug === "planning-poker") {
                     return (
-                        <div key={index} className={"contentSection"}>
-                        <div id={"planningpoker_parent"}>
+                        <div key={index} id={"planningpoker_parent"}>
                            <PlanningPoker post={post}/>
-                        </div>
                         </div>
                     )
                 }
             else {
-                    return (
-                        <div key={index} className={"contentSection"}>
-                            <div className={"postContent"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
-                        </div>
-                    )
+                    return <div key={index} className={"postContent"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
                 }
         }
-    })
+    })}
+            </div>
         )
     }
     else{

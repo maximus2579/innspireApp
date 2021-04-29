@@ -9,8 +9,14 @@ import UserInfo from "./pages/UserInfo";
 const App = () =>{
     const [categories, setCategories] = useState([]);
     const [posts, setPosts] = useState([]);
+    if (!localStorage.getItem("thema")){
+        localStorage.setItem("thema", "theme-light")
+        document.documentElement.classList.add(localStorage.getItem("thema"))
+    } else{
+        document.documentElement.classList.add(localStorage.getItem("thema"))
+    }
     async function getAllPostTypesTitles() {
-        fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/categories?exclude=1&&hide_empty=true&&parent=0&&_fields=slug,name,id`)
+        fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/categories?exclude=1&&hide_empty=true&&_fields=slug,name,id, parent, children`)
             .then(response => response.json())
             .then(data => setCategories(data));
     }
@@ -22,7 +28,7 @@ const App = () =>{
     useEffect(() => {
         getAllPostTypesTitles();
         getAllPostTypes();
-        document.documentElement.classList.add(localStorage.getItem("thema"))
+
     }, [])
 
     return (

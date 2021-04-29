@@ -52,7 +52,31 @@
     background-color: var(--color-primary);
     height: 100%;
     margin-top: 100px;
-    width: 200px;
+    border-right: 1px solid var(--color-secondary);
+    padding-right: 10px;
+}
+
+.navCat{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.navSubCat{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 10px;
+}
+
+
+.cat{
+    display: flex;
+    width: 100%;
+    font-size: 14pt;
+    font-weight: 500;
+    pointer-events: none;
+    color: var(--color-secondary);
 }
 
 .sideNav svg{
@@ -61,7 +85,6 @@
 
 .sideNavItems{
     margin: 10px;
-    width: 100%;
 }
 
 .navCatLabel{
@@ -69,9 +92,14 @@
 }
 
 .navTitleLabel{
+
     margin-left: 40px;
 }
 
-.navTitleLabel div{
+.navTitleLabel>div{
     margin-bottom: 10px;
+}
+
+.navSubCatLabel{
+    margin: 0;
 }

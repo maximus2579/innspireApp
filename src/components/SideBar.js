@@ -8,9 +8,11 @@ const SideBar = ({titles, posts}) => {
         if (x.matches) { // If media query matches
             document.querySelector(".sideNav").classList.remove("visible")
             document.querySelector(".sideNav").classList.add("hide")
+            document.querySelector(".contentSection").style.marginLeft = ""
         } else {
             document.querySelector(".sideNav").classList.remove("hide")
             document.querySelector(".sideNav").classList.add("visible")
+            document.querySelector(".contentSection").style.marginLeft = document.querySelector(".sideNav").offsetWidth.toString() + "px"
         }
     }
 
@@ -20,34 +22,45 @@ const SideBar = ({titles, posts}) => {
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction)
     });
+
     return (
         <div className={"sideNav"}>
                 <div>
                     {titles.map((title, index) =>
+                     title.parent === 0 ?
                         <div key={index} className={"sideNavItems"}>
-                        <div className={"navCat"}>
-                            <IconContext.Provider value={{size: "30px", color: "white"}}>
-                                <AiFillStar/>
-                            </IconContext.Provider>
-                            <div className={"navCatLabel"}>{title.name}</div>
-                        </div>
-                        <div className={"navTitleLabel"}>
-                            {title.slug === "events" ? <div key={index}><Link to={{pathname:`/${title.slug}/upcomming`}} data={"upcomming"}>upcomming</Link></div> : posts.map((post, index) =>
-                                title.id === post.categories[0] ? <div key={index}><Link onClick={() => {
-                                    if (window.matchMedia("(max-width: 700px)").matches) { // If media query matches
-                                        document.querySelector(".sideNav").classList.remove("visible");
-                                        document.querySelector(".sideNav").classList.add("hide");
+                            <div className={"navCat"}>
+                                <div className={"cat"}>
+                                <IconContext.Provider value={{size: "30px", color: "white"}}>
+                                    <AiFillStar/>
+                                </IconContext.Provider>
+                                <div className={"navCatLabel"} data-id={title.id}>{title.name}</div>
+                                </div>
+                                <div className={"navTitleLabel"}>
+                                    {title.slug === "events" ? <div key={index}><Link to={{pathname:`/${title.slug}/upcomming`}} data={"upcomming"} onClick={() => {myFunction(x)}}>upcomming</Link></div> :
+                                        posts.map((post, index) =>
+                                            post.categories.map( (categorie, index) =>
+                                                title.id === categorie ?
+                                                    <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : "" ))
                                     }
-                                }} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : ""
-                            )}
-                        </div>
-                        </div>
-                    )}
+                                    {title.children[0] ?
+                                        <div className={"navSubCat"}>
+                                            <div className={"cat"}><div className={"navSubCatLabel"} data-id={title.id}>{titles.map((title1, index) => title.children[0] === title1.id ? title1.name : "")}</div></div>
+                                            <div>
+                                                {posts.map((post, index) =>
+                                                    post.categories.map( (categorie, index) =>
+                                                        categorie === title.children[0]? <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : ""
+                                                    ))}
+                                            </div>
+                                        </div>
+                                        : ""}
+                                </div>
+                            </div>
+
                 </div>
-                {/*<div className={"last-items"}>*/}
-                {/*    /!*<SwitchTheme/>*!/*/}
-                {/*    <div className={"hamburger"}><GiHamburgerMenu/></div>*/}
-                {/*</div>*/}
+                         : ""
+                    )}
+        </div>
         </div>
     );
 };

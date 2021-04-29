@@ -4,7 +4,6 @@
 
 .contentSection{
     margin-top: 100px;
-    margin-left: 200px;
     padding: 1vw;
 }
 
@@ -38,13 +37,6 @@ nav ul{
     pointer-events: none;
 }
 
-.navCat{
-    display: flex;
-    font-size: 14pt;
-    font-weight: 500;
-    pointer-events: none;
-}
-
 a:hover{
     transform: scale(1.05);
 }
@@ -61,6 +53,7 @@ a:hover{
 
 .hamburger svg{
     font-size: 30px;
+    fill: var(--color-secondary);;
 }
 
 .postContent{

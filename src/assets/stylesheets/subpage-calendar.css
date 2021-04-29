@@ -13,6 +13,7 @@
 
 .eventItem h3{
     margin: 0 0 5px 0;
+    color: var(--color-secondary);
 }
 
 .eventItemString{
