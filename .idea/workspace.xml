@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/pages/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/subpage-calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/subpage-calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListEvents.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xampp/htdocs/wordpress" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -128,6 +130,7 @@
       <workItem from="1619437234187" duration="10721000" />
       <workItem from="1619595003307" duration="23296000" />
       <workItem from="1619685505675" duration="13280000" />
+      <workItem from="1619774794397" duration="1449000" />
     </task>
     <servers />
   </component>

@@ -11,6 +11,10 @@
     margin-bottom: 2vw;
 }
 
+.eventItem img{
+    width: 100%;
+}
+
 .eventItem h3{
     margin: 0 0 5px 0;
     color: var(--color-secondary);
