@@ -39,7 +39,8 @@ const SideBar = ({titles, posts}) => {
                                         posts.map((post, index) =>
                                             post.categories.map( (categorie, index) =>
                                                 title.id === categorie ?
-                                                    <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : "" ))
+                                            console.log("hi") : "" ))
+                                                    // <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : "" ))
                                     }
                                     {title.children[0] ?
                                         <div className={"navSubCat"}>
