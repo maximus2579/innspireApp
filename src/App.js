@@ -21,7 +21,7 @@ const App = () =>{
             .then(data => setCategories(data));
     }
     async function getAllPostTypes() {
-            fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/app`)
+            fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/wp/v2/app?per_page=100`)
                 .then(response => response.json())
                 .then(data => setPosts(data))
     }
