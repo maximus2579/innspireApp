@@ -60,7 +60,6 @@ a:hover{
     display: flex;
     flex-direction: column;
     background-color: var(--color-primary);
-    box-shadow: var(--color-dropshadow);
     padding: var(--padding-content);
     color: var(--font-color);
 }
@@ -103,7 +102,6 @@ a:hover{
 .image_content div{
     width: 46%;
     background-color: var(--color-primary);
-    box-shadow: var(--color-dropshadow);
     padding: 1vw;
 }
 
