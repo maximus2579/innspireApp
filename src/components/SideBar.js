@@ -4,6 +4,7 @@ import {AiFillStar} from "react-icons/ai";
 import {useEffect} from "react"
 
 const SideBar = ({titles, posts}) => {
+    console.log("sidebar")
     function myFunction(x) {
         if (x.matches) { // If media query matches
             document.querySelector(".sideNav").classList.remove("visible")
