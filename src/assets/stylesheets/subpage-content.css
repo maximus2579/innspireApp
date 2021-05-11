@@ -284,4 +284,5 @@ blockquote{
     border-left: 3px solid var(--color-secondary);
     margin-left: 0;
     padding-left: 1em;
+    color: var(--color-primary);
 }
