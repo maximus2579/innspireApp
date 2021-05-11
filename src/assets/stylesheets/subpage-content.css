@@ -286,3 +286,7 @@ blockquote{
     padding-left: 1em;
     color: black;
 }
+
+#content:first-child{
+    margin-top: 0;
+}
