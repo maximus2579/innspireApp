@@ -280,6 +280,8 @@ figure{
 }
 
 blockquote{
-    background-color: lightgrey;
-    border-left: 1px solid var(--color-secondary);
+    background-color: #e8e8e8;
+    border-left: 3px solid var(--color-secondary);
+    margin-left: 0;
+    padding-left: 1em;
 }
