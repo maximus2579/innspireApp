@@ -278,3 +278,8 @@ a{
 figure{
     margin: 0;
 }
+
+blockquote{
+    background-color: lightgrey;
+    border-left: 1px solid var(--color-secondary);
+}
