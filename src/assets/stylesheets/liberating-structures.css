@@ -1,0 +1,51 @@
+.LStitle{
+    display: flex;
+    margin: 0 5px 5px 5px;
+    color: #bf490f;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 36px;
+}
+
+blockquote{
+    font-family: 'Times New Roman', Palatino, serif;
+    font-size: 20px;
+    line-height: 1.21em;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 2.5em;
+    margin-left: 0;
+    color: #D29730;
+    background-image: url(https://www.liberatingstructures.com/layout/images/blockquote.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+#content a{
+    color: #CA244A;
+}
+
+#content .full-image-float-right{
+    display: flex;
+    justify-content: right;
+}
+
+#content .full-image-float-left{
+    display: flex;
+    justify-content: left;
+}
+
+#content .full-image-block{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+}
+
+#content .thumbnail-caption{
+    display: block;
+    font-size: 9px;
+    font-family: Verdana, sans-serif;
+    line-height: 14px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
