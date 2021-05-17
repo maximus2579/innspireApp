@@ -25,23 +25,22 @@ blockquote{
     color: #CA244A;
 }
 
-#content .full-image-float-right{
+.full-image-float-right{
     display: flex;
     justify-content: right;
 }
 
-#content .full-image-float-left{
+.full-image-float-left{
     display: flex;
     justify-content: left;
 }
 
-#content .full-image-block{
+.full-image-block{
     display: flex;
     width: 100%;
     justify-content: left;
 }
-
-#content .thumbnail-caption{
+.thumbnail-caption{
     display: block;
     font-size: 9px;
     font-family: Verdana, sans-serif;
