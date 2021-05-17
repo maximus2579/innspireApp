@@ -26,19 +26,16 @@ blockquote{
 }
 
 .full-image-float-right{
-    display: flex;
-    justify-content: right;
+    float: right;
 }
 
 .full-image-float-left{
-    display: flex;
-    justify-content: left;
+    display: block;
+    float: left;
 }
 
 .full-image-block{
-    display: flex;
-    width: 100%;
-    justify-content: left;
+   display: block;
 }
 .thumbnail-caption{
     display: block;
@@ -47,4 +44,12 @@ blockquote{
     line-height: 14px;
     padding-top: 5px;
     padding-bottom: 10px;
+}
+
+.postContent h2{
+    font-size: 36px;
+    line-height: 1.5em;
+    font-weight: bold;
+    margin-bottom: .5em;
+    color: #BF490F;
 }
