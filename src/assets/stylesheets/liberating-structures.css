@@ -58,3 +58,11 @@
     margin-bottom: .5em;
     color: #BF490F;
 }
+
+#content:first-child{
+    margin-top: 0;
+}
+
+#content:last-child{
+    margin-bottom: 0;
+}
