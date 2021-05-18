@@ -49,6 +49,10 @@
     border-radius: 5px;
     max-width: 100%;
 }
+
+#content #icon{
+    margin: 0;
+}
 #content .thumbnail-caption{
     display: block;
     font-size: 9px;
