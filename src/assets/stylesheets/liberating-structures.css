@@ -50,7 +50,7 @@
     max-width: 100%;
 }
 
-.full-image-float-left:has(#icon) {
+#content .icon {
     margin: 0;
 }
 
