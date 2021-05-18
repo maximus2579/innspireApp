@@ -10,7 +10,6 @@ const Body = ({titles, posts}) => {
             <SideBar titles={titles} posts={posts}/>
             <Switch>
                 <Route path={"/:param/:id"} exact children={<ShowContent posts={posts}/>}/>
-                : <Route path={"/:id"} exact children={<ShowContent posts={posts}/>}/>
             </Switch>
         </>
     );
