@@ -32,15 +32,22 @@
 
 #content .full-image-float-right{
     float: right;
+    margin: 0 0 8px 10px
 }
 
 #content .full-image-float-left{
-    display: block;
     float: left;
+    margin: 0 10px 8px 0;
 }
 
 #content .full-image-block{
    display: block;
+}
+
+#content .full-image-block img, .full-image-inline img, .full-image-float-left img, .full-image-float-right img {
+    overflow: hidden;
+    border-radius: 5px;
+    max-width: 100%;
 }
 #content .thumbnail-caption{
     display: block;
