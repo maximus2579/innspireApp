@@ -1,4 +1,4 @@
-.LStitle{
+#content .LStitle{
     display: flex;
     align-items: center;
     color: #bf490f;
@@ -7,11 +7,11 @@
     line-height: 36px;
 }
 
-.lsTitle *{
+#content .lsTitle *{
     margin: 0 5px;
 }
 
-blockquote{
+#content blockquote{
     font-family: 'Times New Roman', Palatino, serif;
     font-size: 20px;
     line-height: 1.21em;
@@ -25,29 +25,24 @@ blockquote{
     background-repeat: no-repeat;
 }
 
-.postContent a{
+#content a{
     color: #CA244A;
     cursor: pointer;
 }
 
-.postContent p{
-    background-color: red;
-}
-
-
-.full-image-float-right{
+#content .full-image-float-right{
     float: right;
 }
 
-.full-image-float-left{
+#content .full-image-float-left{
     display: block;
     float: left;
 }
 
-.full-image-block{
+#content .full-image-block{
    display: block;
 }
-.thumbnail-caption{
+#content .thumbnail-caption{
     display: block;
     font-size: 9px;
     font-family: Verdana, sans-serif;
@@ -56,7 +51,7 @@ blockquote{
     padding-bottom: 10px;
 }
 
-.postContent h2{
+#content h2{
     font-size: 36px;
     line-height: 1.5em;
     font-weight: bold;
