@@ -1,10 +1,14 @@
 .LStitle{
     display: flex;
-    margin: 0 5px 5px 5px;
+    align-items: center;
     color: #bf490f;
     font-size: 36px;
     font-weight: bold;
     line-height: 36px;
+}
+
+.lsTitle *{
+    margin: 0 5px;
 }
 
 blockquote{
@@ -21,9 +25,15 @@ blockquote{
     background-repeat: no-repeat;
 }
 
-#content a{
+.postContent a{
     color: #CA244A;
+    cursor: pointer;
 }
+
+.postContent p{
+    background-color: red;
+}
+
 
 .full-image-float-right{
     float: right;
