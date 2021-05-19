@@ -33,7 +33,7 @@ const ShowContent = ({posts}) => {
         x.addListener(myFunction)
         if(document.querySelector("#iconmap")){
             for (let i = 0; i<document.querySelector("#iconmap").children; i++){
-                document.querySelector("#iconmap").children[i].src = params.param + document.querySelector("#iconmap").children[i].src
+                document.querySelector("#iconmap").children[i].href = "/" + params.param + document.querySelector("#iconmap").children[i].src
             }
         }
     });
