@@ -31,6 +31,11 @@ const ShowContent = ({posts}) => {
         MakeActive(params.id)
         myFunction(x)
         x.addListener(myFunction)
+        if(document.querySelector("#iconmap")){
+            for (let i = 0; i<document.querySelector("#iconmap").children; i++){
+                document.querySelector("#iconmap").children[i].src = params.param + document.querySelector("#iconmap").children[i].src
+            }
+        }
     });
     if (posts.length > 0) {
         posts.sort((a, b) => (a.cf.app_field_datum > b.cf.app_field_datum ?  1 : -1))
