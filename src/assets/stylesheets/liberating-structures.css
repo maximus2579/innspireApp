@@ -51,6 +51,8 @@
 }
 
 #content .icon {
+    display: flex;
+    align-items: center;
     margin: 0;
 }
 
@@ -65,11 +67,15 @@
 
 #content h2{
     font-size: 36px;
-    line-height: 1.5em;
     font-weight: bold;
     margin-bottom: .5em;
     color: #BF490F;
 }
+
+#content h2 > * {
+    margin: 0 5px;
+}
+
 
 #content>*:first-child{
     margin-top: 0;
