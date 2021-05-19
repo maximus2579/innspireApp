@@ -34,7 +34,10 @@ const ShowContent = ({posts}) => {
         if(document.querySelector("#iconmap")){
             console.log(document.querySelector("#iconmap").children)
             for (let i = 0; i<document.querySelector("#iconmap").children; i++){
-                document.querySelector("#iconmap").children[i].href = "/" + params.param + document.querySelector("#iconmap").children[i].src
+                console.log("hi")
+                console.log(document.querySelector("#iconmap").children[i])
+                document.querySelector("#iconmap").children[i].href = "/" + params.param + document.querySelector("#iconmap").children[i].pathname
+                console.log(document.querySelector("#iconmap").children[i])
             }
         }
     });
