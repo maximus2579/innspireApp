@@ -1,8 +1,10 @@
-import {useParams} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
 import React, {useEffect} from "react";
+import ReactDOMServer from "react-dom/server";
 import Loader from "react-loader-spinner";
 import PlanningPoker from "./PlanningPoker";
 import ListEvents from "./ListEvents";
+import {GiPizzaCutter} from "react-icons/gi";
 
 
 const ShowContent = ({posts}) => {
@@ -34,8 +36,12 @@ const ShowContent = ({posts}) => {
         if(document.querySelector("#iconmap")){
             console.log(document.querySelector("#iconmap").children)
             for (let i = 0; i<document.querySelector("#iconmap").children.length; i++){
-                document.querySelector("#iconmap").children[i].href = "/" + params.param + document.querySelector("#iconmap").children[i].pathname.slice(0, -1).trim()
-                document.querySelector("#iconmap").children[i].target = "_blank";
+                // document.querySelector("#iconmap").children[i].href =
+                document.querySelector("#iconmap").children[i].replaceWith(ReactDOMServer.renderToString(<Link to={"/" + params.param + document.querySelector("#iconmap").children[i].pathname.slice(0, -1).trim()}/>)
+                )
+
+
+
                 console.log(document.querySelector("#iconmap").children[i].href)
             }
         }
