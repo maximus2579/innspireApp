@@ -36,7 +36,7 @@ const ShowContent = ({posts}) => {
             console.log(document.querySelector("#navStructures").children)
             for (let i = 0; i<document.querySelector("#navStructures").children.length; i++){
                 document.querySelector("#navStructures").children[i].addEventListener("click", ()=> {
-                    history.push(params.param + document.querySelector("#navStructures").attributes[0].value)
+                    history.push("/" + params.param + document.querySelector("#navStructures").children[i].attributes[0].value)
                 })
             }
         }
