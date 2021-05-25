@@ -5,6 +5,17 @@
 .contentSection{
     margin-top: 100px;
 }
+#navStructures{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#navStructures > *{
+    width: 20%;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
 
 nav{
     display: flex;
