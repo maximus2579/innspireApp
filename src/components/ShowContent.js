@@ -32,11 +32,11 @@ const ShowContent = ({posts}) => {
         MakeActive(params.id)
         myFunction(x)
         x.addListener(myFunction)
-        if(document.querySelector("#navStructure")){
-            console.log(document.querySelector("#navStructure").children)
-            for (let i = 0; i<document.querySelector("#navStructure").children.length; i++){
-                document.querySelector("#navStructure").children[i].addEventListener("click", ()=> {
-                    history.push(params.param + document.querySelector("#navStructure").attributes[0].value)
+        if(document.querySelector("#navStructures")){
+            console.log(document.querySelector("#navStructures").children)
+            for (let i = 0; i<document.querySelector("#navStructures").children.length; i++){
+                document.querySelector("#navStructures").children[i].addEventListener("click", ()=> {
+                    history.push(params.param + document.querySelector("#navStructures").attributes[0].value)
                 })
             }
         }
