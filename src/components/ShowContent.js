@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {useParams, useHistory} from "react-router-dom";
 import React, {useEffect} from "react";
 import Loader from "react-loader-spinner";
 import PlanningPoker from "./PlanningPoker";
@@ -7,6 +7,7 @@ import ListEvents from "./ListEvents";
 
 const ShowContent = ({posts}) => {
     const params = useParams();
+    const history = useHistory();
     function myFunction(x) {
         if (x.matches) { // If media query matches
             if (document.querySelector(".contentSection")) {
@@ -31,12 +32,12 @@ const ShowContent = ({posts}) => {
         MakeActive(params.id)
         myFunction(x)
         x.addListener(myFunction)
-        if(document.querySelector("#iconmap")){
-            console.log(document.querySelector("#iconmap").children)
-            for (let i = 0; i<document.querySelector("#iconmap").children.length; i++){
-                document.querySelector("#iconmap").children[i].href = "/" + params.param + document.querySelector("#iconmap").children[i].pathname.slice(0, -1).trim()
-                document.querySelector("#iconmap").children[i].target = "_blank";
-                console.log(document.querySelector("#iconmap").children[i].href)
+        if(document.querySelector("#navStructure")){
+            console.log(document.querySelector("#navStructure").children)
+            for (let i = 0; i<document.querySelector("#navStructure").children.length; i++){
+                document.querySelector("#navStructure").children[i].addEventListener("click", ()=> {
+                    history.push(params.param + document.querySelector("#navStructure").attributes[0].value)
+                })
             }
         }
     });
