@@ -54,6 +54,15 @@
     margin-top: 100px;
     border-right: 1px solid var(--color-secondary);
     padding-right: 10px;
+    max-width: 300px;
+}
+
+.sideNav > * {
+    width: 100%;
+}
+
+.sideNav a {
+    word-wrap: break-word;
 }
 
 .navCat{

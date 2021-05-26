@@ -45,9 +45,9 @@ const SideBar = ({titles, posts}) => {
                                         <div className={"navSubCat"}>
                                             <div className={"cat"}><div className={"navSubCatLabel"} data-id={title.id}>{titles.map((title1, index) => title.children[0] === title1.id ? title1.name : "")}</div></div>
                                             <div>
-                                                {posts.map((post, index) =>
+                                                {posts.map((post) =>
                                                     post.categories.map( (categorie, index) =>
-                                                        categorie === title.children[0]? <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : ""
+                                                        categorie === title.children[0]? title.parent === title.id && title.slug === "liberating-structures"? <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/structures`}} data={"structures"}>{"structures"}</Link></div> : <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : ""
                                                     ))}
                                             </div>
                                         </div>
