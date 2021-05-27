@@ -41,16 +41,24 @@ const SideBar = ({titles, posts}) => {
                                                 title.id === categorie ?
                                                     <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : "" ))
                                     }
-                                    {title.children[0] ?
-                                        <div className={"navSubCat"}>
-                                            <div className={"cat"}><div className={"navSubCatLabel"} data-id={title.id}>{titles.map((title1, index) => title.children[0] === title1.id ? title1.name : "")}</div></div>
+                                    {title.children ?
+                                        title.children.map((children) =>
+                                            titles.map((title1) => children === title1.id ?
+                                                <div className={"navSubCat"}>
+                                            <div className={"cat"}><div className={"navSubCatLabel"} data-id={title.id}>{title1.name}</div></div>
                                             <div>
-                                                {posts.map((post) =>
+                                                {
+                                                    posts.map((post) =>
                                                     post.categories.map( (categorie, index) =>
-                                                        categorie === title.children[0]? title.parent === title.id && title.slug === "liberating-structures"? <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/structures`}} data={"structures"}>{"structures"}</Link></div> : <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : ""
-                                                    ))}
+                                                        categorie === children ?
+                                                            title.slug === "liberating-structures" ? <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/structures`}} data={"structures"}>{"structures"}</Link></div>
+                                                                : <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : ""
+                                                    )
+                                                    )}
                                             </div>
                                         </div>
+                                                : "")
+                                        )
                                         : ""}
                                 </div>
                             </div>

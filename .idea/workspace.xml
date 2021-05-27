@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NoMatch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Structures.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/subpage-content.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/subpage-content.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ShowContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xampp/htdocs/scrapingTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -47,13 +51,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\apps\innspireapp" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\apps\innspireapp\public" />
       <recent name="C:\apps\innspireapp\src\pages" />
       <recent name="C:\apps\innspireapp\src\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\apps\innspireapp\src\assets" />
+      <recent name="C:\apps\innspireapp" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -143,7 +148,8 @@
       <workItem from="1621499548989" duration="7064000" />
       <workItem from="1621581858494" duration="2643000" />
       <workItem from="1621929140637" duration="5833000" />
-      <workItem from="1622020068004" duration="3420000" />
+      <workItem from="1622020068004" duration="15987000" />
+      <workItem from="1622101468326" duration="10876000" />
     </task>
     <servers />
   </component>
