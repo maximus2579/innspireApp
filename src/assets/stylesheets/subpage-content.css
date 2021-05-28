@@ -9,6 +9,7 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 #navStructures > *{
     border: 1px solid var(--color-secondary);
@@ -17,7 +18,7 @@
 }
 
 #navStructures > *:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 nav{

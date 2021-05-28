@@ -1,25 +1,27 @@
-const Structure = ({post}) => {
+const Structures = ({posts}) => {
     function getStructure (id){
         for (let i=0; i<document.getElementsByClassName("structure").length; i++) {
-            console.log(document.getElementsByClassName("structure")[i].attributes[0].value, id)
-            if (parseInt(document.getElementsByClassName("structure")[i].attributes[0].value) === id) {
+            document.getElementsByClassName("structure")[i].classList.add("hide")
+            if (parseInt(document.getElementsByClassName("structure")[i].attributes[0].value) === id){
                 document.getElementsByClassName("structure")[i].classList.remove("hide")
                 document.getElementsByClassName("structure")[i].classList.add("visible")
             }
         }
     }
-    // console.log(post)
+    console.log(posts)
     // post.map ( (structure) => {
-        return (
+    return (
+        <div className={"contentSection"}>
             <div className={"postContent"}>
                 <div id="navStructures">
-                    <div onClick={() => getStructure(post.id)}>{post.title.rendered}</div>
+                    {posts.map((post) => <div onClick={() => getStructure(post.id)}>{post.title.rendered}</div>)}
                 </div>
-                    <div data-id={post.id} className={"structure hide"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
+                    {posts.map((post) => <div data-id={post.id} className={"structure hide"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>)}
             </div>
+        </div>
         );
     // })
 
 };
 
-export default Structure;
+export default Structures;

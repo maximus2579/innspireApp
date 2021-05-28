@@ -4,7 +4,6 @@ import {AiFillStar} from "react-icons/ai";
 import {useEffect} from "react"
 
 const SideBar = ({titles, posts}) => {
-    console.log(posts)
     function myFunction(x) {
         if (x.matches) { // If media query matches
             document.querySelector(".sideNav").classList.remove("visible")
@@ -48,12 +47,15 @@ const SideBar = ({titles, posts}) => {
                                             <div className={"cat"}><div className={"navSubCatLabel"} data-id={title.id}>{title1.name}</div></div>
                                             <div>
                                                 {
-                                                    posts.map((post) =>
-                                                    post.categories.map( (categorie, index) =>
-                                                        categorie === children ?
-                                                            title.slug === "liberating-structures" ? <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/structures`}} data={"structures"}>{"structures"}</Link></div>
-                                                                : <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : ""
-                                                    )
+                                                    title.slug === "liberating-structures" && posts.filter(post => post.categories[0] === children) ?
+                                                    <div><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/structures`}} data={"structures"}>{"structures"}</Link></div> :
+                                                    posts.map((post, index) =>
+                                                    post.categories.map( (categorie) => {
+                                                        if (categorie === children) {
+                                                                return <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div>
+                                                            }
+
+                                                    })
                                                     )}
                                             </div>
                                         </div>

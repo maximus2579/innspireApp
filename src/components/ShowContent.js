@@ -1,4 +1,4 @@
-import {useParams, useHistory} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import React, {useEffect} from "react";
 import Loader from "react-loader-spinner";
 import PlanningPoker from "./PlanningPoker";
@@ -8,7 +8,6 @@ import Structures from "./Structures";
 
 const ShowContent = ({posts, titleID, titleIDChildren}) => {
     const params = useParams();
-    const history = useHistory();
     function myFunction(x) {
         if (x.matches) { // If media query matches
             if (document.querySelector(".contentSection")) {
@@ -33,30 +32,18 @@ const ShowContent = ({posts, titleID, titleIDChildren}) => {
         MakeActive(params.id)
         myFunction(x)
         x.addListener(myFunction)
-        if(document.querySelector("#navStructures")){
-            console.log(document.querySelector("#navStructures").children)
-            for (let i = 0; i<document.querySelector("#navStructures").children.length; i++){
-                document.querySelector("#navStructures").children[i].addEventListener("click", ()=> {
-                    history.push("/" + params.param + document.querySelector("#navStructures").children[i].attributes[0].value)
-                })
-            }
-        }
     });
-    // titles.map( (title) => {
-    // if (params.param === title.slug){
-        console.log(posts)
         if (posts.length > 0) {
-            // console.log(title.id)
-                // posts.sort((a, b) => (a.cf.app_field_datum > b.cf.app_field_datum ? 1 : -1))
+            if (params.id === "structures"){
+                var filteredPosts = posts.filter(post => titleIDChildren[0] === post.categories[0])
+                console.log(filteredPosts)
+                return <Structures posts={filteredPosts} />
+            } else {
                 return (
                     <div className={"contentSection"}>
                         {posts.map((post, index) => {
-                            console.log(titleIDChildren, post.categories);
                                 if (params.id === "upcomming" && titleID === post.categories[0]) {
                                     return <ListEvents key={index} post={post}/>
-                                }
-                                else if (params.id === "structures" && titleIDChildren[0] === post.categories[0]) {
-                                    return <Structures key={index} post={post}/>
                                 }
                                 else if (post.slug === params.id) {
                                             if (post.fimg_url) {
@@ -90,12 +77,10 @@ const ShowContent = ({posts, titleID, titleIDChildren}) => {
                             })}
                     </div>
                 )
-            } else {
+            }} else {
             return (
                 <Loader type="ThreeDots" color="#FFF" height={80} width={80}/>
             )
         }
-
-
 };
 export default ShowContent;
