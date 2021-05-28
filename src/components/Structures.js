@@ -13,6 +13,7 @@ const Structures = ({posts}) => {
     }
     console.log(posts)
     // post.map ( (structure) => {
+    posts.sort((a) => a.title.rendered)
     return (
         <div className={"contentSection"}>
             <div className={"postContent"}>
