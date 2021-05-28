@@ -16,6 +16,7 @@ const Structures = ({posts}) => {
                 <div id="navStructures">
                     {posts.map((post) => <div onClick={() => getStructure(post.id)}>{post.title.rendered}</div>)}
                 </div>
+                <hr className={"devider"}/>
                     {posts.map((post) => <div data-id={post.id} className={"structure hide"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>)}
             </div>
         </div>
