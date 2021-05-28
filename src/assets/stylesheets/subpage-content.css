@@ -303,3 +303,8 @@ figure{
     color: var(--color-secondary);
     margin: 1vw auto;
 }
+
+.structureActive{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
