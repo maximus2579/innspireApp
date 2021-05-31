@@ -13,7 +13,7 @@ const SideBar = ({titles, posts}) => {
             document.querySelector(".sideNav").classList.add("visible")
         }
     }
-    var x = window.matchMedia("(max-width: 700px)")
+    var x = window.matchMedia("(max-width: 800px)")
     // Attach listener function on state changes
     useEffect(() => {
         myFunction(x) // Call listener function at run time

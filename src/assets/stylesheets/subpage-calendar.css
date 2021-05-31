@@ -4,11 +4,10 @@
 }
 
 .eventItem{
-    background-color: var(--color-primary);
-    box-shadow: var(--color-dropshadow);
     padding: var(--padding-content);
     color: var(--font-color);
-    margin-bottom: 2vw;
+    margin: 1vw;
+    width: 100%;
 }
 
 .eventItem img{
@@ -22,4 +21,11 @@
 
 .eventItemString{
     font-size: 11pt;
+}
+
+.ListEvents{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }

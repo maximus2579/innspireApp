@@ -17,7 +17,7 @@ const ShowSubContent = ({posts, titleID, titleIDParent}) => {
             }
         }
     }
-    var x = window.matchMedia("(max-width: 700px)")
+    var x = window.matchMedia("(max-width: 800px)")
     function MakeActive(id, catID){
         for (let i=0; i<document.querySelectorAll(".sideNav a").length; i++){
             document.querySelectorAll(".sideNav a")[i].classList.remove("navItemActive")
