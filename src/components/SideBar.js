@@ -44,15 +44,15 @@ const SideBar = ({titles, posts}) => {
                                         title.children.map((children) =>
                                             titles.map((title1) => children === title1.id ?
                                                 <div className={"navSubCat"}>
-                                            <div className={"cat"}><div className={"navSubCatLabel"} data-id={title.id}>{title1.name}</div></div>
+                                            <div className={"cat"}><div className={"navSubCatLabel"} data-id={title1.id}>{title1.name}</div></div>
                                             <div>
                                                 {
                                                     title.slug === "liberating-structures" && posts.filter(post => post.categories[0] === children) ?
-                                                    <div><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/structures`}} data={"structures"}>{"structures"}</Link></div> :
+                                                    <div><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/${title1.slug}/structures`}} data={"structures"}>{"structures"}</Link></div> :
                                                     posts.map((post, index) =>
                                                     post.categories.map( (categorie) => {
                                                         if (categorie === children) {
-                                                                return <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div>
+                                                                return <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/${title1.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div>
                                                             }
 
                                                     })

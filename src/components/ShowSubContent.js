@@ -1,11 +1,10 @@
+import {useEffect} from 'react';
 import {useParams} from "react-router-dom";
-import React, {useEffect} from "react";
-import Loader from "react-loader-spinner";
+import Structures from "./Structures";
 import PlanningPoker from "./PlanningPoker";
-import ListEvents from "./ListEvents";
+import Loader from "react-loader-spinner";
 
-
-const ShowContent = ({posts, titleID}) => {
+const ShowSubContent = ({posts, titleID, titleIDParent}) => {
     const params = useParams();
     function myFunction(x) {
         if (x.matches) { // If media query matches
@@ -19,10 +18,11 @@ const ShowContent = ({posts, titleID}) => {
         }
     }
     var x = window.matchMedia("(max-width: 700px)")
-    function MakeActive(id, titleID){
+    function MakeActive(id, catID){
         for (let i=0; i<document.querySelectorAll(".sideNav a").length; i++){
             document.querySelectorAll(".sideNav a")[i].classList.remove("navItemActive")
-            if (document.querySelectorAll(".sideNav a")[i].attributes[0].value === id && parseInt(document.querySelectorAll(".sideNav a")[i].parentElement.parentElement.parentElement.children[0].children[1].dataset.id) === titleID){
+            console.log(document.querySelectorAll(".sideNav a")[i].parentElement.parentElement.parentElement.children[0].children[0].dataset.id)
+            if (document.querySelectorAll(".sideNav a")[i].attributes[0].value === id && parseInt(document.querySelectorAll(".sideNav a")[i].parentElement.parentElement.parentElement.children[0].children[0].dataset.id) === catID){
                 document.querySelectorAll(".sideNav a")[i].classList.add("navItemActive")
             }
         }
@@ -32,13 +32,17 @@ const ShowContent = ({posts, titleID}) => {
         myFunction(x)
         x.addListener(myFunction)
     });
-        if (posts.length > 0) {
+    if (posts.length > 0) {
+        if (params.id === "structures"){
+            var filteredPosts = posts.filter(post => titleID === post.categories[0])
+            return <Structures posts={filteredPosts} />
+        }
+        else {
             return (
                 <div className={"contentSection"}>
                     {posts.map((post, index) => {
-                        if (params.id === "upcomming" && titleID === post.categories[0]) {
-                            return <ListEvents key={index} post={post}/>
-                        } else if (post.slug === params.id && titleID === post.categories[0]) {
+                        console.log(post, post.categories, titleIDParent, titleID)
+                        if (post.slug === params.id && titleID === post.categories[0]) {
                             if (post.fimg_url) {
                                 return (
                                     <div key={index} className={"postContent postContent_image"}>
@@ -70,10 +74,11 @@ const ShowContent = ({posts, titleID}) => {
                     })}
                 </div>
             )
-            } else {
-            return (
-                <Loader type="ThreeDots" color="#FFF" height={80} width={80}/>
-            )
-        }
+        }} else {
+        return (
+            <Loader type="ThreeDots" color="#FFF" height={80} width={80}/>
+        )
+    }
 };
-export default ShowContent;
+
+export default ShowSubContent;
