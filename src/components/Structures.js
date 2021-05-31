@@ -11,7 +11,7 @@ const Structures = ({posts}) => {
             }
         }
     }
-    console.log(posts)
+    posts.sort( (a, b) => parseInt(a.title.rendered.substring(0, 1)) - parseInt(b.title.rendered.substring(0, 1)))
     // post.map ( (structure) => {
     return (
         <div className={"contentSection"}>
@@ -19,7 +19,7 @@ const Structures = ({posts}) => {
                 <div id="navStructures">
                     {posts.map((post) => <div onClick={(e) => getStructure(e, post.id)}>{post.title.rendered}</div>)}
                 </div>
-                <hr className={"devider"}/>
+                {/*<hr className={"devider"}/>*/}
                     {posts.map((post) => <div data-id={post.id} className={"structure hide"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>)}
             </div>
         </div>

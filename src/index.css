@@ -28,8 +28,8 @@ html{
   --color-background: white;
   --color-form: white;
   --color-dropshadow: 3px 3px 5px #ccc;
-  --margin-content: 1vh;
-  --padding-content: 1vh;
+  --margin-content: 1vw;
+  --padding-content: 0 2vw 2vw 2vw;
   --font-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
   linear-gradient(0deg, #121212, #121212);
 }
@@ -41,7 +41,7 @@ html{
   --color-form: rgba(18, 18, 18, 1);
   --color-dropshadow: 0;
   --margin-content: 0;
-  --padding-content: 1vh;
+  --padding-content: 0 2vw 2 vw 2vw;
   --font-color: rgba(255, 255, 255, 0.78);
 }
 

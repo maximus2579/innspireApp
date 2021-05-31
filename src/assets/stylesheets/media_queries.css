@@ -20,6 +20,10 @@
     #navStructures > *{
         width: 40%;
     }
+    #navStructures{
+        justify-content: center;
+        align-content: flex-start;
+    }
     .sideNav{
         max-width: 100%;
     }
@@ -86,5 +90,11 @@
     }
     .classic{
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #navStructures > *{
+        width: 100%;
     }
 }

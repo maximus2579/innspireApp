@@ -21,7 +21,6 @@ const ShowSubContent = ({posts, titleID, titleIDParent}) => {
     function MakeActive(id, catID){
         for (let i=0; i<document.querySelectorAll(".sideNav a").length; i++){
             document.querySelectorAll(".sideNav a")[i].classList.remove("navItemActive")
-            console.log(document.querySelectorAll(".sideNav a")[i].parentElement.parentElement.parentElement.children[0].children[0].dataset.id)
             if (document.querySelectorAll(".sideNav a")[i].attributes[0].value === id && parseInt(document.querySelectorAll(".sideNav a")[i].parentElement.parentElement.parentElement.children[0].children[0].dataset.id) === catID){
                 document.querySelectorAll(".sideNav a")[i].classList.add("navItemActive")
             }

@@ -9,12 +9,13 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: start;
 }
 #navStructures > *{
     border: 1px solid var(--color-secondary);
     padding: 5px 10px;
     cursor: pointer;
+    width: 20%;
     margin: 1vw;
 }
 
@@ -301,7 +302,7 @@ figure{
 .devider{
     width: 90%;
     color: var(--color-secondary);
-    margin: 1vw auto;
+    margin: 10px auto 0 auto;
 }
 
 .structureActive{
