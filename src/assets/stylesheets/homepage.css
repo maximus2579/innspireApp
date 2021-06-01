@@ -6,20 +6,21 @@
     width: 100%;
     align-items: center;
     background-color: var(--color-primary);
-    height: 100px;
-    flex-wrap: wrap;
 }
 
 .fixedNav>*{
+    flex: 1;
     padding: 10px;
 }
 
+.logoDiv{
+    display: flex;
+    justify-content: start;
+}
 .dropdown{
     display: none;
     position: fixed;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color: var(--color-primary);
-    padding: 10px;
 }
 
 .dropdown > *{
@@ -36,12 +37,18 @@
 
 #profile{
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
 }
 
-#profile #username{
+#profile {
     color: var(--color-secondary);
     margin: 5px;
+}
+
+#username{
+    word-break: normal;
+    font-size: 11pt;
 }
 
 .sideNav{
@@ -56,6 +63,8 @@
     border-right: 1px solid var(--color-secondary);
     padding-right: 10px;
     max-width: 300px;
+    z-index: 999;
+
 }
 
 .sideNav > * {
@@ -112,4 +121,9 @@
 
 .navSubCatLabel{
     margin: 0;
+}
+
+.homeClass{
+    display: flex;
+    align-items: center;
 }

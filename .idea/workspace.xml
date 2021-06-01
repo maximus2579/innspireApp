@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5604e36c-9894-4256-a64f-b4d7c9902087" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/HomeBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MediaQuery.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/homepage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/media_queries.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/subpage-calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/subpage-calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/stylesheets/subpage-content.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/stylesheets/subpage-content.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NoMatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NoMatch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ShowContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ShowSubContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ShowSubContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SwitchTheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UserInfo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +159,8 @@
       <workItem from="1622020068004" duration="15987000" />
       <workItem from="1622101468326" duration="21950000" />
       <workItem from="1622187715394" duration="6712000" />
-      <workItem from="1622448079498" duration="13404000" />
+      <workItem from="1622448079498" duration="22295000" />
+      <workItem from="1622535375981" duration="10804000" />
     </task>
     <servers />
   </component>

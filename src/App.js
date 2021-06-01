@@ -26,6 +26,14 @@ const App = () =>{
                 .then(data => setPosts(data))
     }
     useEffect(() => {
+        fetch(`${process.env.REACT_APP_PROTOCOL}//${process.env.REACT_APP_BASE_URL}/wp-json/jwt-auth/v1/token/validate`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem("token")
+            },
+        })
+            .then(response => response.json()).then(data => data.data.status === 403 ? localStorage.clear() : "")
         getAllPostTypesTitles();
         getAllPostTypes();
 

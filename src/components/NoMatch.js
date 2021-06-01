@@ -13,11 +13,11 @@ const NoMatch = () => {
             }
         }
     }
-    var x = window.matchMedia("(max-width: 700px)")
+    var x = window.matchMedia("(max-width: 800px)")
     useEffect( () =>{
         myFunction(x)
         x.addListener(myFunction)
-    }, [] )
+    } )
     return (
         <div className={"contentSection"}>
             <div  className={"postContent postContent_image"}>

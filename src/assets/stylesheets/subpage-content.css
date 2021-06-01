@@ -2,9 +2,6 @@
    width: 80px;
 }
 
-.contentSection{
-    margin-top: 100px;
-}
 #navStructures{
     display: flex;
     width: 100%;
@@ -81,6 +78,10 @@ a:hover{
     color: var(--font-color);
 }
 
+.contentSection{
+    margin-top: 100px;
+}
+
 .postContent_image{
     display: flex;
     flex-direction: column;
@@ -116,7 +117,7 @@ a:hover{
     align-items: flex-start;
 }
 
-.image_content div{
+.image_content > div{
     width: 46%;
     background-color: var(--color-primary);
     padding: 1vw;
@@ -303,4 +304,8 @@ figure{
 .structureActive{
     background-color: var(--color-secondary);
     color: var(--color-primary);
+}
+
+.contentSection h1{
+    color: var(--color-secondary);
 }

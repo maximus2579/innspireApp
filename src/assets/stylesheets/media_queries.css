@@ -45,7 +45,9 @@
     .contentSection{
         margin-left: 0;
     }
-
+    .logoDiv{
+        justify-content: center;
+    }
     #userInfo{
         width: 80% !important;
         flex-wrap: wrap;

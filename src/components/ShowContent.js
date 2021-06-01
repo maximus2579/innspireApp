@@ -4,7 +4,6 @@ import Loader from "react-loader-spinner";
 import PlanningPoker from "./PlanningPoker";
 import ListEvents from "./ListEvents";
 
-
 const ShowContent = ({posts, titleID}) => {
     const params = useParams();
     function myFunction(x) {
@@ -27,6 +26,7 @@ const ShowContent = ({posts, titleID}) => {
             }
         }
     }
+
     useEffect(() => {
         MakeActive(params.id, titleID)
         myFunction(x)

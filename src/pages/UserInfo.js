@@ -2,10 +2,6 @@ import {useEffect, useState} from 'react';
 import {Link, useHistory} from 'react-router-dom'
 
 const UserInfo = () => {
-    function setTheme(themeName) {
-        localStorage.setItem('theme', themeName);
-        document.documentElement.className = themeName;
-    }
     document.body.style.height = "100%";
     document.body.style.alignItems = "center";
     document.body.style.backgroundColor = null

@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import {IconContext} from "react-icons";
-import {AiFillStar} from "react-icons/ai";
+import {AiFillStar, AiFillHome} from "react-icons/ai";
 import {useEffect} from "react"
 
 const SideBar = ({titles, posts}) => {
@@ -23,8 +23,16 @@ const SideBar = ({titles, posts}) => {
     return (
         <div className={"sideNav"}>
                 <div>
+                    <div className={"sideNavItems"}>
+                        <div className={"homeClass"}>
+                            <IconContext.Provider value={{size: "30px", color: "white"}}>
+                                <AiFillHome/>
+                            </IconContext.Provider>
+                            <div className={"navCatLabel"}><Link className="navItemActive" onClick={() => {myFunction(x)}} to={{pathname:`/`}} data={"home"}>{"Home"}</Link></div>
+                        </div>
+                    </div>
                     {titles.map((title, index) =>
-                     title.parent === 0 ?
+                     title.parent === 0 && title.slug !== "home"?
                         <div key={index} className={"sideNavItems"}>
                             <div className={"navCat"}>
                                 <div className={"cat"}>

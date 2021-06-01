@@ -15,7 +15,7 @@ function hamburgerActivate(){
 
 const Header = () => {
     return (
-        <div className={"fixedNav"}><div className={"hamburger"} onClick={hamburgerActivate}><GiHamburgerMenu/></div><img src={logoSrc} className={"logo"} alt={"Logo"}/><div id={"profile"}><Link to={"/inloggen"} id={"inloggen"}><div>Inloggen</div></Link></div></div>
+        <div className={"fixedNav"}><div className={"hamburger"} onClick={hamburgerActivate}><GiHamburgerMenu/></div><div className={"logoDiv"}><img src={logoSrc} className={"logo"} alt={"Logo"}/></div><div id={"profile"}><Link to={"/inloggen"} id={"inloggen"}><div>Inloggen</div></Link></div></div>
     );
 };
 
