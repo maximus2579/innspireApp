@@ -6,6 +6,7 @@
     width: 100%;
     align-items: center;
     background-color: var(--color-primary);
+    z-index: 999;
 }
 
 .fixedNav>*{
@@ -49,6 +50,7 @@
 #username{
     word-break: normal;
     font-size: 11pt;
+    text-align: right;
 }
 
 .sideNav{
