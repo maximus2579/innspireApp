@@ -61,6 +61,7 @@
     }
     .logoDiv{
         justify-content: center;
+        display: flex;
     }
     #userInfo{
         width: 80% !important;
