@@ -45,8 +45,11 @@
 
     #navStructures{
         align-content: start;
+        width: 30%;
     }
-
+    .structure{
+        width: 60%;
+    }
     #navStructures > *{
         word-break: break-word;
     }
