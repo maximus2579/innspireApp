@@ -23,6 +23,11 @@
     display: flex;
     justify-content: start;
 }
+
+.logoDiv > img{
+    height: 80px;
+}
+
 .dropdown{
     display: none;
     position: fixed;
