@@ -9,9 +9,14 @@
     z-index: 999;
 }
 
-.fixedNav>*{
-    flex: 1;
+.fixedNav>*:first-child{
     padding: 10px;
+    flex: 1;
+}
+
+.fixedNav>*:last-child{
+    padding: 10px;
+    flex: 1;
 }
 
 .logoDiv{
