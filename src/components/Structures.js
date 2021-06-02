@@ -15,7 +15,7 @@ const Structures = ({posts}) => {
     // post.map ( (structure) => {
     return (
         <div className={"contentSection"}>
-            <div className={"postContent"}>
+            <div className={"postContentStructures"}>
                 <div id="navStructures">
                     {posts.map((post) => <div onClick={(e) => getStructure(e, post.id)}>{post.title.rendered}</div>)}
                 </div>

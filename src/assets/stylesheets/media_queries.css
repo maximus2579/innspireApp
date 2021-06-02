@@ -39,6 +39,17 @@
     .eventItem{
         width: 40%;
     }
+    .postContentStructures{
+        flex-direction: row;
+    }
+
+    #navStructures{
+        align-content: start;
+    }
+
+    #navStructures > *{
+        word-break: break-word;
+    }
 }
 
 @media only screen and (max-width: 800px) {
