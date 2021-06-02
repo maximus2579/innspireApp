@@ -19,6 +19,10 @@
     margin: 0 5px;
 }
 
+#content .thumbnail-caption{
+    width: inherit;
+}
+
 #content blockquote{
     font-family: 'Times New Roman', Palatino, serif;
     font-size: 20px;
