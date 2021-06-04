@@ -4,6 +4,11 @@ import {AiFillStar, AiFillHome} from "react-icons/ai";
 import {useEffect} from "react"
 
 const SideBar = ({titles, posts}) => {
+    function decodeHtml(html) {
+        var txt = document.createElement("textarea");
+        txt.innerHTML = html;
+        return txt.value;
+    }
     function myFunction(x) {
         if (x.matches) { // If media query matches
             document.querySelector(".sideNav").classList.remove("visible")
@@ -39,20 +44,20 @@ const SideBar = ({titles, posts}) => {
                                 <IconContext.Provider value={{size: "30px", color: "white"}}>
                                     <AiFillStar/>
                                 </IconContext.Provider>
-                                <div className={"navCatLabel"} data-id={title.id}>{title.name}</div>
+                                <div className={"navCatLabel"} data-id={title.id}>{decodeHtml(title.name)}</div>
                                 </div>
                                 <div className={"navTitleLabel"}>
                                     {title.slug === "events" ? <div key={index}><Link to={{pathname:`/${title.slug}/upcomming`}} data={"upcomming"} onClick={() => {myFunction(x)}}>upcomming</Link></div> :
                                         posts.map((post, index) =>
                                             post.categories.map( (categorie, index) =>
                                                 title.id === categorie ?
-                                                    <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div> : "" ))
+                                                    <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname:`/${title.slug}/${post.slug}`}} data={post.slug}>{decodeHtml(post.title.rendered)}</Link></div> : "" ))
                                     }
                                     {title.children ?
                                         title.children.map((children) =>
                                             titles.map((title1) => children === title1.id ?
                                                 <div className={"navSubCat"}>
-                                            <div className={"cat"}><div className={"navSubCatLabel"} data-id={title1.id}>{title1.name}</div></div>
+                                            <div className={"cat"}><div className={"navSubCatLabel"} data-id={title1.id}>{decodeHtml(title1.name)}</div></div>
                                             <div>
                                                 {
                                                     title.slug === "liberating-structures" && posts.filter(post => post.categories[0] === children) ?
@@ -60,7 +65,7 @@ const SideBar = ({titles, posts}) => {
                                                     posts.map((post, index) =>
                                                     post.categories.map( (categorie) => {
                                                         if (categorie === children) {
-                                                                return <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/${title1.slug}/${post.slug}`}} data={post.slug}>{post.title.rendered}</Link></div>
+                                                                return <div key={index}><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/${title1.slug}/${post.slug}`}} data={post.slug}>{decodeHtml(post.title.rendered)}</Link></div>
                                                             }
 
                                                     })
