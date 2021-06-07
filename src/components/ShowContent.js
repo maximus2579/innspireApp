@@ -34,6 +34,7 @@ const ShowContent = ({posts, titleID, titleIDChildren}) => {
                 newPosts.push(posts.filter(post => post.categories[0] === titleIDChildren[i]))
             }
             // newPosts.flat()
+            console.log(newPosts)
             console.log(newPosts.flat())
             var tableCells = [];
             for (let i=0; i<newPosts.length; i++){
