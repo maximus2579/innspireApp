@@ -33,12 +33,12 @@ const ShowContent = ({posts, titleID, titleIDChildren}) => {
             for (let i = 0; i<titleIDChildren.length; i++){
                 newPosts.push(posts.filter(post => post.categories[0] === titleIDChildren[i]))
             }
-            // newPosts.flat()
+            var allPosts = newPosts.flat()
             console.log(newPosts)
-            console.log(newPosts.flat())
+            console.log(allPosts)
             var tableCells = [];
-            for (let i=0; i<newPosts.length; i++){
-                tableCells.push(`<div>${newPosts[i].title.rendered}</div>`)
+            for (let i=0; i<allPosts.length; i++){
+                tableCells.push(`<div>${allPosts[i].title.rendered}</div>`)
             }
             document.querySelector("#navStructures").innerHTML = tableCells.join("")
         }
