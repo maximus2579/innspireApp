@@ -29,7 +29,10 @@ const ShowContent = ({posts, titleID, titleIDChildren}) => {
     }
     function NavStructure(){
         if (document.querySelector("#navStructures")){
-            var newPosts = posts.filter(post => post.categories[0] === titleID && post.categories[0] === titleIDChildren)
+            var newPosts = posts.filter(post => post.categories[0] === titleID)
+            for (let i = 0; i<titleIDChildren.length; i++){
+                newPosts.push(posts.filter(post => post.categories[0] === titleIDChildren[i]))
+            }
             console.log(newPosts)
             var tableCells = [];
             for (let i=0; i<newPosts.length; i++){
