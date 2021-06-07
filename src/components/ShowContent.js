@@ -31,7 +31,7 @@ const ShowContent = ({posts, titleID, titleIDChildren}) => {
         if (document.querySelector("#navStructures")){
             var newPosts = posts.filter(post => post.categories[0] === titleID)
             for (let i = 0; i<titleIDChildren.length; i++){
-                newPosts.push(posts.filter(post => post.categories[0] === titleIDChildren[i])[0])
+                newPosts.concat(posts.filter(post => post.categories[0] === titleIDChildren[i]))
             }
             console.log(newPosts)
             var tableCells = [];
