@@ -27,8 +27,14 @@ const ShowContent = ({posts, titleID}) => {
             }
         }
     }
+    function NavStructure(){
+        if (document.querySelector("#navStructures")){
+            console.log("hi")
+        }
+    }
 
     useEffect(() => {
+        NavStructure()
         MakeActive(params.id, titleID)
         myFunction(x)
         x.addListener(myFunction)

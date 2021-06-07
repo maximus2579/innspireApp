@@ -9,9 +9,6 @@ import {useEffect} from "react";
 const Body = ({titles, posts}) => {
     document.body.style.height = "";
     document.body.style.alignItems = "";
-    if (document.querySelector("#navStructures")){
-        console.log("hi")
-    }
     // function myFunction(x) {
     //     if (x.matches) { // If media query matches
     //         if (document.querySelector(".contentSection")) {
