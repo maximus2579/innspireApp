@@ -5,7 +5,7 @@ import PlanningPoker from "./PlanningPoker";
 import ListEvents from "./ListEvents";
 import NoMatch from "./NoMatch";
 
-const ShowContent = ({posts, titleID}) => {
+const ShowContent = ({posts, titleID, titleIDChildren}) => {
     const params = useParams();
     function myFunction(x) {
         if (x.matches) { // If media query matches
@@ -29,7 +29,13 @@ const ShowContent = ({posts, titleID}) => {
     }
     function NavStructure(){
         if (document.querySelector("#navStructures")){
-            console.log(posts.filter(post => post.categories[0] === titleID))
+            var newPosts = posts.filter(post => post.categories[0] === titleID && post.categories[0] === titleIDChildren)
+            console.log(newPosts)
+            var tableCells = [];
+            for (let i=0; i<newPosts.length; i++){
+                tableCells.push(`<div>${newPosts[i].title.rendered}</div>`)
+            }
+            document.querySelector("#navStructures").innerHTML = tableCells.join("")
         }
     }
 
