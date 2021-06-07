@@ -24,7 +24,7 @@ const SideBar = ({titles, posts}) => {
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction)
     });
-    posts.sort((a, b) => (a.title.rendered  > b.title.rendered) ?  1 :-1)
+    // posts.sort((a, b) => (a.title.rendered  > b.title.rendered) ?  1 : -1)
     return (
         <div className={"sideNav"}>
                 <div>

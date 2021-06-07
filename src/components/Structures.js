@@ -11,7 +11,6 @@ const Structures = ({posts}) => {
             }
         }
     }
-    posts.sort( (a, b) => parseInt(a.title.rendered.substring(0, 1)) - parseInt(b.title.rendered.substring(0, 1)))
     // post.map ( (structure) => {
     return (
         <div className={"contentSection"}>
