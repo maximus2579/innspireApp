@@ -30,15 +30,14 @@ const ShowContent = ({posts, titleID, titleIDChildren}) => {
     function NavStructure(){
         if (document.querySelector("#navStructures")){
             var newPosts = posts.filter(post => post.categories[0] === titleID)
-            var newPosts1 =[]
             for (let i = 0; i<titleIDChildren.length; i++){
-                newPosts1.push(posts.filter(post => post.categories[0] === titleIDChildren[i]))
+                newPosts.push(posts.filter(post => post.categories[0] === titleIDChildren[i]))
             }
-            var allPosts = newPosts.concat(newPosts1)
-            console.log(newPosts1, allPosts)
+            newPosts.flat()
+            console.log(newPosts)
             var tableCells = [];
-            for (let i=0; i<allPosts.length; i++){
-                tableCells.push(`<div>${allPosts[i].title.rendered}</div>`)
+            for (let i=0; i<newPosts.length; i++){
+                tableCells.push(`<div>${newPosts[i].title.rendered}</div>`)
             }
             document.querySelector("#navStructures").innerHTML = tableCells.join("")
         }
