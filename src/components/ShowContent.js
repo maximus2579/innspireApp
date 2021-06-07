@@ -29,7 +29,7 @@ const ShowContent = ({posts, titleID}) => {
     }
     function NavStructure(){
         if (document.querySelector("#navStructures")){
-            console.log("hi")
+            console.log(posts.filter(post => post.categories[0] === titleID))
         }
     }
 
