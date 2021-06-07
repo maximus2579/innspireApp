@@ -39,17 +39,6 @@
     .eventItem{
         width: 40%;
     }
-    .postContentStructures{
-        flex-direction: row;
-    }
-
-    #navStructures{
-        align-content: start;
-        width: 30%;
-    }
-    .structure{
-        width: 70%;
-    }
     #navStructures > *{
         word-break: break-word;
     }

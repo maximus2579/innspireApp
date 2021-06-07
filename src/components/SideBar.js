@@ -60,8 +60,8 @@ const SideBar = ({titles, posts}) => {
                                             <div className={"cat"}><div className={"navSubCatLabel"} data-id={title1.id}>{decodeHtml(title1.name)}</div></div>
                                             <div>
                                                 {
-                                                    title.slug === "liberating-structures" && posts.filter(post => post.categories[0] === children) ?
-                                                    <div><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/${title1.slug}/structures`}} data={"structures"}>{"structures"}</Link></div> :
+                                                    // title.slug === "liberating-structures" && posts.filter(post => post.categories[0] === children) ?
+                                                    // <div><Link onClick={() => {myFunction(x)}} to={{pathname: `/${title.slug}/${title1.slug}/structures`}} data={"structures"}>{"structures"}</Link></div> :
                                                     posts.map((post, index) =>
                                                     post.categories.map( (categorie) => {
                                                         if (categorie === children) {
