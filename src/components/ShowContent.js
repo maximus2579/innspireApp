@@ -30,6 +30,11 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
     }
     function NavStructure(){
         if (document.querySelector("#navStructures")){
+            function getStructure (){
+                for (let i =0; i<document.querySelector("#navStructures").children.length; i++){
+                    document.querySelector("#navStructures").children[i].addEventListener("click", () => history.push(document.querySelector("#navStructures").children[i].dataset.url))
+                }
+            }
             var newPosts = posts.filter(post => post.categories[0] === titleID)
             for (let i = 0; i<titleIDChildren.length; i++){
                 newPosts.push(posts.filter(post => post.categories[0] === titleIDChildren[i]))
@@ -41,27 +46,13 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
             for (let i=0; i<allPosts.length; i++){
                     console.log(titles[i1].id, allPosts[i].categories[0])
                     if (titles[i1].id === allPosts[i].categories[0]) {
-                        tableCells.push(`<div onClick="${getStructure(titles[i1].slug, allPosts[i].slug)}">${allPosts[i].title.rendered}</div>`)
+                        tableCells.push(`<div class="${params.id === allPosts[i].slug ? "structureActive" : ""}" data-url="${titles[i1].id === titleID ? allPosts[i].slug : titles[i1].slug + "/" + allPosts[i].slug}">${allPosts[i].title.rendered}</div>`)
                     }
                 }
             }
             document.querySelector("#navStructures").innerHTML = tableCells.join("")
+            getStructure()
         }
-    }
-
-    function getStructure (CatSlug, PostSlug){
-        console.log("hi")
-        // for (let i=0; i<document.getElementsByClassName("structure").length; i++) {
-        //     console.log(document.querySelectorAll("#navStructures > div")[i])
-        //     document.querySelectorAll("#navStructures > div")[i].classList.remove("structureActive")
-        //     document.getElementsByClassName("structure")[i].classList.add("hide")
-        //     e.target.classList.add("structureActive")
-        //     if (parseInt(document.getElementsByClassName("structure")[i].attributes[0].value) === id){
-        //         document.getElementsByClassName("structure")[i].classList.remove("hide")
-        //         document.getElementsByClassName("structure")[i].classList.add("visible")
-        //     }
-        history.push(`/${CatSlug}/${PostSlug}`)
-        // }
     }
 
     useEffect(() => {
