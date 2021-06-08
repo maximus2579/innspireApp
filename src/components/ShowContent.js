@@ -3,7 +3,6 @@ import {useEffect} from "react";
 import Loader from "react-loader-spinner";
 import PlanningPoker from "./PlanningPoker";
 import ListEvents from "./ListEvents";
-import NoMatch from "./NoMatch";
 
 const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
     const params = useParams();
