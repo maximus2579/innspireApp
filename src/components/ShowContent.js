@@ -41,7 +41,7 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
             for (let i=0; i<allPosts.length; i++){
                     console.log(titles[i1].id, allPosts[i].categories[0])
                     if (titles[i1].id === allPosts[i].categories[0]) {
-                        tableCells.push(`<div onClick="${() => getStructure(titles[i1].slug, allPosts[i].slug)}">${allPosts[i].title.rendered}</div>`)
+                        tableCells.push(`<div onClick="${getStructure(titles[i1].slug, allPosts[i].slug)}">${allPosts[i].title.rendered}</div>`)
                     }
                 }
             }
