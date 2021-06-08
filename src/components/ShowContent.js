@@ -28,7 +28,7 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
             }
         }
     }
-    function NavStructure(titles){
+    function NavStructure(){
         if (document.querySelector("#navStructures")){
             var newPosts = posts.filter(post => post.categories[0] === titleID)
             for (let i = 0; i<titleIDChildren.length; i++){
@@ -64,7 +64,7 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
     }
 
     useEffect(() => {
-        NavStructure(titles)
+        NavStructure()
         MakeActive(params.id, titleID)
         myFunction(x)
         x.addListener(myFunction)
