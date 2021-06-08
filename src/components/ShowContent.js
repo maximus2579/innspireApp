@@ -1,5 +1,5 @@
-import {useParams} from "react-router-dom";
-import React, {useEffect} from "react";
+import {useParams, useHistory} from "react-router-dom";
+import {useEffect} from "react";
 import Loader from "react-loader-spinner";
 import PlanningPoker from "./PlanningPoker";
 import ListEvents from "./ListEvents";
@@ -7,6 +7,7 @@ import NoMatch from "./NoMatch";
 
 const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
     const params = useParams();
+    const history = useHistory();
     function myFunction(x) {
         if (x.matches) { // If media query matches
             if (document.querySelector(".contentSection")) {
@@ -39,7 +40,7 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
             for (let i=0; i<allPosts.length; i++){
                 for (let i1 =0; i1<titles.length; i++){
                     if (titles[i1].id === allPosts.categories[0]) {
-                        tableCells.push(`<div onclick="${getStructure(this, titles[i1].slug, allPosts[i].slug)}">${allPosts[i].title.rendered}</div>`)
+                        tableCells.push(`<div onclick="${getStructure(titles[i1].slug, allPosts[i].slug)}">${allPosts[i].title.rendered}</div>`)
                     }
                 }
             }
@@ -47,18 +48,18 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
         }
     }
 
-    function getStructure (e, CatSlug, PostSlug){
-        for (let i=0; i<document.getElementsByClassName("structure").length; i++) {
-            console.log(document.querySelectorAll("#navStructures > div")[i])
-            document.querySelectorAll("#navStructures > div")[i].classList.remove("structureActive")
-            document.getElementsByClassName("structure")[i].classList.add("hide")
-            e.target.classList.add("structureActive")
-            if (parseInt(document.getElementsByClassName("structure")[i].attributes[0].value) === id){
-                document.getElementsByClassName("structure")[i].classList.remove("hide")
-                document.getElementsByClassName("structure")[i].classList.add("visible")
-            }
+    function getStructure (CatSlug, PostSlug){
+        // for (let i=0; i<document.getElementsByClassName("structure").length; i++) {
+        //     console.log(document.querySelectorAll("#navStructures > div")[i])
+        //     document.querySelectorAll("#navStructures > div")[i].classList.remove("structureActive")
+        //     document.getElementsByClassName("structure")[i].classList.add("hide")
+        //     e.target.classList.add("structureActive")
+        //     if (parseInt(document.getElementsByClassName("structure")[i].attributes[0].value) === id){
+        //         document.getElementsByClassName("structure")[i].classList.remove("hide")
+        //         document.getElementsByClassName("structure")[i].classList.add("visible")
+        //     }
         history.push(`/${CatSlug}/${PostSlug}`)
-        }
+        // }
     }
 
     useEffect(() => {
