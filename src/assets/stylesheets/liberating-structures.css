@@ -6,6 +6,10 @@
     color: var(--font-color);
 }
 
+#content{
+    width: 800px;
+}
+
 #content .LStitle{
     display: flex;
     align-items: center;
