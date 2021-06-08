@@ -40,7 +40,6 @@ const ShowSubContent = ({posts, titleID, titleIDParent}) => {
             return (
                 <div className={"contentSection"}>
                     {posts.map((post, index) => {
-                        console.log(post, post.categories, titleIDParent, titleID)
                         if (post.slug === params.id && titleID === post.categories[0]) {
                             if (post.fimg_url) {
                                 return (
