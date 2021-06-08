@@ -5,7 +5,7 @@ import PlanningPoker from "./PlanningPoker";
 import ListEvents from "./ListEvents";
 import NoMatch from "./NoMatch";
 
-const ShowContent = ({posts, titleID, titleIDChildren}) => {
+const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
     const params = useParams();
     function myFunction(x) {
         if (x.matches) { // If media query matches
@@ -27,7 +27,7 @@ const ShowContent = ({posts, titleID, titleIDChildren}) => {
             }
         }
     }
-    function NavStructure(){
+    function NavStructure(titles){
         if (document.querySelector("#navStructures")){
             var newPosts = posts.filter(post => post.categories[0] === titleID)
             for (let i = 0; i<titleIDChildren.length; i++){
@@ -37,14 +37,32 @@ const ShowContent = ({posts, titleID, titleIDChildren}) => {
             console.log(allPosts)
             var tableCells = [];
             for (let i=0; i<allPosts.length; i++){
-                tableCells.push(`<div>${allPosts[i].title.rendered}</div>`)
+                for (let i1 =0; i1<titles.length; i++){
+                    if (titles[i1].id === allPosts.categories[0]) {
+                        tableCells.push(`<div onclick="${getStructure(this, titles[i1].slug, allPosts[i].slug)}">${allPosts[i].title.rendered}</div>`)
+                    }
+                }
             }
             document.querySelector("#navStructures").innerHTML = tableCells.join("")
         }
     }
 
+    function getStructure (e, CatSlug, PostSlug){
+        for (let i=0; i<document.getElementsByClassName("structure").length; i++) {
+            console.log(document.querySelectorAll("#navStructures > div")[i])
+            document.querySelectorAll("#navStructures > div")[i].classList.remove("structureActive")
+            document.getElementsByClassName("structure")[i].classList.add("hide")
+            e.target.classList.add("structureActive")
+            if (parseInt(document.getElementsByClassName("structure")[i].attributes[0].value) === id){
+                document.getElementsByClassName("structure")[i].classList.remove("hide")
+                document.getElementsByClassName("structure")[i].classList.add("visible")
+            }
+        history.push(`/${CatSlug}/${PostSlug}`)
+        }
+    }
+
     useEffect(() => {
-        NavStructure()
+        NavStructure(titles)
         MakeActive(params.id, titleID)
         myFunction(x)
         x.addListener(myFunction)
