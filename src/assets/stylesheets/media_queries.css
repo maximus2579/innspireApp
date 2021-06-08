@@ -45,6 +45,9 @@
 }
 
 @media only screen and (max-width: 800px) {
+    #content{
+        width: 100%;
+    }
     .contentSection{
         margin-left: 0;
     }
@@ -104,6 +107,12 @@
 
 @media only screen and (max-width: 300px) {
     #navStructures > *{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #content{
         width: 100%;
     }
 }
