@@ -43,6 +43,9 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
             for (let i1 =0; i1<titles.length; i1++){
             for (let i=0; i<allPosts.length; i++){
                     if (titles[i1].id === allPosts[i].categories[0]) {
+                        var htmlObject = document.createElement('div');
+                        htmlObject.innerHTML = allPosts[i].content.rendered;
+                        console.log(htmlObject.querySelector(".icon img").src);
                         tableCells.push(`<div class="${params.id === allPosts[i].slug ? "structureActive" : ""}" data-url="${titles[i1].id === titleID ? allPosts[i].slug : titles[i1].slug + "/" + allPosts[i].slug}">${allPosts[i].title.rendered}</div>`)
                     }
                 }

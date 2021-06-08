@@ -5,7 +5,6 @@ import PlanningPoker from "./PlanningPoker";
 import Loader from "react-loader-spinner";
 
 const ShowSubContent = ({posts, titleID, titleIDParent}) => {
-    console.log("test")
     const params = useParams();
     function myFunction(x) {
         if (x.matches) { // If media query matches
