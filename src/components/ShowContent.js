@@ -37,11 +37,11 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
             var allPosts = newPosts.flat()
             console.log(allPosts)
             var tableCells = [];
+            for (let i1 =0; i1<titles.length; i1++){
             for (let i=0; i<allPosts.length; i++){
-                for (let i1 =0; i1<titles.length; i1++){
                     console.log(titles[i1].id, allPosts[i].categories[0])
                     if (titles[i1].id === allPosts[i].categories[0]) {
-                        tableCells.push(`<div onclick="${() => getStructure(titles[i1].slug, allPosts[i].slug)}">${allPosts[i].title.rendered}</div>`)
+                        tableCells.push(`<div onClick="${() => getStructure(titles[i1].slug, allPosts[i].slug)}">${allPosts[i].title.rendered}</div>`)
                     }
                 }
             }
@@ -50,6 +50,7 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
     }
 
     function getStructure (CatSlug, PostSlug){
+        console.log("hi")
         // for (let i=0; i<document.getElementsByClassName("structure").length; i++) {
         //     console.log(document.querySelectorAll("#navStructures > div")[i])
         //     document.querySelectorAll("#navStructures > div")[i].classList.remove("structureActive")
