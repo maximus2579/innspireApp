@@ -45,8 +45,7 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
                     if (titles[i1].id === allPosts[i].categories[0]) {
                         var htmlObject = document.createElement('div');
                         htmlObject.innerHTML = allPosts[i].content.rendered;
-                        console.log(htmlObject.querySelector(".icon img").src);
-                        tableCells.push(`<div class="${params.id === allPosts[i].slug ? "structureActive" : ""}" data-url="${titles[i1].id === titleID ? allPosts[i].slug : titles[i1].slug + "/" + allPosts[i].slug}">${htmlObject.querySelector(".icon img") ? console.log(htmlObject.querySelector(".icon img").src) : ""}${allPosts[i].title.rendered}</div>`)
+                        tableCells.push(`<div class="${params.id === allPosts[i].slug ? "structureActive" : ""}" data-url="${titles[i1].id === titleID ? allPosts[i].slug : titles[i1].slug + "/" + allPosts[i].slug}">${htmlObject.querySelector(".icon img") ? `<img src='${htmlObject.querySelector(".icon img").src}'/>` : ""}<p>${allPosts[i].title.rendered}</p></div>`)
                     }
                 }
             }
