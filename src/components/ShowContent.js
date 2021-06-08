@@ -42,7 +42,6 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
             var tableCells = [];
             for (let i1 =0; i1<titles.length; i1++){
             for (let i=0; i<allPosts.length; i++){
-                    console.log(titles[i1].id, allPosts[i].categories[0])
                     if (titles[i1].id === allPosts[i].categories[0]) {
                         tableCells.push(`<div class="${params.id === allPosts[i].slug ? "structureActive" : ""}" data-url="${titles[i1].id === titleID ? allPosts[i].slug : titles[i1].slug + "/" + allPosts[i].slug}">${allPosts[i].title.rendered}</div>`)
                     }
