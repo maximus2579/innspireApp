@@ -12,7 +12,7 @@ const Home = ({titles, posts}) => {
     }
     function checkLogin () {
         if (localStorage.getItem("token")) {
-            document.getElementById("profile").innerHTML = `<div id="username">${localStorage.getItem("username")}<div class="dropdown"><p id="info">User info</p><p id="uitloggen">Uitloggen</p></div></div>`
+            document.getElementById("profile").innerHTML = `<div id="name">${localStorage.getItem("username")}<div class="dropdown"><p id="info">User info</p><p id="uitloggen">Uitloggen</p></div></div>`
             document.getElementById("uitloggen").addEventListener("click", () => logOut())
             document.getElementById("info").addEventListener("click", () => history.push('/user-info'))
         }
