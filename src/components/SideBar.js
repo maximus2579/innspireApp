@@ -17,6 +17,7 @@ const SideBar = ({titles, posts}) => {
             document.querySelector(".sideNav").classList.remove("hide")
             document.querySelector(".sideNav").classList.add("visible")
         }
+        window.scrollTo(0, 0);
     }
     var x = window.matchMedia("(max-width: 800px)")
     // Attach listener function on state changes
