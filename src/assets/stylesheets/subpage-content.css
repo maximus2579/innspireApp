@@ -254,6 +254,11 @@ a{
     width: 100%;
 }
 
+/*#gekozen_card img{*/
+/*    width: 80% !important;*/
+/*    height: auto !important;*/
+/*}*/
+
 #gekozen{
    display: flex;
     justify-content: center;

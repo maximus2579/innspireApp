@@ -44,10 +44,10 @@ const HomeBody = ({posts, titleID}) => {
                         )
                     } else {
                         return(
-                            <>
+                            <div className={"postContent"}>
                                 <h1>{post.title.rendered}</h1>
-                                <div key={index} className={"postContent"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
-                            </>
+                                <div dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
+                            </div>
                     )
                     }
                 }
