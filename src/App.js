@@ -7,6 +7,7 @@ import Form from "./pages/Form"
 import UserInfo from "./pages/UserInfo";
 
 const App = () =>{
+    console.log("test")
     const [categories, setCategories] = useState([]);
     const [posts, setPosts] = useState([]);
     if (!localStorage.getItem("thema")){
