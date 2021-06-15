@@ -1,7 +1,6 @@
 const Structures = ({posts}) => {
     function getStructure (e, id){
         for (let i=0; i<document.getElementsByClassName("structure").length; i++) {
-            console.log(document.querySelectorAll("#navStructures > div")[i])
             document.querySelectorAll("#navStructures > div")[i].classList.remove("structureActive")
             document.getElementsByClassName("structure")[i].classList.add("hide")
                 e.target.classList.add("structureActive")
