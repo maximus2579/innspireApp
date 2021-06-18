@@ -61,7 +61,7 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
         x.addListener(myFunction)
     });
         if (posts.length > 0) {
-            if (params.id === "upcomming") {
+            if (params.id === "upcoming") {
                 var filteredPosts = posts.filter(post => titleID === post.categories[0])
                 return <ListEvents posts={filteredPosts} />
             }
@@ -94,8 +94,7 @@ const ShowContent = ({posts, titleID, titleIDChildren, titles}) => {
                                         </div>
                                     )
                                 } else {
-                                    return <div key={index} className={"postContent"}
-                                                dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
+                                    return <div key={index} className={"postContent"} dangerouslySetInnerHTML={{__html: post.content.rendered}}></div>
                                 }
                             }
                         })}

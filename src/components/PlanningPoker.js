@@ -1,6 +1,5 @@
 import {useEffect} from 'react';
 import ReactDOMServer from "react-dom/server";
-import {GiPizzaCutter} from "react-icons/gi";
 import {IoShirtOutline} from "react-icons/io5";
 
 const PlanningPoker = ({post}) => {
@@ -19,9 +18,6 @@ const PlanningPoker = ({post}) => {
                 document.getElementsByClassName('classic')[0].style.display = 'flex'
                 for (let i = 0; i < document.querySelectorAll(".classic li").length; i++) {
                     document.querySelectorAll(".classic li")[i].innerHTML = `<p>${numbers[i]}</p>`
-                    // if (document.querySelectorAll(".classic li")[i].innerText === "pizza slicer"){
-                    //     document.querySelectorAll(".classic li")[i].innerHTML = ReactDOMServer.renderToString(<GiPizzaCutter/>)
-                    // }
                     var previouscontent = document.querySelector("#planningpoker_parent").innerHTML
                     document.querySelectorAll(".classic li")[i].addEventListener("click", (e) => {
                         document.querySelector("#planningpoker_parent").innerHTML = `<div id="gekozen"><div id="gekozen_card"><p>${e.target.innerHTML}</p></div></div>`
@@ -54,14 +50,16 @@ const PlanningPoker = ({post}) => {
                 document.getElementsByClassName('classic')[0].style.display = 'none'
                 document.getElementsByClassName('t-shirt')[0].style.display = 'flex'
                 for (let i = 0; i < document.querySelectorAll(".t-shirt li").length; i++) {
-                    document.querySelectorAll(".t-shirt li")[i].innerHTML = ReactDOMServer.renderToString(<IoShirtOutline/>)
-                    var path = document.querySelectorAll(".t-shirt li svg")[i].innerHTML
-                    document.querySelectorAll(".t-shirt li svg")[i].innerHTML = `${path}<text x="50%" y="50%" font-size="100px" font-weight="900" dominant-baseline="middle" text-anchor="middle">${size[i]}</text>`
-                    // if (document.querySelectorAll(".t-shirt li")[i].innerText === "pizza slicer"){
-                    //     document.querySelectorAll(".t-shirt li")[i].innerHTML = `<div style="width: 100%">${ReactDOMServer.renderToString(<GiPizzaCutter/>)}</div>`
-                    //     document.querySelectorAll(".t-shirt li")[i].style.width = "100%"
-                    // }
-                    document.querySelectorAll(".t-shirt li svg")[i].addEventListener("click", (e) => {
+                    if (document.querySelectorAll(".t-shirt li")[i].querySelector("img")){
+                        document.querySelectorAll(".t-shirt li")[i].innerHTML = `<div class="shirt-img">${document.querySelectorAll(".t-shirt li")[i].querySelector("img").outerHTML}</div>`
+                    } else {
+                        document.querySelectorAll(".t-shirt li")[i].innerHTML = ReactDOMServer.renderToString(
+                            <IoShirtOutline/>)
+                        var path = document.querySelectorAll(".t-shirt li svg")[i].innerHTML
+                        document.querySelectorAll(".t-shirt li svg")[i].innerHTML = `${path}<text x="50%" y="50%" font-size="100px" font-weight="900" dominant-baseline="middle" text-anchor="middle">${size[i]}</text>`
+                    }
+                        document.querySelectorAll(".t-shirt li")[i].querySelector("img, svg").addEventListener("click", (e) => {
+                            console.log(e)
                         var previouscontent = document.querySelector("#planningpoker_parent").innerHTML
                         document.querySelector("#planningpoker_parent").innerHTML = `<div id="gekozen">${e.target.parentElement.innerHTML}</div>`
                         document.querySelector('#gekozen>*').addEventListener("click", () => {

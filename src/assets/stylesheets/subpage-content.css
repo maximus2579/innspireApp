@@ -254,6 +254,18 @@ a{
     width: 100%;
 }
 
+.shirt-img{
+    width: 213px;
+    height: 213px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shirt-img img{
+    width: 50% !important;
+    height: auto !important;
+}
 /*#gekozen_card img{*/
 /*    width: 80% !important;*/
 /*    height: auto !important;*/
