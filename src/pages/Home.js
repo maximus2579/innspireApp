@@ -6,10 +6,16 @@ import Header from "../components/Header";
 
 const Home = ({titles, posts}) => {
     let history = useHistory()
-    function logOut () {
-        localStorage.clear();
-        window.location.reload();
+
+    // logout user
+    function logOut (){
+        localStorage.clear()
+        window.location.reload()
     }
+
+    // user logged out
+
+
     function checkLogin () {
         if (localStorage.getItem("token")) {
             document.getElementById("profile").innerHTML = `<div id="name">${localStorage.getItem("username")}<div class="dropdown"><p id="info">User info</p><p id="uitloggen">Uitloggen</p></div></div>`
